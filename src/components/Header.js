@@ -1,33 +1,52 @@
 import React from "react";
-import {
-  ContainerDiv,
-  NavDiv,
-  MenuDiv,
-  Menu,
-  PaddedDiv,
-} from "./styleComponents/divStyles";
+import { ContainerDiv } from "./styleComponents/divStyles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { H1styled } from "./styleComponents/HeaderStyles";
+import { Logo, NavDiv } from "./styleComponents/HeaderStyles";
 import { LiStyled, UlStyled } from "./styleComponents/UlStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
+import { Menu, MenuDiv } from "./styleComponents/MenuStyles";
 
 function Header() {
   return (
     <ContainerDiv>
       <NavDiv>
-        <H1styled>Cozy Living</H1styled>
+        <Logo>
+          <Link to="/">Cozy Living</Link>
+        </Logo>
         <MenuDiv>
-          <ShoppingCartIcon />
-          <MenuIcon></MenuIcon>
+          <Link to="/cart">
+            <ShoppingCartIcon />
+          </Link>
+          <MenuIcon />
           <Menu>
             <UlStyled>
               <LiStyled>
-                <Link to="/shop">Shop</Link>
+                <em>
+                  <Link to="/shop">Shop</Link>
+                </em>
+                <div>
+                  <UlStyled>
+                    <LiStyled>Living Room</LiStyled>
+                    <LiStyled>Dining Room</LiStyled>
+                    <LiStyled>Kitchen</LiStyled>
+                    <LiStyled>Bedroom</LiStyled>
+                    <LiStyled>Bathroom</LiStyled>
+                    <LiStyled>Decor</LiStyled>
+                  </UlStyled>
+                </div>
               </LiStyled>
-              <LiStyled>Wishlist</LiStyled>
-              <LiStyled>About</LiStyled>
+              <LiStyled>
+                <Link to="/about">About</Link>
+              </LiStyled>
+              <LiStyled>
+                <Link to="/wishlist">Wishlist</Link>
+              </LiStyled>
+
               <LiStyled>Login</LiStyled>
+              <LiStyled>
+                <input></input>
+              </LiStyled>
             </UlStyled>
           </Menu>
         </MenuDiv>

@@ -5,87 +5,57 @@ const ContainerDiv = styled.div`
 `;
 
 const ThumbnailDiv = styled.div`
-  width: 20%;
+  width: 300px;
   background-color: transparent;
-  margin: 2%;
+  margin: 20px 0;
 
   img {
     width: 100%;
     height: 300px;
   }
-  ul {
-    list-style-type: none;
-  }
-  &:hover img {
-    opacity: 50%;
+
+  div {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 6px;
+      margin: 0;
+    }
+
+    &:hover img {
+      opacity: 50%;
+    }
   }
 `;
 
 const InnerDiv = styled(ContainerDiv)`
   display: flex;
+  position: relative;
+  top: 60px;
+  flex-wrap: wrap;
 `;
 
 const CategoriesContainer = styled.div`
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const BreakDiv = styled.div`
   flex-basis: 100%;
 `;
 
-const Menu = styled.nav`
-  display: none;
-  top: 60px;
-  right: 0;
-  position: absolute;
-  border: solid 1px;
-  width: 100vw;
-
-  ul {
-    padding: 0 20px;
-    flex-direction: column;
-    li {
-      padding: 10px;
-    }
-  }
-`;
-
-const MenuDiv = styled.div`
-  padding: 25px 10px;
-  display: flex;
-
-  svg {
-    padding: 2px 6px;
-  }
-
-  &:hover nav {
-    display: flex;
-  }
-`;
-
 const PaddedDiv = styled.div`
-  padding: 10px;
-`;
-
-const NavDiv = styled(ContainerDiv)`
-  display: flex;
-  justify-content: space-between;
-
-  position: fixed;
-  background-color: white;
-  top: 0;
+  margin: 16px;
 `;
 
 export {
   ContainerDiv,
   ThumbnailDiv,
   InnerDiv,
-  NavDiv,
   CategoriesContainer,
   BreakDiv,
-  MenuDiv,
-  Menu,
   PaddedDiv,
 };

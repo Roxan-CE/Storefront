@@ -10,17 +10,18 @@ export default function Thumbnail(props) {
   return (
     <ThumbnailDiv onClick={handleClick}>
       <img src={props.image} />
-      <ul>
-        <li>{props.name}</li>
-        <li>{props.price}</li>
-        <li>{props.description}</li>
+      <div>
+        <ul>
+          <li>{props.name}</li>
+          <li>{props.price}</li>
 
-        {/* <li>{props.category}</li>
+          {/* <li>{props.category}</li>
         <li>{props.description}</li>
         <li>{props.rating.count}</li>
         <li>{props.rating.rate}</li>
         <li>{props.title}</li> */}
-      </ul>
+        </ul>
+      </div>
     </ThumbnailDiv>
   );
 }

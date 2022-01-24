@@ -1,14 +1,15 @@
 import React from "react";
+import products from "../products";
 import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
 
-function Footer() {
+function Cart() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <h2>Roxan © 2022</h2>
+        <h1>This is your cart.</h1>
       </InnerDiv>
     </ContainerDiv>
   );
 }
 
-export default Footer;
+export default Cart;

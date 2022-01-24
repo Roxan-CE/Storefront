@@ -1,25 +1,27 @@
 import styled from "styled-components";
 
-const MainImage = styled.img`
-  width: 800px;
-  height: 600px;
-  margin: 0 auto;
+const MainImage = styled.div`
+  width: 100vw;
+  height: 350px;
+  margin: 0 1rem;
+  background-image: url("products/Categories/mainpic.jpg");
+  background-size: 650px auto;
+  background-repeat: no-repeat;
+  background-position: 60% 20%;
 `;
 
-const DivImages = styled.div`
-  width: 320px;
-  height: 320px;
-  background-image: url("products/Categories/LivingRoom.jpg");
+const Category = styled.div`
+  height: 180px;
+  margin: 0 1rem;
+  width: 340px;
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
+  background-position: ${(props) => props.position};
+  background-image: url(${(props) => props.image});
 `;
 
-const ImageStyled = styled.img`
-  width: 320px;
-  height: 320px;
+const ProductImage = styled.img`
+  width: 340px;
 `;
 
-// const LeftImage = styled(ImageStyled)`
-//   display: flex;
-//   flex-wrap: wrap;
-// `;
-
-export { DivImages, MainImage, ImageStyled };
+export { Category, MainImage, ProductImage };

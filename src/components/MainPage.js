@@ -8,12 +8,7 @@ import {
   InnerDiv,
 } from "./styleComponents/divStyles";
 import products from "../products";
-import {
-  DivImages,
-  ImageStyled,
-  LeftImage,
-  MainImage,
-} from "./styleComponents/Imagestyles";
+import { Category, MainImage } from "./styleComponents/Imagestyles";
 
 function MainPage() {
   return (
@@ -22,12 +17,22 @@ function MainPage() {
         <MainImage src="products/Categories/mainpic.jpg" />
       </InnerDiv>
       <InnerDiv>
+        <h2>TimeLess Beauty and Aesthetics</h2>
+      </InnerDiv>
+      <InnerDiv>
         <CategoriesContainer>
-          <ImageStyled src="products/Categories/Decor.jpg" />
-          <ImageStyled src="products/Categories/Kitchen.jpg" />
-          <ImageStyled src="products/Categories/DiningRoom.jpg" />
-          <ImageStyled src="products/Categories/Bedroom.jpg" />
-          <ImageStyled src="products/Categories/Bathroom.jpg" />
+          <Category
+            image="products/Categories/LivingRoom.jpg"
+            position="0 60%"
+          />
+          <Category
+            image="products/Categories/DiningRoom.jpg"
+            position="0 55%"
+          />
+          <Category image="products/Categories/Kitchen.jpg" position="0 60%" />
+          <Category image="products/Categories/bedroom.jpg" position="0 55%" />
+          <Category image="products/Categories/Bathroom.jpg" position="0 65%" />
+          <Category image="products/Categories/Decor.jpg" position="0 60%" />
         </CategoriesContainer>
       </InnerDiv>
     </ContainerDiv>

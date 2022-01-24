@@ -1,23 +1,32 @@
 import React from "react";
 import axios from "axios";
 import Thumbnail from "./Thumbnail";
-import { PaddedDiv } from "./styleComponents/divStyles";
+import {
+  CategoriesContainer,
+  ContainerDiv,
+  InnerDiv,
+} from "./styleComponents/divStyles";
 import products from "../products";
 
 function Store() {
   return (
-    <PaddedDiv>
-      {products.map((product) => {
-        return (
-          <Thumbnail
-            image={product.image}
-            name={product.name}
-            price={product.price}
-            description={product.details}
-          ></Thumbnail>
-        );
-      })}
-    </PaddedDiv>
+    <ContainerDiv>
+      <InnerDiv>
+        <CategoriesContainer>
+          {" "}
+          {products.map((product) => {
+            return (
+              <Thumbnail
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                description={product.details}
+              ></Thumbnail>
+            );
+          })}
+        </CategoriesContainer>
+      </InnerDiv>
+    </ContainerDiv>
   );
 }
 
