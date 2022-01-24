@@ -1,39 +1,40 @@
 import React from "react";
 import axios from "axios";
 import Thumbnail from "./Thumbnail";
-import { ContainerDiv } from "./styleComponents/divStyles";
+import {
+  BreakDiv,
+  CategoriesContainer,
+  ContainerDiv,
+  InnerDiv,
+} from "./styleComponents/divStyles";
+import products from "../products";
+import {
+  DivImages,
+  ImageStyled,
+  LeftImage,
+  MainImage,
+} from "./styleComponents/Imagestyles";
 
-function Store() {
-  const api = "https://fakestoreapi.com/products";
-
-  const [post, setPost] = React.useState(null);
-
-  React.useEffect(() => {
-    axios.get(api).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-
-  console.log(post);
-
-  if (!post) return null;
-
+function MainPage() {
   return (
     <ContainerDiv>
-      {post.map((product) => {
-        return (
-          <Thumbnail
-            image={product.image}
-            title={product.title}
-            price={product.price}
-          ></Thumbnail>
-        );
-      })}
+      <InnerDiv>
+        <MainImage src="products/Categories/mainpic.jpg" />
+      </InnerDiv>
+      <InnerDiv>
+        <CategoriesContainer>
+          <ImageStyled src="products/Categories/Decor.jpg" />
+          <ImageStyled src="products/Categories/Kitchen.jpg" />
+          <ImageStyled src="products/Categories/DiningRoom.jpg" />
+          <ImageStyled src="products/Categories/Bedroom.jpg" />
+          <ImageStyled src="products/Categories/Bathroom.jpg" />
+        </CategoriesContainer>
+      </InnerDiv>
     </ContainerDiv>
   );
 }
 
-export default Store;
+export default MainPage;
 
 {
   /* <div>

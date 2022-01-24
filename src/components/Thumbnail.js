@@ -1,18 +1,23 @@
 import { ThumbnailDiv } from "./styleComponents/divStyles";
+import { useNavigate } from "react-router-dom";
 
 export default function Thumbnail(props) {
-  return (
-    <ThumbnailDiv>
-      <ul>
-        {/* <li>{props.category}</li>
-        <li>{props.description}</li> */}
+  const navigate = useNavigate();
 
-        <li>
-          <img src={props.image} />
-        </li>
-        <li>{props.title}</li>
+  function handleClick(event) {
+    navigate(props.name);
+  }
+  return (
+    <ThumbnailDiv onClick={handleClick}>
+      <img src={props.image} />
+      <ul>
+        <li>{props.name}</li>
         <li>{props.price}</li>
-        {/* <li>{props.rating.count}</li>
+        <li>{props.description}</li>
+
+        {/* <li>{props.category}</li>
+        <li>{props.description}</li>
+        <li>{props.rating.count}</li>
         <li>{props.rating.rate}</li>
         <li>{props.title}</li> */}
       </ul>

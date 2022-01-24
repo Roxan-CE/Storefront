@@ -1,0 +1,41 @@
+import React from "react";
+import axios from "axios";
+import Thumbnail from "./Thumbnail";
+import { PaddedDiv } from "./styleComponents/divStyles";
+import products from "../products";
+
+function Store() {
+  return (
+    <PaddedDiv>
+      {products.map((product) => {
+        return (
+          <Thumbnail
+            image={product.image}
+            name={product.name}
+            price={product.price}
+            description={product.details}
+          ></Thumbnail>
+        );
+      })}
+    </PaddedDiv>
+  );
+}
+
+export default Store;
+
+{
+  /* <div>
+<ul>
+  <li>{product.category}</li>
+  <li>{product.description}</li>
+  <li>{product.id}</li>
+  <li>
+    <img src={} />
+  </li>
+  <li>{product.price}</li>
+  <li>{product.rating.count}</li>
+  <li>{product.rating.rate}</li>
+  <li>{product.title}</li>
+</ul>
+</div> */
+}
