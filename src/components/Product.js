@@ -6,11 +6,11 @@ import { ProductImage } from "./styleComponents/Imagestyles";
 
 function Product() {
   const navigate = useNavigate();
-  const { name } = useParams();
+  const { product } = useParams();
 
-  const product = products.find((x) => x.name === name);
+  const item = products.find((x) => x.name === product);
 
-  console.log(product);
+  console.log(item);
 
   return (
     <ContainerDiv>
@@ -24,17 +24,14 @@ function Product() {
             Back
           </button>
           <div>
-            <h3>{name}</h3>
-            <p>{product.price}</p>
+            <h3>{product}</h3>
+            <p>{item.price}</p>
           </div>
-          <ProductImage src={product.image} />
+          <ProductImage src={item.image} />
           <div>
-            <ul>
-              <li>{product.name}</li>
-              <li>{product.price}</li>
-              <li>{product.category}</li>
-              <li>{product.details}</li>
-            </ul>
+            <p>{item.details}</p>
+
+            <button onClick={handleClick}>Add to Cart</button>
           </div>
         </PaddedDiv>
       </InnerDiv>

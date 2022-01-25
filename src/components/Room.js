@@ -1,21 +1,28 @@
 import React from "react";
-import axios from "axios";
-import Thumbnail from "./Thumbnail";
+import { useParams } from "react-router-dom";
+import products from "../products";
 import {
   CategoriesContainer,
   ContainerDiv,
   InnerDiv,
 } from "./styleComponents/divStyles";
-import products from "../products";
+import Thumbnail from "./Thumbnail";
 
-function Store() {
+function Room() {
+  let { room } = useParams();
+
+  console.log(room);
+
+  const categorized = products.filter((product) => product.category === room);
+
   return (
     <ContainerDiv>
       <InnerDiv>
         <CategoriesContainer>
-          {products.map((product) => {
+          {categorized.map((product) => {
             return (
               <Thumbnail
+                key={product.name + 1}
                 image={product.image}
                 name={product.name}
                 price={product.price}
@@ -29,21 +36,4 @@ function Store() {
   );
 }
 
-export default Store;
-
-{
-  /* <div>
-<ul>
-  <li>{product.category}</li>
-  <li>{product.description}</li>
-  <li>{product.id}</li>
-  <li>
-    <img src={} />
-  </li>
-  <li>{product.price}</li>
-  <li>{product.rating.count}</li>
-  <li>{product.rating.rate}</li>
-  <li>{product.title}</li>
-</ul>
-</div> */
-}
+export default Room;

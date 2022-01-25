@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Logo = styled.h1`
   letter-spacing: 2.5px;
-  padding: 0 20px;
+  padding: 5px 20px;
   font-size: 1.3rem;
 `;
 

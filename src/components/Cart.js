@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import products from "../products";
 import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
 
@@ -6,7 +6,11 @@ function Cart() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <h1>This is your cart.</h1>
+        {cart.length === 0 ? (
+          <div>Your cart is currently empty.</div>
+        ) : (
+          <div>{cart}</div>
+        )}
       </InnerDiv>
     </ContainerDiv>
   );

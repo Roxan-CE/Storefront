@@ -4,8 +4,8 @@ const products = [
   {
     name: "Bocker",
     details:
-      "Beautiful white-washed wood display book. It features black printed French titles to add a touch of sophistication and intelligence, complete with PVC green leaves on top for some extra flair. This will be a timeless home decor item that will go well with almost any living room, bedroom, or study.",
-    category: "Decor",
+      "Beautiful white-washed wood display book. It features black printed French titles to add a touch of sophistication and intelligence, complete with PVC green leaves on top for some extra flair. This will be a timeless home decor item that will go well with almost any livingroom, bedroom, or study.",
+    category: "decor",
     type: "table decor",
     sale: false,
     bestseller: false,
@@ -51,7 +51,7 @@ const products = [
     name: "Andrakoppen",
     details:
       "This beautifully crafted mug will be your favorite for coffee. The wonderful design with plain texture and shine adds a hand-made feel. ",
-    category: "Kitchen",
+    category: "kitchen",
     type: "cup",
     sale: false,
     dimensions: {
@@ -82,7 +82,7 @@ const products = [
     name: "Kopp",
     details:
       "Enjoy coffee with this elegant coffee mug.  Perfect for coffee lovers.",
-    category: "Kitchen",
+    category: "kitchen",
     type: "cup",
     sale: false,
     bestseller: false,
@@ -174,7 +174,7 @@ const products = [
     name: "Bruntsate",
     details:
       "This sofa can fit perfectly with a contemporary look, scandinavian style, or a more boho-looking living space. ",
-    category: "living room",
+    category: "livingroom",
     type: "sofa",
     sale: false,
     bestseller: false,
@@ -213,7 +213,7 @@ const products = [
     name: "Entill",
     details:
       "Simple with just the right amount of scandinavian flair, this dining set is the best addition to a small condo and cozy living situations.",
-    category: "dining room",
+    category: "diningroom",
     type: "dining set",
     sale: false,
     bestseller: false,
@@ -259,7 +259,7 @@ const products = [
     name: "Fluffig",
     details:
       "This beautiful tufted armchair adds comfort and elegance to your home. It uses teddy fabric, a fusion of boho style and modern life.",
-    category: "living room",
+    category: "livingroom",
     type: "chair",
     sale: false,
     bestseller: false,
@@ -337,7 +337,7 @@ const products = [
     name: "Haftigt",
     details:
       "Relax in comfort with this plush sofa. This exemplary furniture of scandinavian style works well in converted lofts and modern condos alike. ",
-    category: "living room",
+    category: "livingroom",
     type: "sofa",
     sale: false,
     bestseller: false,
@@ -532,7 +532,7 @@ const products = [
     name: "Matplats",
     details:
       "This simple dining set with mid-century modern style will complete your space.  In a space-saving design, you and your friends can enjoy game nights and socialize around this dining table.",
-    category: "dining room",
+    category: "diningroom",
     type: "dining set",
     sale: false,
     bestseller: false,
@@ -592,7 +592,7 @@ const products = [
     name: "Mertabell",
     details:
       "Full of modern style, the table features a black glass surface, while the seats are upholstered in black velvet fabric with stitch details and tapered legs. This five-piece set is a perfect way to round out your home with on-trend dining.",
-    category: "dining room",
+    category: "diningroom",
     type: "dining set",
     sale: false,
     bestseller: false,
@@ -800,8 +800,8 @@ const products = [
   {
     name: "Sidobord",
     details:
-      "Whether set beside your sofa in the living room or pulled up to your bedside for a charming nightstand, this end table is an excellent addition to any ensemble.",
-    category: "living room",
+      "Whether set beside your sofa in the livingroom or pulled up to your bedside for a charming nightstand, this end table is an excellent addition to any ensemble.",
+    category: "livingroom",
     type: "end table",
     sale: false,
     bestseller: false,
@@ -839,8 +839,8 @@ const products = [
   {
     name: "Sittplatser",
     details:
-      "Elegant lines and contemporary design make the sofa a timeless piece for living rooms and seating areas.",
-    category: "living room",
+      "Elegant lines and contemporary design make the sofa a timeless piece for livingrooms and seating areas.",
+    category: "livingroom",
     type: "sofa",
     sale: false,
     bestseller: false,
@@ -872,7 +872,7 @@ const products = [
     name: "Sittpuff",
     details:
       "Perfect for using as an extra table or offering a spare seat at your next soiree, this posh pouf brings both fashion and function to your space.",
-    category: "living room",
+    category: "livingroom",
     type: "chair",
     sale: false,
     bestseller: false,
@@ -918,7 +918,7 @@ const products = [
     name: "Skap",
     details:
       "Beautiful craftsmanship and intricate detailing, with durable splayed wood legs, beveled top, and sleek handles to finish. This beautiful sideboard offers ample space for tucking away dishes, tablecloths, and dinnerware to host ultimate dinner parties.",
-    category: "dining room",
+    category: "diningroom",
     type: "sideboard",
     sale: false,
     bestseller: false,
@@ -964,7 +964,7 @@ const products = [
     name: "Skon",
     details:
       "This elegant mid-Century modern sofa is the perfect way to add both style and comfort to your home.",
-    category: "living room",
+    category: "livingroom",
     type: "sofa",
     sale: false,
     bestseller: false,
@@ -1002,7 +1002,7 @@ const products = [
   {
     name: "Slumpmassig",
     details:
-      "Add a sense of decoration to your living room or bedroom, or use the mirror to create the illusion of more space in the home.",
+      "Add a sense of decoration to your livingroom or bedroom, or use the mirror to create the illusion of more space in the home.",
     category: "decor",
     type: "mirror",
     sale: false,
@@ -1127,7 +1127,7 @@ const products = [
     name: "Tallrik",
     details:
       "Bring fashionable elegance to your home with this set of 4 plates. Every piece has a soft matte finish that brings a scandinavian touch to your dish collection.",
-    category: "Kitchen",
+    category: "kitchen",
     bestseller: false,
     sale: false,
     dimensions: {
@@ -1204,7 +1204,7 @@ const products = [
     name: "Trosta",
     details:
       "A fresh, clean console table that is versatile in any space. Roomy drawer to store remotes, glasses, or even table linens.",
-    category: "living room",
+    category: "livingroom",
     type: "table",
     sale: false,
     bestseller: false,
@@ -1394,8 +1394,8 @@ const products = [
   {
     name: "Vaxtkruka",
     details:
-      "Displayed in your dining or living room, entryways or hallways, this vase set is sure to bring charm and joy to any space. The neutral tones will work with any color palette.",
-    category: "Kitchen",
+      "Displayed in your dining or livingroom, entryways or hallways, this vase set is sure to bring charm and joy to any space. The neutral tones will work with any color palette.",
+    category: "kitchen",
     type: "dining set",
     sale: false,
     bestseller: false,
@@ -1441,7 +1441,7 @@ const products = [
     name: "Vitbord",
     details:
       "Mix a dash of mid-century modern flair into your entertainment ensemble with this dining set. A two-toned white and brown finish outfits this set for crisp contrast, while still ensuring it’s neutral enough to complement any colour palette.",
-    category: "dining room",
+    category: "diningroom",
     type: "dining set",
     sale: false,
     bestseller: false,
@@ -1473,7 +1473,7 @@ const products = [
     name: "Vitstol",
     details:
       "Putting an elegant style on simplicity, this armchair features luxurious velvet fabric, and a button-tufted seat back for added flair.",
-    category: "living room",
+    category: "livingroom",
     type: "chair",
     sale: false,
     bestseller: false,

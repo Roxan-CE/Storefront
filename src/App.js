@@ -25,6 +25,21 @@ function App() {
     }
   }, []);
 
+  //CART LOGIC
+  const [cart, setCart] = useState();
+
+  useEffect(() => {
+    commerce.cart.retrieve().then((res) => {
+      setCart(res);
+    });
+  }, []);
+
+  const addToCart = () => {
+    setCart();
+  };
+
+  //END CART LOGIC
+
   return (
     <ThemeProvider theme={themeMode}>
       <>

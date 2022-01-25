@@ -21,13 +21,17 @@ const MenuDiv = styled.div`
   padding: 10px;
   display: flex;
   background-color: white;
+  justify-content: flex-end;
+`;
 
+const HoverDiv = styled.div`
   svg {
-    padding: 6px 6px;
+    padding: 10px 6px;
+    cursor: pointer;
   }
 
   &:hover nav {
     display: flex;
   }
 `;
-export { MenuDiv, Menu };
+export { MenuDiv, Menu, HoverDiv };

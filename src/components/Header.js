@@ -4,10 +4,21 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Logo, NavDiv } from "./styleComponents/HeaderStyles";
 import { LiStyled, UlStyled } from "./styleComponents/UlStyles";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
-import { Menu, MenuDiv } from "./styleComponents/MenuStyles";
+import { Link, useNavigate } from "react-router-dom";
+import { HoverDiv, Menu, MenuDiv } from "./styleComponents/MenuStyles";
+import { CartImage, HeartImage } from "./styleComponents/Imagestyles";
 
 function Header() {
+  let navigate = useNavigate();
+
+  const handleClick = (link) => {
+    if (link === "wishlist") {
+      navigate("/wishlist");
+    } else if (link === "cart") {
+      navigate("/cart");
+    }
+  };
+
   return (
     <ContainerDiv>
       <NavDiv>
@@ -15,40 +26,60 @@ function Header() {
           <Link to="/">Cozy Living</Link>
         </Logo>
         <MenuDiv>
-          <Link to="/cart">
-            <ShoppingCartIcon />
-          </Link>
-          <MenuIcon />
-          <Menu>
-            <UlStyled>
-              <LiStyled>
-                <em>
-                  <Link to="/shop">Shop</Link>
-                </em>
-                <div>
-                  <UlStyled>
-                    <LiStyled>Living Room</LiStyled>
-                    <LiStyled>Dining Room</LiStyled>
-                    <LiStyled>Kitchen</LiStyled>
-                    <LiStyled>Bedroom</LiStyled>
-                    <LiStyled>Bathroom</LiStyled>
-                    <LiStyled>Decor</LiStyled>
-                  </UlStyled>
-                </div>
-              </LiStyled>
-              <LiStyled>
-                <Link to="/about">About</Link>
-              </LiStyled>
-              <LiStyled>
-                <Link to="/wishlist">Wishlist</Link>
-              </LiStyled>
+          <HeartImage
+            src="/products/wishlist.svg"
+            onClick={() => handleClick("wishlist")}
+          />
+          <CartImage
+            src="/products/shoppingbag.svg"
+            onClick={() => handleClick("cart")}
+          />
 
-              <LiStyled>Login</LiStyled>
-              <LiStyled>
-                <input></input>
-              </LiStyled>
-            </UlStyled>
-          </Menu>
+          <HoverDiv>
+            <MenuIcon />
+            <Menu>
+              <UlStyled>
+                <LiStyled>
+                  <em>
+                    <Link to="/all-products">Shop</Link>
+                  </em>
+                  <div>
+                    <UlStyled>
+                      <Link to="/livingroom">
+                        <LiStyled>Living Room</LiStyled>
+                      </Link>
+                      <Link to="/diningroom">
+                        <LiStyled>Dining Room</LiStyled>
+                      </Link>
+                      <Link to="/kitchen">
+                        <LiStyled>Kitchen</LiStyled>
+                      </Link>
+                      <Link to="/bedroom">
+                        <LiStyled>Bedroom</LiStyled>
+                      </Link>
+                      <Link to="/bathroom">
+                        <LiStyled>Bathroom</LiStyled>
+                      </Link>
+                      <Link to="/decor">
+                        <LiStyled>Decor</LiStyled>
+                      </Link>
+                    </UlStyled>
+                  </div>
+                </LiStyled>
+                <LiStyled>
+                  <Link to="/about">About</Link>
+                </LiStyled>
+                <LiStyled>
+                  <Link to="/wishlist">Wishlist</Link>
+                </LiStyled>
+
+                <LiStyled>Login</LiStyled>
+                <LiStyled>
+                  <input></input>
+                </LiStyled>
+              </UlStyled>
+            </Menu>
+          </HoverDiv>
         </MenuDiv>
       </NavDiv>
     </ContainerDiv>

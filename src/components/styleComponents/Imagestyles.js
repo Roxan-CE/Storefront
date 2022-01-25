@@ -24,4 +24,15 @@ const ProductImage = styled.img`
   width: 340px;
 `;
 
-export { Category, MainImage, ProductImage };
+const CartImage = styled.img`
+  width: 15%;
+  padding: 0 6px;
+  cursor: pointer;
+`;
+const HeartImage = styled.img`
+  padding: 4px 6px 0;
+  width: 15%;
+  cursor: pointer;
+`;
+
+export { Category, MainImage, ProductImage, CartImage, HeartImage };

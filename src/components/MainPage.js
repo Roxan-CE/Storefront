@@ -9,6 +9,7 @@ import {
 } from "./styleComponents/divStyles";
 import products from "../products";
 import { Category, MainImage } from "./styleComponents/Imagestyles";
+import { Link } from "react-router-dom";
 
 function MainPage() {
   return (
@@ -21,18 +22,39 @@ function MainPage() {
       </InnerDiv>
       <InnerDiv>
         <CategoriesContainer>
-          <Category
-            image="products/Categories/LivingRoom.jpg"
-            position="0 60%"
-          />
-          <Category
-            image="products/Categories/DiningRoom.jpg"
-            position="0 55%"
-          />
-          <Category image="products/Categories/Kitchen.jpg" position="0 60%" />
-          <Category image="products/Categories/bedroom.jpg" position="0 55%" />
-          <Category image="products/Categories/Bathroom.jpg" position="0 65%" />
-          <Category image="products/Categories/Decor.jpg" position="0 60%" />
+          <Link to="/livingroom">
+            <Category
+              image="products/Categories/LivingRoom.jpg"
+              position="0 60%"
+            />
+          </Link>
+          <Link to="/diningroom">
+            <Category
+              image="products/Categories/DiningRoom.jpg"
+              position="0 55%"
+            />
+          </Link>
+          <Link to="/kitchen">
+            <Category
+              image="products/Categories/Kitchen.jpg"
+              position="0 60%"
+            />
+          </Link>
+          <Link to="/bedroom">
+            <Category
+              image="products/Categories/bedroom.jpg"
+              position="0 55%"
+            />
+          </Link>
+          <Link to="/bathroom">
+            <Category
+              image="products/Categories/Bathroom.jpg"
+              position="0 65%"
+            />
+          </Link>
+          <Link to="/decor">
+            <Category image="products/Categories/Decor.jpg" position="0 60%" />
+          </Link>
         </CategoriesContainer>
       </InnerDiv>
     </ContainerDiv>
