@@ -1,13 +1,13 @@
 import "./index.css";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./globalStyles";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import MainPage from "./components/MainPage";
 import { lightTheme, darkTheme } from "./components/Themes";
 import { useDarkMode } from "./components/useDarkMode";
 import { Outlet } from "react-router-dom";
+import { CartProvider } from "react-use-cart";
 
 function App() {
   const [theme, themeToggler] = useDarkMode();
@@ -26,17 +26,7 @@ function App() {
   }, []);
 
   //CART LOGIC
-  const [cart, setCart] = useState();
-
-  useEffect(() => {
-    commerce.cart.retrieve().then((res) => {
-      setCart(res);
-    });
-  }, []);
-
-  const addToCart = () => {
-    setCart();
-  };
+  const [cart, setCart] = useState([]);
 
   //END CART LOGIC
 
@@ -45,9 +35,11 @@ function App() {
       <>
         <GlobalStyles />
         <div className="App">
-          <Header theme={themeMode} onClick={themeToggler} />
-          <Outlet />
-          <Footer />
+          <CartProvider>
+            <Header theme={themeMode} onClick={themeToggler} />
+            <Outlet />
+            <Footer />
+          </CartProvider>
         </div>
       </>
     </ThemeProvider>

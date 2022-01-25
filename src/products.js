@@ -2,6 +2,7 @@ import moment from "moment";
 
 const products = [
   {
+    id: 1,
     name: "Bocker",
     details:
       "Beautiful white-washed wood display book. It features black printed French titles to add a touch of sophistication and intelligence, complete with PVC green leaves on top for some extra flair. This will be a timeless home decor item that will go well with almost any livingroom, bedroom, or study.",
@@ -48,6 +49,7 @@ const products = [
     ],
   },
   {
+    id: 2,
     name: "Andrakoppen",
     details:
       "This beautifully crafted mug will be your favorite for coffee. The wonderful design with plain texture and shine adds a hand-made feel. ",
@@ -79,6 +81,7 @@ const products = [
     ],
   },
   {
+    id: 3,
     name: "Kopp",
     details:
       "Enjoy coffee with this elegant coffee mug.  Perfect for coffee lovers.",
@@ -132,6 +135,7 @@ const products = [
     ],
   },
   {
+    id: 4,
     name: "Bekvam",
     details:
       "A beautiful addition to your guest room – or even the master suite – this platform bed features a simple, versatile silhouette. ",
@@ -171,6 +175,7 @@ const products = [
     ],
   },
   {
+    id: 5,
     name: "Bruntsate",
     details:
       "This sofa can fit perfectly with a contemporary look, scandinavian style, or a more boho-looking living space. ",
@@ -210,6 +215,7 @@ const products = [
     ],
   },
   {
+    id: 6,
     name: "Entill",
     details:
       "Simple with just the right amount of scandinavian flair, this dining set is the best addition to a small condo and cozy living situations.",
@@ -256,6 +262,7 @@ const products = [
     ],
   },
   {
+    id: 7,
     name: "Fluffig",
     details:
       "This beautiful tufted armchair adds comfort and elegance to your home. It uses teddy fabric, a fusion of boho style and modern life.",
@@ -295,6 +302,7 @@ const products = [
     ],
   },
   {
+    id: 8,
     name: "Grejer",
     details:
       "This 6 piece bath set creates a timeless elegance of a 5-star Scandinavation spa of long-lasting quality for years to come.",
@@ -334,6 +342,7 @@ const products = [
     ],
   },
   {
+    id: 9,
     name: "Haftigt",
     details:
       "Relax in comfort with this plush sofa. This exemplary furniture of scandinavian style works well in converted lofts and modern condos alike. ",
@@ -366,6 +375,7 @@ const products = [
     ],
   },
   {
+    id: 10,
     name: "Hylla",
     details:
       "This beautiful handmade floating shelf sports a rectangular silhouette and boasts a natural pine wood finish. It is sure to catch the eye in any ensemble, and provides plenty of room to perch books, photos, plants, and more up top.",
@@ -412,6 +422,7 @@ const products = [
     ],
   },
   {
+    id: 11,
     name: "Kantig",
     details:
       "Looking for a modern and sleek decoration to hang on your wall? This frame is the perfect choice for your home and office décor. Has a keyhole on the back for easy hanging on your wall.",
@@ -451,6 +462,7 @@ const products = [
     ],
   },
   {
+    id: 12,
     name: "Sev",
     details:
       "Handmade all-natural scented candle. It is made of soy and palm 100% vegetable oil wax. It will fill any room with a heavenly romantic scent of flowers and plants.",
@@ -490,6 +502,7 @@ const products = [
     ],
   },
   {
+    id: 13,
     name: "Malning",
     details:
       "This beautiful watercolor picture fills in the blanks on an empty wall, and brings the wall to life. It has a premium hand-wrapped Giclée canvas, 100% made in China and created to last.",
@@ -529,6 +542,7 @@ const products = [
     ],
   },
   {
+    id: 14,
     name: "Matplats",
     details:
       "This simple dining set with mid-century modern style will complete your space.  In a space-saving design, you and your friends can enjoy game nights and socialize around this dining table.",
@@ -589,6 +603,7 @@ const products = [
     ],
   },
   {
+    id: 15,
     name: "Mertabell",
     details:
       "Full of modern style, the table features a black glass surface, while the seats are upholstered in black velvet fabric with stitch details and tapered legs. This five-piece set is a perfect way to round out your home with on-trend dining.",
@@ -628,6 +643,7 @@ const products = [
     ],
   },
   {
+    id: 16,
     name: "Nattduksbord",
     details:
       "With a clean, minimalist silhouette and square-tube, it's the essence of modern scandinavian style. ",
@@ -667,6 +683,7 @@ const products = [
     ],
   },
   {
+    id: 17,
     name: "Rundkruka",
     details:
       "This stunning ceramic bud vase can be used on its own for a beautiful statement piece or works well with flower and faux florals.",
@@ -713,6 +730,7 @@ const products = [
     ],
   },
   {
+    id: 18,
     name: "Forsmadlig",
     details:
       "Great for adding a decorative touch to any room's decor. Wonderful accent piece for coffee tables or side tables.",
@@ -759,6 +777,7 @@ const products = [
     ],
   },
   {
+    id: 19,
     name: "Annan",
     details:
       "Show off your blooms to their best by pairing them with this vase, a timeless pick suited for classic and modern spaces. ",
@@ -798,6 +817,7 @@ const products = [
     ],
   },
   {
+    id: 20,
     name: "Sidobord",
     details:
       "Whether set beside your sofa in the livingroom or pulled up to your bedside for a charming nightstand, this end table is an excellent addition to any ensemble.",
@@ -837,6 +857,7 @@ const products = [
     ],
   },
   {
+    id: 21,
     name: "Sittplatser",
     details:
       "Elegant lines and contemporary design make the sofa a timeless piece for livingrooms and seating areas.",
@@ -869,6 +890,7 @@ const products = [
     ],
   },
   {
+    id: 22,
     name: "Sittpuff",
     details:
       "Perfect for using as an extra table or offering a spare seat at your next soiree, this posh pouf brings both fashion and function to your space.",
@@ -915,6 +937,7 @@ const products = [
     ],
   },
   {
+    id: 23,
     name: "Skap",
     details:
       "Beautiful craftsmanship and intricate detailing, with durable splayed wood legs, beveled top, and sleek handles to finish. This beautiful sideboard offers ample space for tucking away dishes, tablecloths, and dinnerware to host ultimate dinner parties.",
@@ -961,6 +984,7 @@ const products = [
     ],
   },
   {
+    id: 24,
     name: "Skon",
     details:
       "This elegant mid-Century modern sofa is the perfect way to add both style and comfort to your home.",
@@ -1000,6 +1024,7 @@ const products = [
     ],
   },
   {
+    id: 25,
     name: "Slumpmassig",
     details:
       "Add a sense of decoration to your livingroom or bedroom, or use the mirror to create the illusion of more space in the home.",
@@ -1046,6 +1071,7 @@ const products = [
     ],
   },
   {
+    id: 26,
     name: "Spegel",
     details:
       "From offering a glimpse of your reflection to opening up a smaller space, mirrors are a versatile addition to any arrangement in your home. Plus, they double as decorative accents!",
@@ -1085,6 +1111,7 @@ const products = [
     ],
   },
   {
+    id: 27,
     name: "Svartkruka",
     details:
       "This vase, skillfully crafted from ceramic, is a beautiful and unique addition to your space that looks great by itself or when paired with other vases that compliment it.",
@@ -1124,6 +1151,7 @@ const products = [
     ],
   },
   {
+    id: 28,
     name: "Tallrik",
     details:
       "Bring fashionable elegance to your home with this set of 4 plates. Every piece has a soft matte finish that brings a scandinavian touch to your dish collection.",
@@ -1162,6 +1190,7 @@ const products = [
     ],
   },
   {
+    id: 29,
     name: "Tickande",
     details:
       "This eye-catching wall clock instantly elevates your favourite aesthetic. Its round silhouette blends effortlessly into both casual or formal spaces, while its clean profile adds sophistication to your decor.",
@@ -1201,6 +1230,7 @@ const products = [
     ],
   },
   {
+    id: 30,
     name: "Trosta",
     details:
       "A fresh, clean console table that is versatile in any space. Roomy drawer to store remotes, glasses, or even table linens.",
@@ -1240,6 +1270,7 @@ const products = [
     ],
   },
   {
+    id: 31,
     name: "Vadsomhelst",
     details:
       "A stunning alternative to traditional dining sets. The kitchen chairs are designed with padded faux leather cushions and the bottom legs are equipped with anti-scratches and anti-noise pads to protect your floor.",
@@ -1272,6 +1303,7 @@ const products = [
     ],
   },
   {
+    id: 32,
     name: "Vaxtbehallare",
     details:
       "This wood flower vase set is made of natural Paulownia wood. This is an ideal selection of vintage room decor adding a modern scandinavian touch to your home.",
@@ -1332,6 +1364,7 @@ const products = [
     ],
   },
   {
+    id: 33,
     name: "Vaxtbricka",
     details:
       "Instantly create an eye-catching display of elegance on your coffee table or window sill with this table vase. This set arrives with a wooden tray for your vase to sit to create a beautiful cohesive display.",
@@ -1392,6 +1425,7 @@ const products = [
     ],
   },
   {
+    id: 34,
     name: "Vaxtkruka",
     details:
       "Displayed in your dining or livingroom, entryways or hallways, this vase set is sure to bring charm and joy to any space. The neutral tones will work with any color palette.",
@@ -1438,6 +1472,7 @@ const products = [
     ],
   },
   {
+    id: 35,
     name: "Vitbord",
     details:
       "Mix a dash of mid-century modern flair into your entertainment ensemble with this dining set. A two-toned white and brown finish outfits this set for crisp contrast, while still ensuring it’s neutral enough to complement any colour palette.",
@@ -1470,6 +1505,7 @@ const products = [
     ],
   },
   {
+    id: 36,
     name: "Vitstol",
     details:
       "Putting an elegant style on simplicity, this armchair features luxurious velvet fabric, and a button-tufted seat back for added flair.",

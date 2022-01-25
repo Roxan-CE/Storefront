@@ -3,14 +3,14 @@ import products from "../products";
 import { ContainerDiv, InnerDiv, PaddedDiv } from "./styleComponents/divStyles";
 import { useParams, useNavigate } from "react-router-dom";
 import { ProductImage } from "./styleComponents/Imagestyles";
+import { useCart } from "react-use-cart";
 
 function Product() {
   const navigate = useNavigate();
   const { product } = useParams();
+  const { addItem } = useCart();
 
   const item = products.find((x) => x.name === product);
-
-  console.log(item);
 
   return (
     <ContainerDiv>
@@ -31,7 +31,7 @@ function Product() {
           <div>
             <p>{item.details}</p>
 
-            <button onClick={handleClick}>Add to Cart</button>
+            <button onClick={() => addItem(item)}>Add to Cart</button>
           </div>
         </PaddedDiv>
       </InnerDiv>

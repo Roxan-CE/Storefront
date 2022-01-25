@@ -7,9 +7,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useNavigate } from "react-router-dom";
 import { HoverDiv, Menu, MenuDiv } from "./styleComponents/MenuStyles";
 import { CartImage, HeartImage } from "./styleComponents/Imagestyles";
+import { useCart } from "react-use-cart";
 
 function Header() {
   let navigate = useNavigate();
+  const { totalItems } = useCart();
 
   const handleClick = (link) => {
     if (link === "wishlist") {
@@ -34,6 +36,7 @@ function Header() {
             src="/products/shoppingbag.svg"
             onClick={() => handleClick("cart")}
           />
+          <span>{totalItems}</span>
 
           <HoverDiv>
             <MenuIcon />

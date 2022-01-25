@@ -16,6 +16,7 @@ function Store() {
           {products.map((product) => {
             return (
               <Thumbnail
+                id={product.id}
                 image={product.image}
                 name={product.name}
                 price={product.price}
