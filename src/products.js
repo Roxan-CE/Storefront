@@ -15,7 +15,7 @@ const products = [
       height: 7.125,
       depth: 3,
     },
-    image: "/products/bocker.jpg",
+    image: "/assets/bocker.jpg",
     price: 60.99,
     reviews: [
       {
@@ -61,7 +61,7 @@ const products = [
       height: 4.33,
       depth: 5.24,
     },
-    image: "/products/andrakoppen.jpg",
+    image: "/assets/andrakoppen.jpg",
     price: 19.99,
     reviews: [
       {
@@ -94,7 +94,7 @@ const products = [
       height: 7.125,
       depth: 3,
     },
-    image: "/products/kopp.jpg",
+    image: "/assets/kopp.jpg",
     price: 60.99,
     reviews: [
       {
@@ -148,7 +148,7 @@ const products = [
       height: 74,
       depth: 10,
     },
-    image: "/products/bekvam.jpg",
+    image: "/assets/bekvam.jpg",
     price: 529.99,
     reviews: [
       {
@@ -188,7 +188,7 @@ const products = [
       height: 29.9,
       depth: 37.8,
     },
-    image: "/products/bruntsate.jpg",
+    image: "/assets/bruntsate.jpg",
     price: 1220.99,
     reviews: [
       {
@@ -228,7 +228,7 @@ const products = [
       height: 30,
       depth: 47,
     },
-    image: "/products/entill.jpg",
+    image: "/assets/entill.jpg",
     price: 669.99,
     reviews: [
       {
@@ -275,7 +275,7 @@ const products = [
       height: 32.28,
       depth: 31,
     },
-    image: "/products/fluffig.jpg",
+    image: "/assets/fluffig.jpg",
     price: 359.99,
     reviews: [
       {
@@ -315,7 +315,7 @@ const products = [
       height: 2.125,
       depth: 9,
     },
-    image: "/products/grejer.jpg",
+    image: "/assets/grejer.jpg",
     price: 46.99,
     reviews: [
       {
@@ -355,7 +355,7 @@ const products = [
       height: 18,
       depth: 48,
     },
-    image: "/products/haftigt.jpg",
+    image: "/assets/haftigt.jpg",
     price: 1499.99,
     reviews: [
       {
@@ -388,7 +388,7 @@ const products = [
       height: 5,
       depth: 8,
     },
-    image: "/products/hylla.jpg",
+    image: "/assets/hylla.jpg",
     price: 54.99,
     reviews: [
       {
@@ -435,7 +435,7 @@ const products = [
       height: 20,
       depth: 1.5,
     },
-    image: "/products/kantig.jpg",
+    image: "/assets/kantig.jpg",
     price: 32.99,
     reviews: [
       {
@@ -475,7 +475,7 @@ const products = [
       height: 6,
       depth: 4,
     },
-    image: "/products/sev.jpg",
+    image: "/assets/sev.jpg",
     price: 19.99,
     reviews: [
       {
@@ -515,7 +515,7 @@ const products = [
       height: 20,
       depth: 1.5,
     },
-    image: "/products/malning.jpg",
+    image: "/assets/malning.jpg",
     price: 36.99,
     reviews: [
       {
@@ -555,7 +555,7 @@ const products = [
       height: 30,
       depth: 27.5,
     },
-    image: "/products/matplats.jpg",
+    image: "/assets/matplats.jpg",
     price: 589.99,
     reviews: [
       {
@@ -616,7 +616,7 @@ const products = [
       height: 48.5,
       depth: 27.5,
     },
-    image: "/products/mertabell.jpg",
+    image: "/assets/mertabell.jpg",
     price: 699.99,
     reviews: [
       {
@@ -656,7 +656,7 @@ const products = [
       height: 5.8,
       depth: 14,
     },
-    image: "/products/nattduksbord.jpg",
+    image: "/assets/nattduksbord.jpg",
     price: 169.99,
     reviews: [
       {
@@ -696,7 +696,7 @@ const products = [
       height: 5.7,
       depth: 3,
     },
-    image: "/products/rundkruka.jpg",
+    image: "/assets/rundkruka.jpg",
     price: 16.99,
     reviews: [
       {
@@ -743,7 +743,7 @@ const products = [
       height: 12,
       depth: 4,
     },
-    image: "/products/forsmadlig.jpg",
+    image: "/assets/forsmadlig.jpg",
     price: 36.99,
     reviews: [
       {
@@ -790,7 +790,7 @@ const products = [
       height: 4.5,
       depth: 4.5,
     },
-    image: "/products/annan.jpg",
+    image: "/assets/annan.jpg",
     price: 42.99,
     reviews: [
       {
@@ -830,7 +830,7 @@ const products = [
       height: 23,
       depth: 13,
     },
-    image: "/products/sidobord.jpg",
+    image: "/assets/sidobord.jpg",
     price: 129.99,
     reviews: [
       {
@@ -870,7 +870,7 @@ const products = [
       height: 30.7,
       depth: 31.49,
     },
-    image: "/products/sittplatser.jpg",
+    image: "/assets/sittplatser.jpg",
     price: 1059.99,
     reviews: [
       {
@@ -903,7 +903,7 @@ const products = [
       height: 14,
       depth: 20,
     },
-    image: "/products/sittpuff.jpg",
+    image: "/assets/sittpuff.jpg",
     price: 124.99,
     reviews: [
       {
@@ -950,7 +950,7 @@ const products = [
       height: 33.07,
       depth: 14.96,
     },
-    image: "/products/skap.jpg",
+    image: "/assets/skap.jpg",
     price: 509.99,
     reviews: [
       {
@@ -997,7 +997,7 @@ const products = [
       height: 34,
       depth: 31,
     },
-    image: "/products/skon.jpg",
+    image: "/assets/skon.jpg",
     price: 1359.99,
     reviews: [
       {
@@ -1037,7 +1037,7 @@ const products = [
       height: 16,
       depth: 1.6,
     },
-    image: "/products/slumpmassig.jpg",
+    image: "/assets/slumpmassig.jpg",
     price: 116.99,
     reviews: [
       {
@@ -1084,7 +1084,7 @@ const products = [
       height: 30,
       depth: 2,
     },
-    image: "/products/spegel-gold.jpg",
+    image: "/assets/spegel-gold.jpg",
     price: 98.99,
     reviews: [
       {
@@ -1124,7 +1124,7 @@ const products = [
       height: 11.02,
       depth: 4.53,
     },
-    image: "/products/svartkruka.jpg",
+    image: "/assets/svartkruka.jpg",
     price: 56.99,
     reviews: [
       {
@@ -1163,7 +1163,7 @@ const products = [
       height: 8,
       depth: 1.5,
     },
-    image: "/products/tallrik-beige.jpg",
+    image: "/assets/tallrik-beige.jpg",
     price: 26.99,
     reviews: [
       {
@@ -1203,7 +1203,7 @@ const products = [
       height: 9.5,
       depth: 1.25,
     },
-    image: "/products/tickande.jpg",
+    image: "/assets/tickande.jpg",
     price: 42.99,
     reviews: [
       {
@@ -1243,7 +1243,7 @@ const products = [
       height: 32,
       depth: 14,
     },
-    image: "/products/trosta.jpg",
+    image: "/assets/trosta.jpg",
     price: 229.99,
     reviews: [
       {
@@ -1283,7 +1283,7 @@ const products = [
       height: 35.4,
       depth: 29.5,
     },
-    image: "/products/vadsomhelst.jpg",
+    image: "/assets/vadsomhelst.jpg",
     price: 259.99,
     reviews: [
       {
@@ -1316,7 +1316,7 @@ const products = [
       height: 7.5,
       depth: 3.1,
     },
-    image: "/products/vaxtbehallare.jpg",
+    image: "/assets/vaxtbehallare.jpg",
     price: 59.99,
     reviews: [
       {
@@ -1377,7 +1377,7 @@ const products = [
       height: 7.125,
       depth: 3,
     },
-    image: "/products/vaxtbricka.jpg",
+    image: "/assets/vaxtbricka.jpg",
     price: 60.99,
     reviews: [
       {
@@ -1438,7 +1438,7 @@ const products = [
       height: 12,
       depth: 5.45,
     },
-    image: "/products/vaxtkruka.jpg",
+    image: "/assets/vaxtkruka.jpg",
     price: 32.99,
     reviews: [
       {
@@ -1485,7 +1485,7 @@ const products = [
       height: 32,
       depth: 30,
     },
-    image: "/products/vitbord.jpg",
+    image: "/assets/vitbord.jpg",
     price: 460.99,
     reviews: [
       {
@@ -1518,7 +1518,7 @@ const products = [
       height: 33.4,
       depth: 26.3,
     },
-    image: "/products/vitstol.jpg",
+    image: "/assets/vitstol.jpg",
     price: 312.99,
     reviews: [
       {

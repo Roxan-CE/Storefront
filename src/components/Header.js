@@ -1,13 +1,13 @@
 import React from "react";
 import { ContainerDiv } from "./styleComponents/divStyles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Logo, NavDiv } from "./styleComponents/HeaderStyles";
-import { LiStyled, UlStyled } from "./styleComponents/UlStyles";
+import { CartCount, Logo, NavDiv } from "./styleComponents/HeaderStyles";
+import { LiStyled, UlStyled } from "./styleComponents/TextStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useNavigate } from "react-router-dom";
 import { HoverDiv, Menu, MenuDiv } from "./styleComponents/MenuStyles";
-import { CartImage, HeartImage } from "./styleComponents/Imagestyles";
-import { useCart } from "react-use-cart";
+import { CartImage } from "./styleComponents/Imagestyles";
+import { useCart, totalItems } from "react-use-cart";
 
 function Header() {
   let navigate = useNavigate();
@@ -28,15 +28,16 @@ function Header() {
           <Link to="/">Cozy Living</Link>
         </Logo>
         <MenuDiv>
-          <HeartImage
-            src="/products/wishlist.svg"
-            onClick={() => handleClick("wishlist")}
-          />
           <CartImage
-            src="/products/shoppingbag.svg"
+            src="/assets/shoppingbag.svg"
             onClick={() => handleClick("cart")}
           />
-          <span>{totalItems}</span>
+
+          {totalItems ? (
+            <CartCount onClick={() => handleClick("cart")}>
+              {totalItems}
+            </CartCount>
+          ) : null}
 
           <HoverDiv>
             <MenuIcon />

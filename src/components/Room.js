@@ -22,6 +22,7 @@ function Room() {
           {categorized.map((product) => {
             return (
               <Thumbnail
+                key={product.id + 1}
                 id={product.id}
                 image={product.image}
                 name={product.name}

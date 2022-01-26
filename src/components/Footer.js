@@ -1,11 +1,21 @@
 import React from "react";
-import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
+import {
+  CenterDiv,
+  ContainerDiv,
+  InnerDiv,
+  FooterDiv,
+} from "./styleComponents/divStyles";
 
 function Footer() {
+  const d = new Date();
+  let year = d.getFullYear();
+
   return (
     <ContainerDiv>
       <InnerDiv>
-        <h2>Roxan © 2022</h2>
+        <CenterDiv margin="20px">
+          <h4>Roxan © {year}</h4>
+        </CenterDiv>
       </InnerDiv>
     </ContainerDiv>
   );

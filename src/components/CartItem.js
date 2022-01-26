@@ -1,47 +1,51 @@
 import React from "react";
 import { useCart } from "react-use-cart";
-import { CartDiv } from "./styleComponents/CartStyles";
-import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
+import { CartDiv, CartImg, CartDetails } from "./styleComponents/CartStyles";
+import { ArrowImg, ButtonImg } from "./styleComponents/Imagestyles";
+import { FlexDiv, BreakDiv } from "./styleComponents/divStyles";
+import { useNavigate } from "react-router-dom";
+import formatter from "./formatter";
 
 function CartItem(props) {
-  const {
-    isEmpty,
-    totalUniqueItems,
-    totalItems,
-    items,
-    cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-  } = useCart();
-  return (
-    <ContainerDiv>
-      <InnerDiv>
-        <CartDiv>
-          <img src={props.image} />
-          <div>
-            <ul>
-              <li>{props.name}</li>
-              <li>{props.price}</li>
-              <li>Quantity: {props.quantity}</li>
-              <li>Total price: {props.quantity * props.price}</li>
-            </ul>
-          </div>
+  const { updateItemQuantity, removeItem } = useCart();
 
-          <button
-            onClick={() => updateItemQuantity(props.id, props.quantity - 1)}
-          >
-            -
-          </button>
-          <button
-            onClick={() => updateItemQuantity(props.id, props.quantity + 1)}
-          >
-            +
-          </button>
-          <button onClick={() => removeItem(props.id)}>Remove</button>
-        </CartDiv>
-      </InnerDiv>
-    </ContainerDiv>
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(props.name);
+  }
+
+  return (
+    <CartDiv>
+      <CartImg src={props.image} />
+      <CartDetails>
+        <ul>
+          <FlexDiv>
+            <h1 onClick={handleClick}>{props.name}</h1>
+            <ButtonImg
+              src="/assets/close.svg"
+              onClick={() => removeItem(props.id)}
+            />
+          </FlexDiv>
+          <BreakDiv></BreakDiv>
+
+          <li>Unit Price: {formatter.format(props.price)}</li>
+          <li>
+            Quantity:
+            <ArrowImg
+              src="/assets/left.svg"
+              onClick={() => updateItemQuantity(props.id, props.quantity - 1)}
+            />
+            <span>{props.quantity}</span>
+            <ArrowImg
+              src="/assets/right.svg"
+              onClick={() => updateItemQuantity(props.id, props.quantity + 1)}
+            />
+          </li>
+          <li>Total price: {formatter.format(props.quantity * props.price)}</li>
+        </ul>
+      </CartDetails>
+    </CartDiv>
   );
 }
 

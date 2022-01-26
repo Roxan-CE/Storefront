@@ -37,6 +37,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
+    letter-spacing: 1px;
   }
 
   h2 {
@@ -44,19 +45,29 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
-    margin: 1rem auto;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 10px;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
     margin: 0;
+    letter-spacing: 2px;
+  }
+
+  h4 {
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
   }
 
   p {
     margin: 0;
+
   }
 
   ul{

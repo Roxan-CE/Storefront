@@ -4,6 +4,7 @@ import Thumbnail from "./Thumbnail";
 import {
   BreakDiv,
   CategoriesContainer,
+  CenterDiv,
   ContainerDiv,
   InnerDiv,
 } from "./styleComponents/divStyles";
@@ -15,45 +16,37 @@ function MainPage() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <MainImage src="products/Categories/mainpic.jpg" />
-      </InnerDiv>
-      <InnerDiv>
-        <h2>TimeLess Beauty and Aesthetics</h2>
-      </InnerDiv>
-      <InnerDiv>
+        <CenterDiv margin="20px 0 0">
+          <MainImage src="assets/Categories/mainpic.jpg" />
+        </CenterDiv>
+        <CenterDiv>
+          <h2>TimeLess Beauty and Aesthetics</h2>
+        </CenterDiv>
+
         <CategoriesContainer>
           <Link to="/livingroom">
             <Category
-              image="products/Categories/LivingRoom.jpg"
+              image="assets/Categories/LivingRoom.jpg"
               position="0 60%"
             />
           </Link>
           <Link to="/diningroom">
             <Category
-              image="products/Categories/DiningRoom.jpg"
+              image="assets/Categories/DiningRoom.jpg"
               position="0 55%"
             />
           </Link>
           <Link to="/kitchen">
-            <Category
-              image="products/Categories/Kitchen.jpg"
-              position="0 60%"
-            />
+            <Category image="assets/Categories/Kitchen.jpg" position="0 60%" />
           </Link>
           <Link to="/bedroom">
-            <Category
-              image="products/Categories/bedroom.jpg"
-              position="0 55%"
-            />
+            <Category image="assets/Categories/bedroom.jpg" position="0 55%" />
           </Link>
           <Link to="/bathroom">
-            <Category
-              image="products/Categories/Bathroom.jpg"
-              position="0 65%"
-            />
+            <Category image="assets/Categories/Bathroom.jpg" position="0 65%" />
           </Link>
           <Link to="/decor">
-            <Category image="products/Categories/Decor.jpg" position="0 60%" />
+            <Category image="assets/Categories/Decor.jpg" position="0 60%" />
           </Link>
         </CategoriesContainer>
       </InnerDiv>
