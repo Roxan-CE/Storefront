@@ -14,8 +14,13 @@ import { ButtonImg, ProductImage } from "./styleComponents/Imagestyles";
 import { WideButton } from "./styleComponents/ButtonStyles";
 import { useCart } from "react-use-cart";
 import formatter from "./formatter";
+import CustomSeparator from "./Breadcrumb";
 
 function Product() {
+  window.scrollTo({
+    top: 0,
+  });
+
   const navigate = useNavigate();
   const { product } = useParams();
   const { addItem } = useCart();
@@ -37,6 +42,8 @@ function Product() {
             </h4>
           </LeftFlex>
           <BreakDiv margin="10px 0 30px"></BreakDiv>
+
+          <CustomSeparator></CustomSeparator>
 
           <StyledDiv>
             <h2>{product}</h2>

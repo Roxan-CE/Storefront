@@ -13,6 +13,13 @@ const UlStyled = styled.ul`
   list-style-type: none;
 `;
 
+const Striked = styled.h4`
+  text-decoration: line-through;
+`;
+const RedText = styled.h4`
+  color: red;
+`;
+
 const LiStyled = styled.li``;
 
-export { Fineprint, H3Link, UlStyled, LiStyled };
+export { Fineprint, H3Link, UlStyled, LiStyled, Striked, RedText };

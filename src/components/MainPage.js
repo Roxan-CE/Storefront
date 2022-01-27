@@ -13,6 +13,10 @@ import { Category, MainImage } from "./styleComponents/Imagestyles";
 import { Link } from "react-router-dom";
 
 function MainPage() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // for smoothly scrolling
+  });
   return (
     <ContainerDiv>
       <InnerDiv>

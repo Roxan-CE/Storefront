@@ -3,6 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import formatter from "./formatter";
 import { ButtonImg, ThumbnailImage } from "./styleComponents/Imagestyles";
+import { RedText, Striked } from "./styleComponents/TextStyles";
+import sale from "./Sale";
 
 export default function Thumbnail(props) {
   const navigate = useNavigate();
@@ -20,7 +22,15 @@ export default function Thumbnail(props) {
           <BreakDiv margin="10px 0"></BreakDiv>
         </FlexDiv>
         <FlexDiv>
-          <h4>{formatter.format(props.price)}</h4>
+          {props.sale ? (
+            <h4>
+              <Striked>{formatter.format(props.price)}</Striked>
+              <RedText>{formatter.format(props.price * sale)}</RedText>
+            </h4>
+          ) : (
+            <h4>{formatter.format(props.price)}</h4>
+          )}
+
           <ButtonImg onClick={() => addItem(props)} src="/assets/add.svg" />
 
           {/* <li>{props.category}</li>

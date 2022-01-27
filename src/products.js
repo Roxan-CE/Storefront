@@ -1,4 +1,5 @@
 import moment from "moment";
+import sale from "./components/Sale";
 
 const products = [
   {
@@ -7,6 +8,8 @@ const products = [
     details:
       "Beautiful white-washed wood display book. It features black printed French titles to add a touch of sophistication and intelligence, complete with PVC green leaves on top for some extra flair. This will be a timeless home decor item that will go well with almost any livingroom, bedroom, or study.",
     category: "decor",
+    itemsSold: 231,
+    dateAdded: moment("2021-01-20"),
     type: "table decor",
     sale: false,
     bestseller: false,
@@ -56,6 +59,8 @@ const products = [
     category: "kitchen",
     type: "cup",
     sale: false,
+    itemsSold: 131,
+    dateAdded: moment("2020-04-20"),
     dimensions: {
       width: 5.24,
       height: 4.33,
@@ -88,6 +93,8 @@ const products = [
     category: "kitchen",
     type: "cup",
     sale: false,
+    itemsSold: 410,
+    dateAdded: moment("2021-07-10"),
     bestseller: false,
     dimensions: {
       width: 4.75,
@@ -142,6 +149,8 @@ const products = [
     category: "bedroom",
     type: "bed",
     sale: false,
+    itemsSold: 31,
+    dateAdded: moment("2021-04-22"),
     bestseller: false,
     dimensions: {
       width: 37,
@@ -181,7 +190,9 @@ const products = [
       "This sofa can fit perfectly with a contemporary look, scandinavian style, or a more boho-looking living space. ",
     category: "livingroom",
     type: "sofa",
-    sale: false,
+    itemsSold: 121,
+    dateAdded: moment("2021-07-28"),
+    sale: true,
     bestseller: false,
     dimensions: {
       width: 71.3,
@@ -222,6 +233,8 @@ const products = [
     category: "diningroom",
     type: "dining set",
     sale: false,
+    itemsSold: 61,
+    dateAdded: moment("2021-05-10"),
     bestseller: false,
     dimensions: {
       width: 30,
@@ -269,6 +282,8 @@ const products = [
     category: "livingroom",
     type: "chair",
     sale: false,
+    itemsSold: 171,
+    dateAdded: moment("2021-09-21"),
     bestseller: false,
     dimensions: {
       width: 25.3,
@@ -309,6 +324,8 @@ const products = [
     category: "bathroom",
     type: "bath accessories",
     sale: false,
+    itemsSold: 178,
+    dateAdded: moment("2021-04-16"),
     bestseller: false,
     dimensions: {
       width: 4.75,
@@ -349,6 +366,8 @@ const products = [
     category: "livingroom",
     type: "sofa",
     sale: false,
+    itemsSold: 58,
+    dateAdded: moment("2021-07-06"),
     bestseller: false,
     dimensions: {
       width: 24,
@@ -381,7 +400,9 @@ const products = [
       "This beautiful handmade floating shelf sports a rectangular silhouette and boasts a natural pine wood finish. It is sure to catch the eye in any ensemble, and provides plenty of room to perch books, photos, plants, and more up top.",
     category: "bedroom",
     type: "shelf",
-    sale: false,
+    sale: true,
+    itemsSold: 91,
+    dateAdded: moment("2021-01-15"),
     bestseller: false,
     dimensions: {
       width: 44,
@@ -429,6 +450,8 @@ const products = [
     category: "decor",
     type: "wall decor",
     sale: false,
+    itemsSold: 207,
+    dateAdded: moment("2021-09-01"),
     bestseller: false,
     dimensions: {
       width: 16,
@@ -469,6 +492,8 @@ const products = [
     category: "decor",
     type: "tabletop decor",
     sale: false,
+    itemsSold: 319,
+    dateAdded: moment("2021-02-09"),
     bestseller: false,
     dimensions: {
       width: 4,
@@ -508,7 +533,9 @@ const products = [
       "This beautiful watercolor picture fills in the blanks on an empty wall, and brings the wall to life. It has a premium hand-wrapped Giclée canvas, 100% made in China and created to last.",
     category: "decor",
     type: "wall art",
-    sale: false,
+    sale: true,
+    itemsSold: 284,
+    dateAdded: moment("2021-04-06"),
     bestseller: false,
     dimensions: {
       width: 14,
@@ -549,6 +576,8 @@ const products = [
     category: "diningroom",
     type: "dining set",
     sale: false,
+    itemsSold: 52,
+    dateAdded: moment("2021-08-09"),
     bestseller: false,
     dimensions: {
       width: 47.5,
@@ -610,6 +639,8 @@ const products = [
     category: "diningroom",
     type: "dining set",
     sale: false,
+    itemsSold: 78,
+    dateAdded: moment("2021-08-04"),
     bestseller: false,
     dimensions: {
       width: 30,
@@ -650,6 +681,8 @@ const products = [
     category: "bedroom",
     type: "nightstand",
     sale: false,
+    itemsSold: 94,
+    dateAdded: moment("2021-06-30"),
     bestseller: false,
     dimensions: {
       width: 20.5,
@@ -689,7 +722,9 @@ const products = [
       "This stunning ceramic bud vase can be used on its own for a beautiful statement piece or works well with flower and faux florals.",
     category: "decor",
     type: "tabletop decor",
-    sale: false,
+    sale: true,
+    itemsSold: 161,
+    dateAdded: moment("2021-05-11"),
     bestseller: false,
     dimensions: {
       width: 3,
@@ -737,6 +772,8 @@ const products = [
     category: "decor",
     type: "tabletop decor",
     sale: false,
+    itemsSold: 94,
+    dateAdded: moment("2021-02-17"),
     bestseller: false,
     dimensions: {
       width: 4,
@@ -784,6 +821,8 @@ const products = [
     category: "decor",
     type: "tabletop decor",
     sale: false,
+    itemsSold: 420,
+    dateAdded: moment("2021-03-18"),
     bestseller: false,
     dimensions: {
       width: 6,
@@ -823,7 +862,9 @@ const products = [
       "Whether set beside your sofa in the livingroom or pulled up to your bedside for a charming nightstand, this end table is an excellent addition to any ensemble.",
     category: "livingroom",
     type: "end table",
-    sale: false,
+    sale: true,
+    itemsSold: 76,
+    dateAdded: moment("2021-02-18"),
     bestseller: false,
     dimensions: {
       width: 22,
@@ -864,6 +905,8 @@ const products = [
     category: "livingroom",
     type: "sofa",
     sale: false,
+    itemsSold: 10,
+    dateAdded: moment("2022-01-18"),
     bestseller: false,
     dimensions: {
       width: 63.77,
@@ -896,7 +939,9 @@ const products = [
       "Perfect for using as an extra table or offering a spare seat at your next soiree, this posh pouf brings both fashion and function to your space.",
     category: "livingroom",
     type: "chair",
-    sale: false,
+    sale: true,
+    itemsSold: 109,
+    dateAdded: moment("2021-04-08"),
     bestseller: false,
     dimensions: {
       width: 20,
@@ -943,7 +988,10 @@ const products = [
       "Beautiful craftsmanship and intricate detailing, with durable splayed wood legs, beveled top, and sleek handles to finish. This beautiful sideboard offers ample space for tucking away dishes, tablecloths, and dinnerware to host ultimate dinner parties.",
     category: "diningroom",
     type: "sideboard",
+    itemsSold: 420,
     sale: false,
+    itemsSold: 114,
+    dateAdded: moment("2021-08-08"),
     bestseller: false,
     dimensions: {
       width: 62.99,
@@ -991,6 +1039,8 @@ const products = [
     category: "livingroom",
     type: "sofa",
     sale: false,
+    itemsSold: 69,
+    dateAdded: moment("2021-03-19"),
     bestseller: false,
     dimensions: {
       width: 85,
@@ -1031,6 +1081,8 @@ const products = [
     category: "decor",
     type: "mirror",
     sale: false,
+    itemsSold: 239,
+    dateAdded: moment("2021-06-12"),
     bestseller: false,
     dimensions: {
       width: 16,
@@ -1077,7 +1129,9 @@ const products = [
       "From offering a glimpse of your reflection to opening up a smaller space, mirrors are a versatile addition to any arrangement in your home. Plus, they double as decorative accents!",
     category: "decor",
     type: "mirror",
-    sale: false,
+    sale: true,
+    itemsSold: 99,
+    dateAdded: moment("2021-07-22"),
     bestseller: false,
     dimensions: {
       width: 20,
@@ -1118,6 +1172,8 @@ const products = [
     category: "decor",
     type: "tabletop decor",
     sale: false,
+    itemsSold: 472,
+    dateAdded: moment("2021-01-28"),
     bestseller: false,
     dimensions: {
       width: 4.53,
@@ -1158,6 +1214,8 @@ const products = [
     category: "kitchen",
     bestseller: false,
     sale: false,
+    itemsSold: 509,
+    dateAdded: moment("2021-02-17"),
     dimensions: {
       width: 8,
       height: 8,
@@ -1197,6 +1255,8 @@ const products = [
     category: "wall decor",
     type: "clock",
     sale: false,
+    itemsSold: 389,
+    dateAdded: moment("2021-08-16"),
     bestseller: false,
     dimensions: {
       width: 9.5,
@@ -1237,6 +1297,8 @@ const products = [
     category: "livingroom",
     type: "table",
     sale: false,
+    itemsSold: 89,
+    dateAdded: moment("2021-09-13"),
     bestseller: false,
     dimensions: {
       width: 36,
@@ -1277,6 +1339,8 @@ const products = [
     category: "dining table",
     type: "dining set",
     sale: false,
+    itemsSold: 64,
+    dateAdded: moment("2021-11-28"),
     bestseller: false,
     dimensions: {
       width: 35.4,
@@ -1310,6 +1374,8 @@ const products = [
     category: "decor",
     type: "tabletop decor",
     sale: false,
+    itemsSold: 169,
+    dateAdded: moment("2021-12-12"),
     bestseller: false,
     dimensions: {
       width: 3.3,
@@ -1371,6 +1437,8 @@ const products = [
     category: "decor",
     type: "tabletop decor",
     sale: false,
+    itemsSold: 299,
+    dateAdded: moment("2021-01-03"),
     bestseller: false,
     dimensions: {
       width: 4.75,
@@ -1429,9 +1497,11 @@ const products = [
     name: "Vaxtkruka",
     details:
       "Displayed in your dining or livingroom, entryways or hallways, this vase set is sure to bring charm and joy to any space. The neutral tones will work with any color palette.",
-    category: "kitchen",
-    type: "dining set",
+    category: "decor",
+    type: "tabletop decor",
     sale: false,
+    itemsSold: 29,
+    dateAdded: moment("2022-01-12"),
     bestseller: false,
     dimensions: {
       width: 5.45,
@@ -1479,6 +1549,8 @@ const products = [
     category: "diningroom",
     type: "dining set",
     sale: false,
+    itemsSold: 65,
+    dateAdded: moment("2021-08-10"),
     bestseller: false,
     dimensions: {
       width: 30,
@@ -1512,6 +1584,8 @@ const products = [
     category: "livingroom",
     type: "chair",
     sale: false,
+    itemsSold: 103,
+    dateAdded: moment("2021-07-29"),
     bestseller: false,
     dimensions: {
       width: 28.3,
