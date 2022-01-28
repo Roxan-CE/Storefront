@@ -5,11 +5,14 @@ const FlexDiv = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: ${(props) => props.margin};
 `;
 
 const FlexSpacedT20 = styled(FlexDiv)`
   margin-top: 20px;
+`;
+
+const FlexSpaced20 = styled(FlexDiv)`
+  margin: 20px;
 `;
 
 const RightFlex = styled(FlexDiv)`
@@ -30,7 +33,7 @@ const CenterDiv = styled(FlexDiv)`
   justify-content: center;
 `;
 
-const CenterDiv20 = styled(FlexDiv)`
+const CenterDiv20 = styled(CenterDiv)`
   margin: 20px 0;
 `;
 
@@ -42,8 +45,10 @@ export {
   FlexDiv,
   RightFlex,
   LeftFlex,
+  CenterDiv,
   FlexSpacedT20,
   LeftFlex20,
   CenterDiv20,
   CenterDiv40,
+  FlexSpaced20,
 };

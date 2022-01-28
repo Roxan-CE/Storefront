@@ -3,16 +3,19 @@ import { useCart } from "react-use-cart";
 import { useNavigate, Link } from "react-router-dom";
 import CartItem from "./CartItem";
 import {
-  BreakDiv,
   CategoriesContainer,
-  CenterDiv,
   ContainerDiv,
-  FlexDiv,
   InnerDiv,
-  RightAligned,
 } from "./styleComponents/divStyles";
 import { Fineprint, H3Link } from "./styleComponents/TextStyles";
 import { WideButton } from "./styleComponents/ButtonStyles";
+import {
+  CenterDiv20,
+  CenterDiv40,
+  FlexDiv,
+  FlexSpaced20,
+} from "./styleComponents/FlexDivs";
+import { BreakDiv1020 } from "./styleComponents/BreakDivs";
 
 function Cart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();
@@ -38,29 +41,29 @@ function Cart() {
       <InnerDiv>
         {isEmpty ? (
           <ContainerDiv>
-            <CenterDiv margin="100px 0 10px">
+            <CenterDiv40>
               <h4>Your cart is empty.</h4>
-            </CenterDiv>
+            </CenterDiv40>
 
-            <CenterDiv margin="10px 0 50px">
+            <CenterDiv20>
               <Link to="/all-products">
                 <WideButton>
                   <h3>Add some items</h3>
                 </WideButton>
               </Link>
-            </CenterDiv>
+            </CenterDiv20>
           </ContainerDiv>
         ) : (
           <CategoriesContainer>
-            <FlexDiv margin="20px 20px 0">
+            <FlexSpaced20>
               <h3>Total Items: {totalItems} </h3>
 
               <H3Link onClick={emptyCart}>Empty Cart</H3Link>
-            </FlexDiv>
+            </FlexSpaced20>
 
-            <BreakDiv margin="10px 20px"></BreakDiv>
+            <BreakDiv1020></BreakDiv1020>
 
-            {items.map((item, index) => {
+            {items.map((item) => {
               return (
                 <CartItem
                   key={item.id}
@@ -74,12 +77,12 @@ function Cart() {
               );
             })}
 
-            <FlexDiv margin="15px 20px 5px">
+            <FlexSpaced20>
               <h4>Total* </h4>
               <h4>{formatter.format(cartTotal)}</h4>
-            </FlexDiv>
+            </FlexSpaced20>
 
-            <BreakDiv></BreakDiv>
+            <BreakDiv1020></BreakDiv1020>
 
             <FlexDiv margin="5px 20px">
               <Fineprint>
@@ -90,7 +93,7 @@ function Cart() {
               </Fineprint>
             </FlexDiv>
 
-            <FlexDiv margin="10px 20px">
+            <FlexSpaced20>
               <WideButton
                 onClick={() => {
                   navigate("/preview");
@@ -101,7 +104,7 @@ function Cart() {
               <WideButton onClick={handleClick}>
                 <h3>Continue Shopping</h3>
               </WideButton>
-            </FlexDiv>
+            </FlexSpaced20>
           </CategoriesContainer>
         )}
       </InnerDiv>

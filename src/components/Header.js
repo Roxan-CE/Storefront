@@ -13,12 +13,8 @@ function Header() {
   let navigate = useNavigate();
   const { totalItems } = useCart();
 
-  const handleClick = (link) => {
-    if (link === "wishlist") {
-      navigate("/wishlist");
-    } else if (link === "cart") {
-      navigate("/cart");
-    }
+  const handleClick = () => {
+    navigate("/cart");
   };
 
   return (
@@ -73,11 +69,6 @@ function Header() {
                 <LiStyled>
                   <Link to="/about">About</Link>
                 </LiStyled>
-                <LiStyled>
-                  <Link to="/wishlist">Wishlist</Link>
-                </LiStyled>
-
-                <LiStyled>Login</LiStyled>
                 <LiStyled>
                   <input></input>
                 </LiStyled>

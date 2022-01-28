@@ -2,9 +2,10 @@ import React from "react";
 import { useCart } from "react-use-cart";
 import { CartDiv, CartImg, CartDetails } from "./styleComponents/CartStyles";
 import { ArrowImg, ButtonImg } from "./styleComponents/Imagestyles";
-import { FlexDiv, BreakDiv } from "./styleComponents/divStyles";
 import { useNavigate } from "react-router-dom";
 import formatter from "./formatter";
+import { FlexDiv } from "./styleComponents/FlexDivs";
+import { BreakDiv } from "./styleComponents/BreakDivs";
 
 function CartItem(props) {
   const { updateItemQuantity, removeItem } = useCart();

@@ -1,5 +1,4 @@
 import React from "react";
-import { CenterDiv, ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
 
 const stripeApiKey =
   pk_test_51KMkEABrSUNo10EJSwwopkX597MvfZV4Nj8ZMdCZ0PkdE7X2P99PTIEptVP7vqHVJRZbBZsjVG8LCTUsjVI0xqZO00CzWvtaPJ;

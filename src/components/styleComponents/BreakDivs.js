@@ -13,5 +13,8 @@ const BreakDiv10 = styled(BreakDiv)`
 const BreakDiv20 = styled(BreakDiv)`
   margin: 20px 0;
 `;
+const BreakDiv1020 = styled(BreakDiv)`
+  margin: 10px 20px;
+`;
 
-export { BreakDiv, BreakDiv10, BreakDiv20 };
+export { BreakDiv, BreakDiv10, BreakDiv20, BreakDiv1020 };

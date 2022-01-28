@@ -1,17 +1,12 @@
 import React from "react";
-import {
-  CenterDiv,
-  ContainerDiv,
-  InnerDiv,
-} from "../styleComponents/divStyles";
+import { ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
+import { CenterDiv20 } from "../styleComponents/FlexDivs";
 
 function Canceled() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <CenterDiv margin="20px">
-          Checkout was successfully cancelled.
-        </CenterDiv>
+        <CenterDiv20>Checkout was successfully cancelled.</CenterDiv20>
       </InnerDiv>
     </ContainerDiv>
   );

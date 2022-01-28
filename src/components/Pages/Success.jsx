@@ -1,15 +1,12 @@
 import React from "react";
-import {
-  CenterDiv,
-  ContainerDiv,
-  InnerDiv,
-} from "../styleComponents/divStyles";
+import { ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
+import { CenterDiv20 } from "../styleComponents/FlexDivs";
 
 function Success() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <CenterDiv margin="20px">Checkout was successful.</CenterDiv>
+        <CenterDiv20>Checkout was successful.</CenterDiv20>
       </InnerDiv>
     </ContainerDiv>
   );

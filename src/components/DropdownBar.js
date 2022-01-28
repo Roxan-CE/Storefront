@@ -1,6 +1,7 @@
 import React from "react";
 import products from "../products";
-import { BreakDiv, StyledDiv } from "./styleComponents/divStyles";
+import { BreakDiv } from "./styleComponents/BreakDivs";
+import { StyledDiv } from "./styleComponents/divStyles";
 import { Dropdown } from "./styleComponents/DropdownStyles";
 
 function DropdownBar(props) {

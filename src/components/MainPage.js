@@ -1,13 +1,12 @@
 import React from "react";
 import {
   CategoriesContainer,
-  CenterDiv,
   ContainerDiv,
   InnerDiv,
 } from "./styleComponents/divStyles";
 import { Category, MainImage } from "./styleComponents/Imagestyles";
 import { Link } from "react-router-dom";
-import { CenterDiv20 } from "./styleComponents/FlexDivs";
+import { CenterDiv20, CenterDiv } from "./styleComponents/FlexDivs";
 
 function MainPage() {
   window.scrollTo({

@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  BreakDiv,
-  CenterDiv,
-  ContainerDiv,
-  FlexDiv,
-  InnerDiv,
-} from "./styleComponents/divStyles";
+import { BreakDiv, ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
 import { useCart } from "react-use-cart";
-import CartItem from "./CartItem";
 import { CartImg } from "./styleComponents/CartStyles";
 import { WideButton } from "./styleComponents/ButtonStyles";
 import { useNavigate } from "react-router-dom";
+import { CenterDiv20, FlexDiv, FlexSpaced20 } from "./styleComponents/FlexDivs";
+import { BreakDiv1020 } from "./styleComponents/BreakDivs";
 
 function PreviewCart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();
@@ -25,8 +20,8 @@ function PreviewCart() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <CenterDiv margin="20px">
-          <BreakDiv margin="10px 20px"></BreakDiv>
+        <CenterDiv20>
+          <BreakDiv1020></BreakDiv1020>
 
           {items.map((item, index) => {
             return (
@@ -42,10 +37,10 @@ function PreviewCart() {
             );
           })}
 
-          <FlexDiv margin="15px 20px 5px">
+          <FlexSpaced20>
             <h4>Total </h4>
             <h4>{formatter.format(cartTotal)}</h4>
-          </FlexDiv>
+          </FlexSpaced20>
 
           <WideButton
             onClick={() => {
@@ -54,7 +49,7 @@ function PreviewCart() {
           >
             <h3>Pay Now</h3>
           </WideButton>
-        </CenterDiv>
+        </CenterDiv20>
       </InnerDiv>
     </ContainerDiv>
   );

@@ -10,7 +10,7 @@ export default function CustomSeparator() {
   let { product } = useParams();
 
   const breadcrumbs = [
-    <Link to="/">All Products</Link>,
+    <Link to="/all-products">All Products</Link>,
     <Link to={"/" + room}>{room.replace(/^\w/, (c) => c.toUpperCase())}</Link>,
     <Typography key="3" color="text.primary">
       {product}

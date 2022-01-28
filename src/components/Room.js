@@ -4,14 +4,13 @@ import products from "../products";
 import {
   CategoriesContainer,
   ContainerDiv,
-  FlexDiv,
   InnerDiv,
   PaddedDiv,
 } from "./styleComponents/divStyles";
 import Back from "./Back";
 import Thumbnail from "./Thumbnail";
 import DropdownBar from "./DropdownBar";
-import { CenterDiv40 } from "./styleComponents/FlexDivs";
+import { CenterDiv40, FlexDiv } from "./styleComponents/FlexDivs";
 
 function Room() {
   let { room } = useParams();

@@ -31,38 +31,8 @@ const CategoriesContainer = styled.div`
   padding: ${(props) => props.padding};
 `;
 
-const BreakDiv = styled.div`
-  width: 100%;
-  height: 0;
-  border-bottom: solid 1px;
-  margin: ${(props) => props.margin};
-`;
-
 const PaddedDiv = styled.div`
   margin: 0 20px;
-`;
-
-const FlexDiv = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: ${(props) => props.margin};
-`;
-
-const RightFlex = styled(FlexDiv)`
-  justify-content: end;
-  margin: ${(props) => props.margin};
-`;
-
-const LeftFlex = styled(FlexDiv)`
-  justify-content: start;
-  margin: ${(props) => props.margin};
-`;
-
-const CenterDiv = styled(FlexDiv)`
-  justify-content: center;
-  margin: ${(props) => props.margin};
 `;
 
 const StyledDiv = styled.div`
@@ -75,11 +45,6 @@ export {
   ThumbnailDiv,
   InnerDiv,
   CategoriesContainer,
-  BreakDiv,
   PaddedDiv,
-  FlexDiv,
-  RightFlex,
-  LeftFlex,
-  CenterDiv,
   StyledDiv,
 };
