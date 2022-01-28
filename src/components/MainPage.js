@@ -1,16 +1,13 @@
 import React from "react";
-import axios from "axios";
-import Thumbnail from "./Thumbnail";
 import {
-  BreakDiv,
   CategoriesContainer,
   CenterDiv,
   ContainerDiv,
   InnerDiv,
 } from "./styleComponents/divStyles";
-import products from "../products";
 import { Category, MainImage } from "./styleComponents/Imagestyles";
 import { Link } from "react-router-dom";
+import { CenterDiv20 } from "./styleComponents/FlexDivs";
 
 function MainPage() {
   window.scrollTo({
@@ -20,9 +17,9 @@ function MainPage() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <CenterDiv margin="20px 0 0">
+        <CenterDiv20>
           <MainImage src="assets/Categories/mainpic.jpg" />
-        </CenterDiv>
+        </CenterDiv20>
         <CenterDiv>
           <h2>TimeLess Beauty and Aesthetics</h2>
         </CenterDiv>

@@ -1,6 +1,6 @@
 import React from "react";
-import products from "../products";
-import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
+import products from "../../products";
+import { ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
 
 function About() {
   return (

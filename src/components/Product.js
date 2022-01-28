@@ -1,27 +1,26 @@
 import React from "react";
 import products from "../products";
 import {
-  BreakDiv,
   ContainerDiv,
   InnerDiv,
   PaddedDiv,
-  LeftFlex,
-  CenterDiv,
   StyledDiv,
 } from "./styleComponents/divStyles";
-import { useParams, useNavigate } from "react-router-dom";
-import { ButtonImg, ProductImage } from "./styleComponents/Imagestyles";
+import { useParams } from "react-router-dom";
+import { ProductImage } from "./styleComponents/Imagestyles";
 import { WideButton } from "./styleComponents/ButtonStyles";
 import { useCart } from "react-use-cart";
-import formatter from "./formatter";
 import CustomSeparator from "./Breadcrumb";
+import Price from "./Price";
+import { CenterDiv20, FlexSpacedT20 } from "./styleComponents/FlexDivs";
+import Back from "./Back";
+import { BreakDiv20 } from "./styleComponents/BreakDivs";
 
 function Product() {
   window.scrollTo({
     top: 0,
   });
 
-  const navigate = useNavigate();
   const { product } = useParams();
   const { addItem } = useCart();
 
@@ -31,35 +30,26 @@ function Product() {
     <ContainerDiv>
       <InnerDiv>
         <PaddedDiv>
-          <LeftFlex margin="20px 0">
-            <ButtonImg src="/assets/back.svg" />
-            <h4
-              onClick={() => {
-                navigate(-1);
-              }}
-            >
-              Back
-            </h4>
-          </LeftFlex>
-          <BreakDiv margin="10px 0 30px"></BreakDiv>
+          <Back></Back>
+          <BreakDiv20></BreakDiv20>
 
           <CustomSeparator></CustomSeparator>
 
           <StyledDiv>
-            <h2>{product}</h2>
-            <h3>{formatter.format(item.price)}</h3>
+            <h2>{item.name}</h2>
+            <Price sale={item.sale} price={item.price}></Price>
           </StyledDiv>
 
           <ProductImage src={item.image} />
-          <div>
+          <FlexSpacedT20>
             <p>{item.details}</p>
 
-            <CenterDiv margin="20px 0">
+            <CenterDiv20>
               <WideButton onClick={() => addItem(item)}>
                 <h3>Add to Cart</h3>
               </WideButton>
-            </CenterDiv>
-          </div>
+            </CenterDiv20>
+          </FlexSpacedT20>
         </PaddedDiv>
       </InnerDiv>
     </ContainerDiv>

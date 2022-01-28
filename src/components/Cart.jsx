@@ -91,7 +91,11 @@ function Cart() {
             </FlexDiv>
 
             <FlexDiv margin="10px 20px">
-              <WideButton onClick={emptyCart}>
+              <WideButton
+                onClick={() => {
+                  navigate("/preview");
+                }}
+              >
                 <h3>Checkout</h3>
               </WideButton>
               <WideButton onClick={handleClick}>
