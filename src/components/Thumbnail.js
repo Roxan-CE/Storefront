@@ -5,6 +5,7 @@ import { ButtonImg, ThumbnailImage } from "./styleComponents/Imagestyles";
 import Price from "./Price";
 import { BreakDiv10 } from "./styleComponents/BreakDivs";
 import { FlexSpacedT20, FlexDiv } from "./styleComponents/FlexDivs";
+import { Title1 } from "./styleComponents/TextStyles";
 
 export default function Thumbnail(props) {
   const { addItem } = useCart();
@@ -17,7 +18,7 @@ export default function Thumbnail(props) {
 
       <FlexDiv>
         <FlexSpacedT20>
-          <h4>{props.name}</h4>
+          <Title1>{props.name}</Title1>
           <BreakDiv10></BreakDiv10>
         </FlexSpacedT20>
         <FlexDiv>

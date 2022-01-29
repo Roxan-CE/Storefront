@@ -10,8 +10,12 @@ export default function CustomSeparator() {
   let { product } = useParams();
 
   const breadcrumbs = [
-    <Link to="/all-products">All Products</Link>,
-    <Link to={"/" + room}>{room.replace(/^\w/, (c) => c.toUpperCase())}</Link>,
+    <Link key="2" to="/all-products">
+      All Products
+    </Link>,
+    <Link key="1" to={"/" + room}>
+      {room.replace(/^\w/, (c) => c.toUpperCase())}
+    </Link>,
     <Typography key="3" color="text.primary">
       {product}
     </Typography>,
@@ -19,7 +23,7 @@ export default function CustomSeparator() {
 
   return (
     <Stack spacing={2}>
-      <Breadcrumbs separator=" | " aria-label="breadcrumb">
+      <Breadcrumbs key="6" separator=" | " aria-label="breadcrumb">
         {breadcrumbs}
       </Breadcrumbs>
     </Stack>

@@ -13,13 +13,22 @@ const UlStyled = styled.ul`
   list-style-type: none;
 `;
 
-const Striked = styled.h4`
+const Title1 = styled.p`
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+`;
+
+const Striked = styled(Title1)`
   text-decoration: line-through;
 `;
-const RedText = styled.h4`
+const RedText = styled(Title1)`
   color: red;
 `;
 
 const LiStyled = styled.li``;
 
-export { Fineprint, H3Link, UlStyled, LiStyled, Striked, RedText };
+export { Fineprint, H3Link, UlStyled, LiStyled, Striked, RedText, Title1 };

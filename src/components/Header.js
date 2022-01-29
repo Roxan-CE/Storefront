@@ -1,21 +1,21 @@
 import React from "react";
 import { ContainerDiv } from "./styleComponents/divStyles";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { CartCount, Logo, NavDiv } from "./styleComponents/HeaderStyles";
+import { Logo, NavDiv } from "./styleComponents/HeaderStyles";
 import { LiStyled, UlStyled } from "./styleComponents/TextStyles";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { HoverDiv, Menu, MenuDiv } from "./styleComponents/MenuStyles";
-import { CartImage } from "./styleComponents/Imagestyles";
-import { useCart, totalItems } from "react-use-cart";
+import CartIcon from "./CartIcon";
 
 function Header() {
-  let navigate = useNavigate();
-  const { totalItems } = useCart();
-
-  const handleClick = () => {
-    navigate("/cart");
-  };
+  const rooms = [
+    { name: "Livingroom", url: "/livingroom" },
+    { name: "Diningroom", url: "/diningroom" },
+    { name: "Kitchen", url: "/kitchen" },
+    { name: "Bedroom", url: "/bedroom" },
+    { name: "Bathroom", url: "/bathroom" },
+    { name: "Decor", url: "/decor" },
+  ];
 
   return (
     <ContainerDiv>
@@ -24,17 +24,7 @@ function Header() {
           <Link to="/">Cozy Living</Link>
         </Logo>
         <MenuDiv>
-          <CartImage
-            src="/assets/shoppingbag.svg"
-            onClick={() => handleClick("cart")}
-          />
-
-          {totalItems ? (
-            <CartCount onClick={() => handleClick("cart")}>
-              {totalItems}
-            </CartCount>
-          ) : null}
-
+          <CartIcon></CartIcon>
           <HoverDiv>
             <MenuIcon />
             <Menu>
@@ -45,24 +35,13 @@ function Header() {
                   </em>
                   <div>
                     <UlStyled>
-                      <Link to="/livingroom">
-                        <LiStyled>Living Room</LiStyled>
-                      </Link>
-                      <Link to="/diningroom">
-                        <LiStyled>Dining Room</LiStyled>
-                      </Link>
-                      <Link to="/kitchen">
-                        <LiStyled>Kitchen</LiStyled>
-                      </Link>
-                      <Link to="/bedroom">
-                        <LiStyled>Bedroom</LiStyled>
-                      </Link>
-                      <Link to="/bathroom">
-                        <LiStyled>Bathroom</LiStyled>
-                      </Link>
-                      <Link to="/decor">
-                        <LiStyled>Decor</LiStyled>
-                      </Link>
+                      {rooms.map((room, index) => {
+                        return (
+                          <Link key={index} to="{room.url}">
+                            <LiStyled>{room.name}</LiStyled>
+                          </Link>
+                        );
+                      })}
                     </UlStyled>
                   </div>
                 </LiStyled>

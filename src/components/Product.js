@@ -17,10 +17,6 @@ import Back from "./Back";
 import { BreakDiv20 } from "./styleComponents/BreakDivs";
 
 function Product() {
-  window.scrollTo({
-    top: 0,
-  });
-
   const { product } = useParams();
   const { addItem } = useCart();
 

@@ -25,7 +25,7 @@ const ProductImage = styled.img`
 `;
 
 const CartImage = styled.img`
-  width: 26%;
+  width: 19%;
   padding: 0px 6px;
   cursor: pointer;
 `;

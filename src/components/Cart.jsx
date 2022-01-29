@@ -1,21 +1,17 @@
 import React from "react";
 import { useCart } from "react-use-cart";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import CartItem from "./CartItem";
 import {
   CategoriesContainer,
   ContainerDiv,
   InnerDiv,
 } from "./styleComponents/divStyles";
-import { Fineprint, H3Link } from "./styleComponents/TextStyles";
+import { Fineprint, H3Link, Title1 } from "./styleComponents/TextStyles";
 import { WideButton } from "./styleComponents/ButtonStyles";
-import {
-  CenterDiv20,
-  CenterDiv40,
-  FlexDiv,
-  FlexSpaced20,
-} from "./styleComponents/FlexDivs";
+import { FlexSpaced20 } from "./styleComponents/FlexDivs";
 import { BreakDiv1020 } from "./styleComponents/BreakDivs";
+import EmptyCart from "./EmptyCart";
 
 function Cart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();
@@ -40,19 +36,7 @@ function Cart() {
     <ContainerDiv>
       <InnerDiv>
         {isEmpty ? (
-          <ContainerDiv>
-            <CenterDiv40>
-              <h4>Your cart is empty.</h4>
-            </CenterDiv40>
-
-            <CenterDiv20>
-              <Link to="/all-products">
-                <WideButton>
-                  <h3>Add some items</h3>
-                </WideButton>
-              </Link>
-            </CenterDiv20>
-          </ContainerDiv>
+          <EmptyCart></EmptyCart>
         ) : (
           <CategoriesContainer>
             <FlexSpaced20>
@@ -78,20 +62,20 @@ function Cart() {
             })}
 
             <FlexSpaced20>
-              <h4>Total* </h4>
-              <h4>{formatter.format(cartTotal)}</h4>
+              <Title1>Total* </Title1>
+              <Title1>{formatter.format(cartTotal)}</Title1>
             </FlexSpaced20>
 
             <BreakDiv1020></BreakDiv1020>
 
-            <FlexDiv margin="5px 20px">
+            <FlexSpaced20>
               <Fineprint>
                 *Final taxes and shipping are calculated at checkout.
                 <br />
                 Discounts can not be applied to sale items. Sale items are final
                 sale.
               </Fineprint>
-            </FlexDiv>
+            </FlexSpaced20>
 
             <FlexSpaced20>
               <WideButton

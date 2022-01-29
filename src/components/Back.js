@@ -2,13 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { LeftFlex20 } from "./styleComponents/FlexDivs";
 import { ButtonImg } from "./styleComponents/Imagestyles";
+import { Title1 } from "./styleComponents/TextStyles";
 
 function Back() {
   const navigate = useNavigate();
   return (
     <LeftFlex20>
       <ButtonImg src="/assets/back.svg" />
-      <h4
+      <Title1
         onClick={() => {
           navigate(-1);
           window.scrollTo({
@@ -18,7 +19,7 @@ function Back() {
         }}
       >
         Back
-      </h4>
+      </Title1>
     </LeftFlex20>
   );
 }

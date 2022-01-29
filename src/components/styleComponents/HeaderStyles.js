@@ -4,6 +4,7 @@ const Logo = styled.h1`
   letter-spacing: 2.5px;
   padding: 6px 20px;
   font-size: 1.3rem;
+  width: 100%;
 `;
 
 const NavDiv = styled.div`

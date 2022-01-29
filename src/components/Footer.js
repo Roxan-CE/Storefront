@@ -1,6 +1,7 @@
 import React from "react";
 import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
 import { CenterDiv20 } from "./styleComponents/FlexDivs";
+import { Title1 } from "./styleComponents/TextStyles";
 
 function Footer() {
   const d = new Date();
@@ -10,7 +11,7 @@ function Footer() {
     <ContainerDiv>
       <InnerDiv>
         <CenterDiv20>
-          <h4>Roxan © {year}</h4>
+          <Title1>Roxan © {year}</Title1>
         </CenterDiv20>
       </InnerDiv>
     </ContainerDiv>
