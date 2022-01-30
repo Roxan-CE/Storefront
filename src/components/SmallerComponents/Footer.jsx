@@ -1,7 +1,7 @@
 import React from "react";
-import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
-import { CenterDiv20 } from "./styleComponents/FlexDivs";
-import { Title1 } from "./styleComponents/TextStyles";
+import { ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
+import { CenterDiv20 } from "../styleComponents/FlexDivs";
+import { Title1 } from "../styleComponents/TextStyles";
 
 function Footer() {
   const d = new Date();

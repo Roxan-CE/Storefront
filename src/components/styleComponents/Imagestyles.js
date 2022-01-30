@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { device } from "../SmallerComponents/device";
 
 const MainImage = styled.div`
-  width: 100vw;
+  width: 335px;
   height: 350px;
   margin: 0 1rem;
   background-image: url(${(props) => props.image});
@@ -15,13 +16,72 @@ const AboutImage = styled(MainImage)`
   background-position: 60% 55%;
 `;
 const Category = styled.div`
-  height: 180px;
-  margin: 0 1rem;
-  width: 340px;
-  background-size: 100vw auto;
-  background-repeat: no-repeat;
-  background-position: ${(props) => props.position};
-  background-image: url(${(props) => props.image});
+  height: 45px;
+  margin: 5px 1rem;
+  width: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 0;
+
+  :hover {
+    p {
+      letter-spacing: 3px;
+      border-bottom: solid 1px;
+      padding-bottom: 8px;
+    }
+  }
+
+  p {
+    height: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  @media ${device.tablet} {
+    height: 180px;
+    width: 340px;
+
+    p {
+      display: none;
+      position: absolute;
+      z-index: 6;
+      font-weight: 300;
+      text-align: center;
+      width: 340px;
+      top: 60px;
+      margin: 5px 0;
+    }
+
+    ::before {
+      content: "";
+      position: relative;
+      height: 180px;
+      width: 340px;
+      background-size: 100vw auto;
+      background-repeat: no-repeat;
+      background-position: ${(props) => props.position};
+      background-image: url(${(props) => props.image});
+
+      :hover {
+        border: solid 1px;
+      }
+
+      :hover::before {
+        opacity: 20%;
+      }
+
+      :hover p {
+        display: block;
+      }
+    }
+  }
+  @media ${device.laptop} {
+  }
+  @media ${device.laptopL} {
+  }
 `;
 
 const ProductImage = styled.img`
@@ -41,6 +101,7 @@ const ArrowImg = styled.img`
 
 const ButtonImg = styled.img`
   cursor: pointer;
+  padding-right: 5px;
 `;
 
 const ThumbnailImage = styled.img`

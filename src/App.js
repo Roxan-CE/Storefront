@@ -2,10 +2,10 @@ import "./index.css";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./globalStyles";
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { lightTheme, darkTheme } from "./components/Themes";
-import { useDarkMode } from "./components/useDarkMode";
+import Header from "./components/SmallerComponents/Header";
+import Footer from "./components/SmallerComponents/Footer";
+import { lightTheme, darkTheme } from "./components/SmallerComponents/Themes";
+import { useDarkMode } from "./components/SmallerComponents/useDarkMode";
 import { Outlet } from "react-router-dom";
 import { CartProvider } from "react-use-cart";
 

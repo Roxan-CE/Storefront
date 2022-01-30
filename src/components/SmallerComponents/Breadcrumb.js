@@ -18,7 +18,9 @@ export function ProductCrumb() {
         {room.replace(/^\w/, (c) => c.toUpperCase())}
       </p>
     </Link>,
-    <p style={{ fontFamily: "Cormorant Garamond,serif" }}>{product}</p>,
+    <p key={room + 9} style={{ fontFamily: "Cormorant Garamond,serif" }}>
+      {product}
+    </p>,
   ];
 
   return (
@@ -35,13 +37,15 @@ export function RoomCrumb() {
   let { product } = useParams();
 
   const breadcrumbs = [
-    <Link key="5" to="/all-products">
+    <Link key={room + 7} to="/all-products">
       <p style={{ fontFamily: "Cormorant Garamond,serif" }}>All Products</p>
     </Link>,
-    <p style={{ fontFamily: "Cormorant Garamond,serif" }}>
+    <p key={room + 6} style={{ fontFamily: "Cormorant Garamond,serif" }}>
       {room.replace(/^\w/, (c) => c.toUpperCase())}
     </p>,
-    <p style={{ fontFamily: "Cormorant Garamond,serif" }}>{product}</p>,
+    <p key={room + 3} style={{ fontFamily: "Cormorant Garamond,serif" }}>
+      {product}
+    </p>,
   ];
 
   return (

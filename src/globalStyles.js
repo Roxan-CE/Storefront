@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0; 
     width: 100vw;
+    letter-spacing: 1px;
 
     @media ${device.tablet} {
 
@@ -23,12 +24,16 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+   
+   :hover {
+    letter-spacing: 3px;
+   }
   }
 
   em {
     font-family: 'Tangerine', cursive;  
     letter-spacing: 2px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
 
   }

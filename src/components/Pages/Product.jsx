@@ -1,20 +1,20 @@
 import React from "react";
-import products from "../products";
+import products from "../../products";
 import {
   ContainerDiv,
   InnerDiv,
   PaddedDiv,
   StyledDiv,
-} from "./styleComponents/divStyles";
+} from "../styleComponents/divStyles";
 import { useParams } from "react-router-dom";
-import { ProductImage } from "./styleComponents/Imagestyles";
-import { WideButton } from "./styleComponents/ButtonStyles";
+import { ProductImage } from "../styleComponents/Imagestyles";
+import { WideButton } from "../styleComponents/ButtonStyles";
 import { useCart } from "react-use-cart";
-import { ProductCrumb } from "./Breadcrumb";
-import Price from "./Price";
-import { CenterDiv20, FlexSpacedT20 } from "./styleComponents/FlexDivs";
-import Back from "./Back";
-import { BreakDiv20 } from "./styleComponents/BreakDivs";
+import { ProductCrumb } from "../SmallerComponents/Breadcrumb";
+import Price from "../SmallerComponents/Price";
+import { CenterDiv20, FlexSpacedT20 } from "../styleComponents/FlexDivs";
+import Back from "../SmallerComponents/Back";
+import { BreakDiv20 } from "../styleComponents/BreakDivs";
 
 function Product() {
   const { product } = useParams();

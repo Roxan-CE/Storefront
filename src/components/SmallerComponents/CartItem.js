@@ -1,14 +1,14 @@
 import React from "react";
 import { useCart } from "react-use-cart";
-import { CartDiv, CartImg, CartDetails } from "./styleComponents/CartStyles";
-import { ArrowImg, ButtonImg } from "./styleComponents/Imagestyles";
+import { CartDiv, CartImg, CartDetails } from "../styleComponents/CartStyles";
+import { ArrowImg, ButtonImg } from "../styleComponents/Imagestyles";
 import { useNavigate } from "react-router-dom";
-import formatter from "./formatter";
-import { FlexDiv } from "./styleComponents/FlexDivs";
-import { BreakDiv } from "./styleComponents/BreakDivs";
-import close from "../assets/Icons/close.svg";
-import left from "../assets/Icons/left.svg";
-import right from "../assets/Icons/right.svg";
+import formatter from "../SmallerComponents/formatter";
+import { FlexDiv } from "../styleComponents/FlexDivs";
+import { BreakDiv } from "../styleComponents/BreakDivs";
+import close from "../../assets/Icons/close.svg";
+import left from "../../assets/Icons/left.svg";
+import right from "../../assets/Icons/right.svg";
 
 function CartItem(props) {
   const { updateItemQuantity, removeItem } = useCart();

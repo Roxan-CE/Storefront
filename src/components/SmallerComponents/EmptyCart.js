@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { WideButton } from "./styleComponents/ButtonStyles";
-import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
-import { CenterDiv20, CenterDiv40 } from "./styleComponents/FlexDivs";
-import { Title1 } from "./styleComponents/TextStyles";
+import { WideButton } from "../styleComponents/ButtonStyles";
+import { ContainerDiv } from "../styleComponents/divStyles";
+import { CenterDiv20, CenterDiv40 } from "../styleComponents/FlexDivs";
+import { Title1 } from "../styleComponents/TextStyles";
 
 function EmptyCart() {
   return (

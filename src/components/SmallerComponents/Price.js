@@ -1,6 +1,6 @@
 import React from "react";
-import { RedText, Striked, Title1 } from "./styleComponents/TextStyles";
-import formatter from "./formatter";
+import { RedText, Striked, Title1 } from "../styleComponents/TextStyles";
+import formatter from "../SmallerComponents/formatter";
 import sale from "./Sale";
 
 function Price(props) {

@@ -1,14 +1,13 @@
-import React from "react";
-import products from "../products";
-import { BreakDiv } from "./styleComponents/BreakDivs";
-import { StyledDiv } from "./styleComponents/divStyles";
-import { Dropdown } from "./styleComponents/DropdownStyles";
-import { Title1 } from "./styleComponents/TextStyles";
+import React, { useEffect, useState } from "react";
+import { BreakDiv } from "../styleComponents/BreakDivs";
+import { StyledDiv } from "../styleComponents/divStyles";
+import { Dropdown } from "../styleComponents/DropdownStyles";
+import { Title1 } from "../styleComponents/TextStyles";
 
 function DropdownBar(props) {
   const listReset = props.room
-    ? products.filter((product) => product.category === props.room)
-    : products;
+    ? props.list.filter((product) => product.category === props.room)
+    : [...props.list];
 
   const options = [
     {
@@ -59,7 +58,7 @@ function DropdownBar(props) {
     <Dropdown>
       <StyledDiv>
         <label htmlFor="touch">
-          <Title1>Sort</Title1>
+          <h4>Sort</h4>
         </label>
         <input type="checkbox" id="touch" />
 

@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ContactForm from "../ContactForm";
+import ContactForm from "../SmallerComponents/ContactForm";
 import {
   ContainerDiv,
   InnerDiv,
   PaddedDiv,
 } from "../styleComponents/divStyles";
-import { CenterDiv20, LeftFlex20 } from "../styleComponents/FlexDivs";
-import { FormDiv } from "../styleComponents/FormStyles";
+import { LeftFlex20 } from "../styleComponents/FlexDivs";
 import { Title1 } from "../styleComponents/TextStyles";
 
 function Contact() {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Dropdown = styled.nav`
   width: 300px;
   background: transparent;
-  margin: 40px auto 10px;
+  margin: 10px auto 10px;
   border-bottom: solid 1px;
 
   li {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { LeftFlex } from "./styleComponents/FlexDivs";
-import { FormDiv } from "./styleComponents/FormStyles";
+import { FormDiv } from "../styleComponents/FormStyles";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -17,7 +16,7 @@ function ContactForm() {
 
   return (
     <FormDiv>
-      <form onChange={handleChange}>
+      <form>
         <input
           type="text"
           name="name"
@@ -26,27 +25,37 @@ function ContactForm() {
           onClick={() => {
             sent ? send(false) : send(false);
           }}
+          onChange={handleChange}
           required
           autoFocus
         />
         <input
           type="email"
           name="email"
+          onClick={() => {
+            sent ? send(false) : send(false);
+          }}
           placeholder="Email"
           value={formData.email}
+          onChange={handleChange}
           required
           autoFocus
         />
         <textarea
           placeholder="Message"
           name="message"
+          onChange={handleChange}
           value={formData.message}
+          onClick={() => {
+            sent ? send(false) : send(false);
+          }}
           required
         ></textarea>
         <input
           type="submit"
           id="sendButton"
           value={sent ? "Message sent" : "Send"}
+          onChange={handleChange}
           disabled={sent ? true : false}
           onClick={(e) => {
             let x = document.getElementById("sendButton");

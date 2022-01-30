@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
+import { ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
 
 function NotFound() {
   return (

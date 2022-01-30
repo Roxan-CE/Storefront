@@ -1,17 +1,17 @@
 import React from "react";
 import { useCart } from "react-use-cart";
 import { useNavigate } from "react-router-dom";
-import CartItem from "./CartItem";
+import CartItem from "../SmallerComponents/CartItem";
 import {
   CategoriesContainer,
   ContainerDiv,
   InnerDiv,
-} from "./styleComponents/divStyles";
-import { Fineprint, H3Link, Title1 } from "./styleComponents/TextStyles";
-import { WideButton } from "./styleComponents/ButtonStyles";
-import { FlexSpaced20 } from "./styleComponents/FlexDivs";
-import { BreakDiv1020 } from "./styleComponents/BreakDivs";
-import EmptyCart from "./EmptyCart";
+} from "../styleComponents/divStyles";
+import { Fineprint, H3Link, Title1 } from "../styleComponents/TextStyles";
+import { WideButton } from "../styleComponents/ButtonStyles";
+import { FlexSpaced20 } from "../styleComponents/FlexDivs";
+import { BreakDiv1020 } from "../styleComponents/BreakDivs";
+import EmptyCart from "../SmallerComponents/EmptyCart";
 
 function Cart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();

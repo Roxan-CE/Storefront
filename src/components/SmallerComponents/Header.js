@@ -1,10 +1,10 @@
 import React from "react";
-import { ContainerDiv } from "./styleComponents/divStyles";
-import { Logo, NavDiv } from "./styleComponents/HeaderStyles";
-import { LiStyled, UlStyled } from "./styleComponents/TextStyles";
+import { ContainerDiv } from "../styleComponents/divStyles";
+import { Logo, NavDiv } from "../styleComponents/HeaderStyles";
+import { LiStyled, UlStyled } from "../styleComponents/TextStyles";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-import { HoverDiv, Menu, MenuDiv } from "./styleComponents/MenuStyles";
+import { HoverDiv, Menu, MenuDiv } from "../styleComponents/MenuStyles";
 import CartIcon from "./CartIcon";
 
 function Header() {

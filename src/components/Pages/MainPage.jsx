@@ -3,10 +3,13 @@ import {
   CategoriesContainer,
   ContainerDiv,
   InnerDiv,
+  PaddedDiv,
 } from "../styleComponents/divStyles";
 import { Category, MainImage } from "../styleComponents/Imagestyles";
 import { Link } from "react-router-dom";
 import { CenterDiv20, CenterDiv } from "../styleComponents/FlexDivs";
+import { WideButton } from "../styleComponents/ButtonStyles";
+import { BreakDiv1020 } from "../styleComponents/BreakDivs";
 import mainpic from "../../assets/Categories/mainpic.jpg";
 import livingroom from "../../assets/Categories/LivingRoom.jpg";
 import diningroom from "../../assets/Categories/DiningRoom.jpg";
@@ -24,30 +27,45 @@ function MainPage() {
     <ContainerDiv>
       <InnerDiv>
         <CenterDiv20>
-          <MainImage image={mainpic} />
+          <Link to="/all-products">
+            <MainImage image={mainpic} />
+          </Link>
         </CenterDiv20>
         <CenterDiv>
-          <h2>TimeLess Beauty and Aesthetics</h2>
+          <h2>TimeLess and Modern Aesthetics</h2>
         </CenterDiv>
+        <BreakDiv1020></BreakDiv1020>
 
         <CategoriesContainer>
           <Link to="/livingroom">
-            <Category image={livingroom} position="0 60%" />
+            <Category image={livingroom} position="0 60%">
+              <p>Livingroom</p>
+            </Category>
           </Link>
           <Link to="/diningroom">
-            <Category image={diningroom} position="0 55%" />
+            <Category image={diningroom} position="0 55%">
+              <p>Diningroom</p>
+            </Category>
           </Link>
           <Link to="/kitchen">
-            <Category image={kitchen} position="0 60%" />
+            <Category image={kitchen} position="0 60%">
+              <p>Kitchen</p>
+            </Category>
           </Link>
           <Link to="/bedroom">
-            <Category image={bedroom} position="0 55%" />
+            <Category image={bedroom} position="0 55%">
+              <p>Bedroom</p>
+            </Category>
           </Link>
           <Link to="/bathroom">
-            <Category image={bathroom} position="0 65%" />
+            <Category image={bathroom} position="0 65%">
+              <p>Bathroom</p>
+            </Category>
           </Link>
           <Link to="/decor">
-            <Category image={decor} position="0 60%" />
+            <Category image={decor} position="0 60%">
+              <p>Decor</p>
+            </Category>
           </Link>
         </CategoriesContainer>
       </InnerDiv>
