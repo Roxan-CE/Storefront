@@ -1,12 +1,16 @@
 import React from "react";
-import { BreakDiv, ContainerDiv, InnerDiv } from "./styleComponents/divStyles";
+import { BreakDiv, ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
 import { useCart } from "react-use-cart";
-import { CartImg } from "./styleComponents/CartStyles";
-import { WideButton } from "./styleComponents/ButtonStyles";
+import { CartImg } from "../styleComponents/CartStyles";
+import { WideButton } from "../styleComponents/ButtonStyles";
 import { useNavigate } from "react-router-dom";
-import { CenterDiv20, FlexDiv, FlexSpaced20 } from "./styleComponents/FlexDivs";
-import { BreakDiv1020 } from "./styleComponents/BreakDivs";
-import { Title1 } from "./styleComponents/TextStyles";
+import {
+  CenterDiv20,
+  FlexDiv,
+  FlexSpaced20,
+} from "../styleComponents/FlexDivs";
+import { BreakDiv1020 } from "../styleComponents/BreakDivs";
+import { Title1 } from "../styleComponents/TextStyles";
 
 function PreviewCart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();

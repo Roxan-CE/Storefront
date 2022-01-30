@@ -6,6 +6,7 @@ import Price from "./Price";
 import { BreakDiv10 } from "./styleComponents/BreakDivs";
 import { FlexSpacedT20, FlexDiv } from "./styleComponents/FlexDivs";
 import { Title1 } from "./styleComponents/TextStyles";
+import add from "../assets/Icons/add.svg";
 
 export default function Thumbnail(props) {
   const { addItem } = useCart();
@@ -23,7 +24,7 @@ export default function Thumbnail(props) {
         </FlexSpacedT20>
         <FlexDiv>
           <Price sale={props.sale} price={props.price}></Price>
-          <ButtonImg onClick={() => addItem(props)} src="/assets/add.svg" />
+          <ButtonImg onClick={() => addItem(props)} src={add} />
         </FlexDiv>
       </FlexDiv>
     </ThumbnailDiv>

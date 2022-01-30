@@ -1,5 +1,40 @@
 import moment from "moment";
-import sale from "./components/Sale";
+import andrakoppen from "./assets/ProductImages/andrakoppen.jpg";
+import annan from "./assets/ProductImages/annan.jpg";
+import bekvam from "./assets/ProductImages/bekvam.jpg";
+import bocker from "./assets/ProductImages/bocker.jpg";
+import bruntsate from "./assets/ProductImages/bruntsate.jpg";
+import entill from "./assets/ProductImages/entill.jpg";
+import fluffig from "./assets/ProductImages/fluffig.jpg";
+import forsmadlig from "./assets/ProductImages/forsmadlig.jpg";
+import grejer from "./assets/ProductImages/grejer.jpg";
+import haftigt from "./assets/ProductImages/haftigt.jpg";
+import hylla from "./assets/ProductImages/hylla.jpg";
+import kantig from "./assets/ProductImages/kantig.jpg";
+import kopp from "./assets/ProductImages/kopp.jpg";
+import malning from "./assets/ProductImages/malning.jpg";
+import matplats from "./assets/ProductImages/matplats.jpg";
+import mertabell from "./assets/ProductImages/mertabell.jpg";
+import nattduksbord from "./assets/ProductImages/nattduksbord.jpg";
+import rundkruka from "./assets/ProductImages/rundkruka.jpg";
+import sev from "./assets/ProductImages/sev.jpg";
+import sidobord from "./assets/ProductImages/sidobord.jpg";
+import sittplatser from "./assets/ProductImages/sittplatser.jpg";
+import sittpuff from "./assets/ProductImages/sittpuff.jpg";
+import skap from "./assets/ProductImages/skap.jpg";
+import skon from "./assets/ProductImages/skon.jpg";
+import slumpmassig from "./assets/ProductImages/slumpmassig.jpg";
+import spegel from "./assets/ProductImages/spegel-gold.jpg";
+import svartkruka from "./assets/ProductImages/svartkruka.jpg";
+import tallrik from "./assets/ProductImages/tallrik-beige.jpg";
+import tickande from "./assets/ProductImages/tickande.jpg";
+import trosta from "./assets/ProductImages/trosta.jpg";
+import vadsomhelst from "./assets/ProductImages/vadsomhelst.jpg";
+import vaxtbehallare from "./assets/ProductImages/vaxtbehallare.jpg";
+import vaxtbricka from "./assets/ProductImages/vaxtbricka.jpg";
+import vaxtkruka from "./assets/ProductImages/vaxtkruka.jpg";
+import vitbord from "./assets/ProductImages/vitbord.jpg";
+import vitstol from "./assets/ProductImages/vitstol.jpg";
 
 const products = [
   {
@@ -19,38 +54,8 @@ const products = [
       height: 7.125,
       depth: 3,
     },
-    image: "/assets/bocker.jpg",
+    image: bocker,
     price: 60.99,
-    reviews: [
-      {
-        username: "Angelica",
-        location: "Garland, TX",
-        date: moment("2022-01-20"),
-        entry: "Wish it was bigger but overall nice piece.",
-        rating: 4.5,
-      },
-      {
-        username: "Kristi",
-        location: "Leawood, KS",
-        date: moment("2021-11-28"),
-        entry: "Great little accent to a corner.",
-        rating: 4.2,
-      },
-      {
-        username: "Kathy",
-        location: "Salem, OR",
-        date: moment("2021-10-16"),
-        entry: "This was a gift.",
-        rating: 5.0,
-      },
-      {
-        username: "Chrisharo",
-        location: "Dallas, TX",
-        date: moment("2021-05-01"),
-        entry: "Exactly as shown on the site.",
-        rating: 4.5,
-      },
-    ],
   },
   {
     id: 2,
@@ -68,7 +73,7 @@ const products = [
       height: 4.33,
       depth: 5.24,
     },
-    image: "/assets/andrakoppen.jpg",
+    image: andrakoppen,
     price: 19.99,
   },
   {
@@ -88,7 +93,7 @@ const products = [
       height: 7.125,
       depth: 3,
     },
-    image: "/assets/kopp.jpg",
+    image: kopp,
     price: 60.99,
   },
   {
@@ -108,7 +113,7 @@ const products = [
       height: 74,
       depth: 10,
     },
-    image: "/assets/bekvam.jpg",
+    image: bekvam,
     price: 529.99,
   },
   {
@@ -128,7 +133,7 @@ const products = [
       height: 29.9,
       depth: 37.8,
     },
-    image: "/assets/bruntsate.jpg",
+    image: bruntsate,
     price: 1220.99,
   },
   {
@@ -148,7 +153,7 @@ const products = [
       height: 30,
       depth: 47,
     },
-    image: "/assets/entill.jpg",
+    image: entill,
     price: 669.99,
   },
   {
@@ -168,7 +173,7 @@ const products = [
       height: 32.28,
       depth: 31,
     },
-    image: "/assets/fluffig.jpg",
+    image: fluffig,
     price: 359.99,
   },
   {
@@ -188,7 +193,7 @@ const products = [
       height: 2.125,
       depth: 9,
     },
-    image: "/assets/grejer.jpg",
+    image: grejer,
     price: 46.99,
   },
   {
@@ -208,7 +213,7 @@ const products = [
       height: 18,
       depth: 48,
     },
-    image: "/assets/haftigt.jpg",
+    image: haftigt,
     price: 1499.99,
   },
   {
@@ -228,7 +233,7 @@ const products = [
       height: 5,
       depth: 8,
     },
-    image: "/assets/hylla.jpg",
+    image: hylla,
     price: 54.99,
   },
   {
@@ -248,7 +253,7 @@ const products = [
       height: 20,
       depth: 1.5,
     },
-    image: "/assets/kantig.jpg",
+    image: kantig,
     price: 32.99,
   },
   {
@@ -268,7 +273,7 @@ const products = [
       height: 6,
       depth: 4,
     },
-    image: "/assets/sev.jpg",
+    image: sev,
     price: 19.99,
   },
   {
@@ -288,7 +293,7 @@ const products = [
       height: 20,
       depth: 1.5,
     },
-    image: "/assets/malning.jpg",
+    image: malning,
     price: 36.99,
   },
   {
@@ -308,7 +313,7 @@ const products = [
       height: 30,
       depth: 27.5,
     },
-    image: "/assets/matplats.jpg",
+    image: matplats,
     price: 589.99,
   },
   {
@@ -328,7 +333,7 @@ const products = [
       height: 48.5,
       depth: 27.5,
     },
-    image: "/assets/mertabell.jpg",
+    image: mertabell,
     price: 699.99,
   },
   {
@@ -348,7 +353,7 @@ const products = [
       height: 5.8,
       depth: 14,
     },
-    image: "/assets/nattduksbord.jpg",
+    image: nattduksbord,
     price: 169.99,
   },
   {
@@ -368,7 +373,7 @@ const products = [
       height: 5.7,
       depth: 3,
     },
-    image: "/assets/rundkruka.jpg",
+    image: rundkruka,
     price: 16.99,
   },
   {
@@ -388,7 +393,7 @@ const products = [
       height: 12,
       depth: 4,
     },
-    image: "/assets/forsmadlig.jpg",
+    image: forsmadlig,
     price: 36.99,
   },
   {
@@ -408,7 +413,7 @@ const products = [
       height: 4.5,
       depth: 4.5,
     },
-    image: "/assets/annan.jpg",
+    image: annan,
     price: 42.99,
   },
   {
@@ -428,7 +433,7 @@ const products = [
       height: 23,
       depth: 13,
     },
-    image: "/assets/sidobord.jpg",
+    image: sidobord,
     price: 129.99,
   },
   {
@@ -448,7 +453,7 @@ const products = [
       height: 30.7,
       depth: 31.49,
     },
-    image: "/assets/sittplatser.jpg",
+    image: sittplatser,
     price: 1059.99,
   },
   {
@@ -468,7 +473,7 @@ const products = [
       height: 14,
       depth: 20,
     },
-    image: "/assets/sittpuff.jpg",
+    image: sittpuff,
     price: 124.99,
   },
   {
@@ -489,7 +494,7 @@ const products = [
       height: 33.07,
       depth: 14.96,
     },
-    image: "/assets/skap.jpg",
+    image: skap,
     price: 509.99,
   },
   {
@@ -509,7 +514,7 @@ const products = [
       height: 34,
       depth: 31,
     },
-    image: "/assets/skon.jpg",
+    image: skon,
     price: 1359.99,
   },
   {
@@ -529,7 +534,7 @@ const products = [
       height: 16,
       depth: 1.6,
     },
-    image: "/assets/slumpmassig.jpg",
+    image: slumpmassig,
     price: 116.99,
   },
   {
@@ -549,7 +554,7 @@ const products = [
       height: 30,
       depth: 2,
     },
-    image: "/assets/spegel-gold.jpg",
+    image: spegel,
     price: 98.99,
   },
   {
@@ -569,7 +574,7 @@ const products = [
       height: 11.02,
       depth: 4.53,
     },
-    image: "/assets/svartkruka.jpg",
+    image: svartkruka,
     price: 56.99,
   },
   {
@@ -588,7 +593,7 @@ const products = [
       height: 8,
       depth: 1.5,
     },
-    image: "/assets/tallrik-beige.jpg",
+    image: tallrik,
     price: 26.99,
   },
   {
@@ -608,7 +613,7 @@ const products = [
       height: 9.5,
       depth: 1.25,
     },
-    image: "/assets/tickande.jpg",
+    image: tickande,
     price: 42.99,
   },
   {
@@ -628,7 +633,7 @@ const products = [
       height: 32,
       depth: 14,
     },
-    image: "/assets/trosta.jpg",
+    image: trosta,
     price: 229.99,
   },
   {
@@ -648,7 +653,7 @@ const products = [
       height: 35.4,
       depth: 29.5,
     },
-    image: "/assets/vadsomhelst.jpg",
+    image: vadsomhelst,
     price: 259.99,
   },
   {
@@ -668,7 +673,7 @@ const products = [
       height: 7.5,
       depth: 3.1,
     },
-    image: "/assets/vaxtbehallare.jpg",
+    image: vaxtbehallare,
     price: 59.99,
   },
   {
@@ -688,7 +693,7 @@ const products = [
       height: 7.125,
       depth: 3,
     },
-    image: "/assets/vaxtbricka.jpg",
+    image: vaxtbricka,
     price: 60.99,
   },
   {
@@ -708,7 +713,7 @@ const products = [
       height: 12,
       depth: 5.45,
     },
-    image: "/assets/vaxtkruka.jpg",
+    image: vaxtkruka,
     price: 32.99,
   },
   {
@@ -728,7 +733,7 @@ const products = [
       height: 32,
       depth: 30,
     },
-    image: "/assets/vitbord.jpg",
+    image: vitbord,
     price: 460.99,
   },
   {
@@ -748,7 +753,7 @@ const products = [
       height: 33.4,
       depth: 26.3,
     },
-    image: "/assets/vitstol.jpg",
+    image: vitstol,
     price: 312.99,
   },
 ];

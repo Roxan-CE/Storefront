@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { LeftFlex20 } from "./styleComponents/FlexDivs";
 import { ButtonImg } from "./styleComponents/Imagestyles";
 import { Title1 } from "./styleComponents/TextStyles";
+import back from "../assets/Icons/back.svg";
 
 function Back() {
   const navigate = useNavigate();
   return (
     <LeftFlex20>
-      <ButtonImg src="/assets/back.svg" />
+      <ButtonImg src={back} />
       <Title1
         onClick={() => {
           navigate(-1);

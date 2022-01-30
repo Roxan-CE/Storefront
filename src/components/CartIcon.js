@@ -4,6 +4,7 @@ import { useCart } from "react-use-cart";
 import { RightFlex } from "./styleComponents/FlexDivs";
 import { CartCount } from "./styleComponents/HeaderStyles";
 import { CartImage } from "./styleComponents/Imagestyles";
+import shoppingbag from "../assets/Icons/shoppingbag.svg";
 
 function CartIcon() {
   let navigate = useNavigate();
@@ -14,10 +15,7 @@ function CartIcon() {
   };
   return (
     <RightFlex>
-      <CartImage
-        src="/assets/shoppingbag.svg"
-        onClick={() => handleClick("cart")}
-      />
+      <CartImage src={shoppingbag} onClick={() => handleClick("cart")} />
       {totalItems ? (
         <CartCount onClick={() => handleClick("cart")}>{totalItems}</CartCount>
       ) : null}

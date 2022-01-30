@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 import { ProductImage } from "./styleComponents/Imagestyles";
 import { WideButton } from "./styleComponents/ButtonStyles";
 import { useCart } from "react-use-cart";
-import CustomSeparator from "./Breadcrumb";
+import { ProductCrumb } from "./Breadcrumb";
 import Price from "./Price";
 import { CenterDiv20, FlexSpacedT20 } from "./styleComponents/FlexDivs";
 import Back from "./Back";
@@ -29,7 +29,7 @@ function Product() {
           <Back></Back>
           <BreakDiv20></BreakDiv20>
 
-          <CustomSeparator></CustomSeparator>
+          <ProductCrumb></ProductCrumb>
 
           <StyledDiv>
             <h2>{item.name}</h2>

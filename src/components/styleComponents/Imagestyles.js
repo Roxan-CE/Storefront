@@ -4,12 +4,16 @@ const MainImage = styled.div`
   width: 100vw;
   height: 350px;
   margin: 0 1rem;
-  background-image: url("assets/Categories/mainpic.jpg");
+  background-image: url(${(props) => props.image});
   background-size: 650px auto;
   background-repeat: no-repeat;
   background-position: 60% 20%;
 `;
 
+const AboutImage = styled(MainImage)`
+  background-size: 375px auto;
+  background-position: 60% 55%;
+`;
 const Category = styled.div`
   height: 180px;
   margin: 0 1rem;
@@ -27,7 +31,6 @@ const ProductImage = styled.img`
 const CartImage = styled.img`
   width: 19%;
   padding: 0px 6px;
-  cursor: pointer;
 `;
 
 const ArrowImg = styled.img`
@@ -54,4 +57,5 @@ export {
   ArrowImg,
   ButtonImg,
   ThumbnailImage,
+  AboutImage,
 };

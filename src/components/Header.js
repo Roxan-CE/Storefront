@@ -9,12 +9,12 @@ import CartIcon from "./CartIcon";
 
 function Header() {
   const rooms = [
-    { name: "Livingroom", url: "/livingroom" },
-    { name: "Diningroom", url: "/diningroom" },
-    { name: "Kitchen", url: "/kitchen" },
-    { name: "Bedroom", url: "/bedroom" },
-    { name: "Bathroom", url: "/bathroom" },
-    { name: "Decor", url: "/decor" },
+    { name: "Livingroom", url: "livingroom" },
+    { name: "Diningroom", url: "diningroom" },
+    { name: "Kitchen", url: "kitchen" },
+    { name: "Bedroom", url: "bedroom" },
+    { name: "Bathroom", url: "bathroom" },
+    { name: "Decor", url: "decor" },
   ];
 
   return (
@@ -35,9 +35,9 @@ function Header() {
                   </em>
                   <div>
                     <UlStyled>
-                      {rooms.map((room, index) => {
+                      {rooms.map((room) => {
                         return (
-                          <Link key={index} to="{room.url}">
+                          <Link to={"/" + room.url} key={room.name + 1}>
                             <LiStyled>{room.name}</LiStyled>
                           </Link>
                         );
@@ -46,10 +46,13 @@ function Header() {
                   </div>
                 </LiStyled>
                 <LiStyled>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">About Us</Link>
                 </LiStyled>
                 <LiStyled>
-                  <input></input>
+                  <Link to="/contact">Contact</Link>
+                </LiStyled>
+                <LiStyled>
+                  <br />
                 </LiStyled>
               </UlStyled>
             </Menu>

@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 import formatter from "./formatter";
 import { FlexDiv } from "./styleComponents/FlexDivs";
 import { BreakDiv } from "./styleComponents/BreakDivs";
+import close from "../assets/Icons/close.svg";
+import left from "../assets/Icons/left.svg";
+import right from "../assets/Icons/right.svg";
 
 function CartItem(props) {
   const { updateItemQuantity, removeItem } = useCart();
@@ -23,10 +26,7 @@ function CartItem(props) {
         <ul>
           <FlexDiv>
             <h1 onClick={handleClick}>{props.name}</h1>
-            <ButtonImg
-              src="/assets/close.svg"
-              onClick={() => removeItem(props.id)}
-            />
+            <ButtonImg src={close} onClick={() => removeItem(props.id)} />
           </FlexDiv>
           <BreakDiv></BreakDiv>
 
@@ -34,12 +34,12 @@ function CartItem(props) {
           <li>
             Quantity:
             <ArrowImg
-              src="/assets/left.svg"
+              src={left}
               onClick={() => updateItemQuantity(props.id, props.quantity - 1)}
             />
             <span>{props.quantity}</span>
             <ArrowImg
-              src="/assets/right.svg"
+              src={right}
               onClick={() => updateItemQuantity(props.id, props.quantity + 1)}
             />
           </li>
