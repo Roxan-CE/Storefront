@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { device } from "../SmallerComponents/device";
+import { device } from "./device";
 
 const MainImage = styled.div`
-  width: 335px;
+  /* width: 335px; */
+  width: 100vw;
   height: 350px;
-  margin: 0 1rem;
   background-image: url(${(props) => props.image});
   background-size: 650px auto;
   background-repeat: no-repeat;
@@ -89,8 +89,8 @@ const ProductImage = styled.img`
 `;
 
 const CartImage = styled.img`
-  width: 19%;
-  padding: 0px 6px;
+  width: 22px;
+  padding: 0px 7px;
 `;
 
 const ArrowImg = styled.img`

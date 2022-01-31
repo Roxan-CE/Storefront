@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { ContainerDiv, InnerDiv } from "../styleComponents/divStyles";
-import products from "../../products";
+import { ContainerDiv } from "../styleComponents/divStyles";
 import Thumbnail from "./Thumbnail";
-import { Pagination } from "@mui/material";
+import { Pagination, PaginationItem } from "@mui/material";
 import usePagination from "./usePagination";
 import { CenterDiv20 } from "../styleComponents/FlexDivs";
-import { BreakDiv20 } from "../styleComponents/BreakDivs";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 
 function Paginate(props) {
   let { data, dataLimit } = props;
@@ -43,11 +42,17 @@ function Paginate(props) {
           count={count}
           size="small"
           page={page}
-          variant="outlined"
           shape="rounded"
           onChange={handleChange}
-          showFirstButton
-          showLastButton
+          renderItem={(item) => (
+            <PaginationItem
+              components={{
+                previous: ArrowLeftOutlined,
+                next: ArrowRightOutlined,
+              }}
+              {...item}
+            />
+          )}
         />
       </CenterDiv20>
     </ContainerDiv>

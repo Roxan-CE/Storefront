@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./device";
 
 const Menu = styled.nav`
   display: none;
@@ -13,6 +14,58 @@ const Menu = styled.nav`
     flex-direction: column;
     li {
       padding: 10px;
+    }
+  }
+
+  @media ${device.tablet} {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding-top: 6px;
+    width: 220px;
+    vertical-align: baseline;
+
+    ul {
+      padding: 0 10px;
+      flex-direction: row;
+
+      li {
+        padding: 8px 10px;
+      }
+      .shop-li {
+        padding-bottom: 10px;
+        padding-top: 5.5px;
+      }
+
+      li .shopButton {
+        padding-bottom: 10px;
+        padding-top: 0px;
+      }
+      .shopButton:hover + div {
+        display: flex;
+      }
+    }
+    .room-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: -20px;
+
+      ul {
+        flex-direction: column;
+        background-color: white;
+        padding: 10px 20px 15px;
+        width: 200px;
+      }
+
+      li {
+        padding: 10px 0;
+      }
+    }
+
+    .room-menu:hover {
+      display: flex;
     }
   }
 `;
@@ -32,6 +85,12 @@ const HoverDiv = styled.div`
 
   &:hover nav {
     display: flex;
+  }
+
+  @media ${device.tablet} {
+    svg {
+      display: none;
+    }
   }
 `;
 export { MenuDiv, Menu, HoverDiv };

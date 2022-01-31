@@ -14,11 +14,26 @@ export const GlobalStyles = createGlobalStyle`
     width: 100vw;
     letter-spacing: 1px;
 
-    @media ${device.tablet} {
+    @media ${device.mobileL} {
+
 
   }
   @media ${device.laptop} {
   }
+
+  .css-w05zow-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    border: none;
+    background-color: white;
+    border-bottom: solid 1px;
+    border-radius: 0;
+    min-width: 20px;
+  }
+
+  .css-w05zow-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover {
+   background-color: white;
+
+  }
+
   }
 
   a {
@@ -80,4 +95,8 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+
+
+
+  
   `;

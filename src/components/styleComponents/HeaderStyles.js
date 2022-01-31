@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./device.js";
 
 const Logo = styled.h1`
   letter-spacing: 2.5px;
@@ -22,7 +23,7 @@ const CartCount = styled.div`
   display: block;
   text-align: center;
   position: absolute;
-  right: 56px;
+  right: 20.5px;
   top: 26px;
   font-size: 0.7rem;
   font-family: "Lato", sans-serif;

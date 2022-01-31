@@ -24,16 +24,15 @@ function Header() {
           <Link to="/">Cozy Living</Link>
         </Logo>
         <MenuDiv>
-          <CartIcon></CartIcon>
           <HoverDiv>
             <MenuIcon />
             <Menu>
               <UlStyled>
-                <LiStyled>
-                  <em>
+                <LiStyled className="shop-li">
+                  <em className="shopButton">
                     <Link to="/all-products">Shop</Link>
                   </em>
-                  <div>
+                  <div className="room-menu">
                     <UlStyled>
                       {rooms.map((room) => {
                         return (
@@ -46,7 +45,7 @@ function Header() {
                   </div>
                 </LiStyled>
                 <LiStyled>
-                  <Link to="/about">About Us</Link>
+                  <Link to="/about">About</Link>
                 </LiStyled>
                 <LiStyled>
                   <Link to="/contact">Contact</Link>
@@ -57,6 +56,7 @@ function Header() {
               </UlStyled>
             </Menu>
           </HoverDiv>
+          <CartIcon></CartIcon>
         </MenuDiv>
       </NavDiv>
     </ContainerDiv>
