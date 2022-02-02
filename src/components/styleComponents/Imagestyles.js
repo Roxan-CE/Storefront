@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { device } from "./device";
 
 const MainImage = styled.div`
-  /* width: 335px; */
-  width: 100vw;
+  width: 90vw;
   height: 350px;
   background-image: url(${(props) => props.image});
   background-size: 650px auto;
@@ -11,18 +10,27 @@ const MainImage = styled.div`
   background-position: 60% 20%;
 `;
 
-const AboutImage = styled(MainImage)`
-  background-size: 375px auto;
+const AboutImage = styled.div`
+  width: 100%;
+  height: 350px;
+  background-image: url(${(props) => props.image});
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: 60% 55%;
 `;
+
 const Category = styled.div`
   height: 45px;
   margin: 5px 1rem;
-  width: 100px;
+  width: 150px;
   position: relative;
   display: flex;
   justify-content: center;
   padding: 10px 0 0;
+
+  @media ${device.mobileL} {
+    width: 180px;
+  }
 
   :hover {
     p {
@@ -41,43 +49,45 @@ const Category = styled.div`
   }
 
   @media ${device.tablet} {
-    height: 180px;
+    height: 90px;
     width: 340px;
+    border: solid 1px;
 
     p {
-      display: none;
       position: absolute;
-      z-index: 6;
+      z-index: 2;
+      font-size: 1.15rem;
       font-weight: 300;
       text-align: center;
       width: 340px;
-      top: 60px;
+      top: 28px;
       margin: 5px 0;
     }
 
-    ::before {
+    :hover p {
+      display: block;
+      border: none;
+    }
+
+    /* ::before {
       content: "";
       position: relative;
       height: 180px;
       width: 340px;
-      background-size: 100vw auto;
+      display: flex;
+      background-size: 45vw auto;
       background-repeat: no-repeat;
       background-position: ${(props) => props.position};
       background-image: url(${(props) => props.image});
-
-      :hover {
-        border: solid 1px;
-      }
-
-      :hover::before {
-        opacity: 20%;
-      }
-
-      :hover p {
-        display: block;
-      }
+      opacity: 100%;
+      z-index: 1;
     }
+    :hover::before {
+      opacity: 10%;
+      border: solid 1px;
+    } */
   }
+
   @media ${device.laptop} {
   }
   @media ${device.laptopL} {
@@ -86,11 +96,17 @@ const Category = styled.div`
 
 const ProductImage = styled.img`
   width: 340px;
+
+  @media ${device.tablet} {
+  }
 `;
 
 const CartImage = styled.img`
   width: 22px;
   padding: 0px 7px;
+
+  @media ${device.tablet} {
+  }
 `;
 
 const ArrowImg = styled.img`

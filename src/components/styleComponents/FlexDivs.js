@@ -17,7 +17,6 @@ const FlexSpaced20 = styled(FlexDiv)`
 
 const RightFlex = styled(FlexDiv)`
   justify-content: end;
-  margin: ${(props) => props.margin};
 `;
 
 const LeftFlex = styled(FlexDiv)`
@@ -41,6 +40,10 @@ const CenterDiv40 = styled(CenterDiv)`
   margin: 40px 0;
 `;
 
+const RegularFlex = styled.div`
+  display: flex;
+`;
+
 export {
   FlexDiv,
   RightFlex,
@@ -51,4 +54,5 @@ export {
   CenterDiv20,
   CenterDiv40,
   FlexSpaced20,
+  RegularFlex,
 };

@@ -4,6 +4,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import { useParams } from "react-router-dom";
+import { RegularText } from "../styleComponents/TextStyles";
 
 export function ProductCrumb() {
   let { room } = useParams();
@@ -11,16 +12,18 @@ export function ProductCrumb() {
 
   const breadcrumbs = [
     <Link key={room + 2} to="/all-products">
-      <p style={{ fontFamily: "Cormorant Garamond,serif" }}>All Products</p>
+      <RegularText style={{ fontFamily: "Cormorant Garamond,serif" }}>
+        All Products
+      </RegularText>
     </Link>,
     <Link key={room + 1} to={"/" + room}>
-      <p style={{ fontFamily: "Cormorant Garamond,serif" }}>
+      <RegularText style={{ fontFamily: "Cormorant Garamond,serif" }}>
         {room.replace(/^\w/, (c) => c.toUpperCase())}
-      </p>
+      </RegularText>
     </Link>,
-    <p key={room + 9} style={{ fontFamily: "Cormorant Garamond,serif" }}>
+    <RegularText key={room + 9} style={{ opacity: "60%" }}>
       {product}
-    </p>,
+    </RegularText>,
   ];
 
   return (
@@ -38,14 +41,11 @@ export function RoomCrumb() {
 
   const breadcrumbs = [
     <Link key={room + 7} to="/all-products">
-      <p style={{ fontFamily: "Cormorant Garamond,serif" }}>All Products</p>
+      <RegularText style={{ width: "100px" }}>All Products</RegularText>
     </Link>,
-    <p key={room + 6} style={{ fontFamily: "Cormorant Garamond,serif" }}>
+    <RegularText key={room + 6} style={{ opacity: "60%" }}>
       {room.replace(/^\w/, (c) => c.toUpperCase())}
-    </p>,
-    <p key={room + 3} style={{ fontFamily: "Cormorant Garamond,serif" }}>
-      {product}
-    </p>,
+    </RegularText>,
   ];
 
   return (

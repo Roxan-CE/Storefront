@@ -39,8 +39,10 @@ const Menu = styled.nav`
       }
 
       li .shopButton {
+        margin: 0 3px 0 0px;
         padding-bottom: 10px;
-        padding-top: 0px;
+        font-weight: 200;
+        background-color: transparent;
       }
       .shopButton:hover + div {
         display: flex;

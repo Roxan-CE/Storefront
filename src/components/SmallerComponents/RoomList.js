@@ -4,6 +4,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import { Link } from "react-router-dom";
 import Stack from "@mui/material/Stack";
 import { CenterDiv20, FlexDiv, LeftFlex20 } from "../styleComponents/FlexDivs";
+import { RegularText } from "../styleComponents/TextStyles";
 
 export function RoomList() {
   const rooms = [
@@ -20,18 +21,7 @@ export function RoomList() {
       {rooms.map((room) => {
         return (
           <Link to={"/" + room.url}>
-            <p
-              style={{
-                fontFamily: "Cormorant Garamond,serif",
-                fontSize: "16px",
-                padding: "5px 5px",
-                letterSpacing: "0.15px",
-                fontWeight: 400,
-                color: "rgba(0, 0, 0, 0.6)",
-              }}
-            >
-              {room.name + " | "}
-            </p>
+            <RegularText>{room.name}</RegularText>
           </Link>
         );
       })}

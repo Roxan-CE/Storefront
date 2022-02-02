@@ -50,6 +50,7 @@ function DropdownBar(props) {
       name: "On Sale",
       action() {
         props.setList(listReset.filter((product) => product.sale));
+        props.resetRoomChange(true);
       },
     },
   ];

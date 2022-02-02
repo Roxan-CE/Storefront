@@ -8,19 +8,17 @@ import back from "../../assets/Icons/back.svg";
 function Back() {
   const navigate = useNavigate();
   return (
-    <LeftFlex20>
+    <LeftFlex20
+      onClick={() => {
+        navigate(-1);
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // for smoothly scrolling
+        });
+      }}
+    >
       <ButtonImg src={back} />
-      <Title1
-        onClick={() => {
-          navigate(-1);
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth", // for smoothly scrolling
-          });
-        }}
-      >
-        Back
-      </Title1>
+      <Title1>Back</Title1>
     </LeftFlex20>
   );
 }

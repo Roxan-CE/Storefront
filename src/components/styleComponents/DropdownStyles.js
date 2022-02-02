@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import { device } from "./device.js";
 
 const Dropdown = styled.nav`
   width: 300px;
   background: transparent;
   margin: 10px auto 10px;
   border-bottom: solid 1px;
+
+  @media ${device.tablet} {
+    width: 300px;
+    margin: 10px 50px 10px;
+  }
 
   li {
     cursor: pointer;

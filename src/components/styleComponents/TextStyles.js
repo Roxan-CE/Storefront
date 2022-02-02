@@ -29,6 +29,25 @@ const RedText = styled(Title1)`
   color: red;
 `;
 
+const RegularText = styled.p`
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 8px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+`;
+
 const LiStyled = styled.li``;
 
-export { Fineprint, H3Link, UlStyled, LiStyled, Striked, RedText, Title1 };
+export {
+  Fineprint,
+  H3Link,
+  UlStyled,
+  LiStyled,
+  Striked,
+  RedText,
+  Title1,
+  RegularText,
+};

@@ -1,12 +1,29 @@
 import styled from "styled-components";
+import { device } from "./device";
 
 const CartImg = styled.img`
-  width: 40%;
+  width: 136px;
+
+  @media ${device.mobileL} {
+    width: 160px;
+  }
+
+  @media ${device.tablet} {
+    width: 230px;
+    height: 200px;
+  }
 `;
 
 const CartDetails = styled.div`
-  width: 60%;
+  width: 80%;
   padding: 15px 0;
+
+  @media ${device.mobileL} {
+  }
+
+  @media ${device.tablet} {
+    padding: 0;
+  }
 `;
 
 const CartDiv = styled.div`
@@ -16,6 +33,14 @@ const CartDiv = styled.div`
   flex-direction: row;
   padding: 10px 20px;
   font-family: "Lato", sans-serif;
+
+  @media ${device.mobileL} {
+    height: 175px;
+  }
+
+  @media ${device.tablet} {
+    height: 200px;
+  }
 
   h1 {
     font-size: 0.9rem;

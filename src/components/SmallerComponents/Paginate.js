@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContainerDiv } from "../styleComponents/divStyles";
 import Thumbnail from "./Thumbnail";
 import { Pagination, PaginationItem } from "@mui/material";
@@ -13,6 +13,15 @@ function Paginate(props) {
 
   const dataList = usePagination(data, dataLimit);
   console.log(dataList.currentData());
+
+  useEffect(() => {
+    if (props.roomChanged) {
+      setPage(1);
+      dataList.jump(1);
+
+      props.resetRoomChange(false);
+    }
+  }, [props.roomChanged]);
 
   const handleChange = (e, p) => {
     setPage(p);

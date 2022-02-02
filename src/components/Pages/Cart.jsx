@@ -9,7 +9,7 @@ import {
 } from "../styleComponents/divStyles";
 import { Fineprint, H3Link, Title1 } from "../styleComponents/TextStyles";
 import { WideButton } from "../styleComponents/ButtonStyles";
-import { FlexSpaced20 } from "../styleComponents/FlexDivs";
+import { CenterDiv20, FlexSpaced20 } from "../styleComponents/FlexDivs";
 import { BreakDiv1020 } from "../styleComponents/BreakDivs";
 import EmptyCart from "../SmallerComponents/EmptyCart";
 
@@ -47,19 +47,21 @@ function Cart() {
 
             <BreakDiv1020></BreakDiv1020>
 
-            {items.map((item) => {
-              return (
-                <CartItem
-                  key={item.id}
-                  id={item.id}
-                  image={item.image}
-                  name={item.name}
-                  price={item.price}
-                  description={item.details}
-                  quantity={item.quantity}
-                ></CartItem>
-              );
-            })}
+            <CenterDiv20>
+              {items.map((item) => {
+                return (
+                  <CartItem
+                    key={item.id}
+                    id={item.id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    description={item.details}
+                    quantity={item.quantity}
+                  ></CartItem>
+                );
+              })}
+            </CenterDiv20>
 
             <FlexSpaced20>
               <Title1>Total* </Title1>

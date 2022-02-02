@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./device.js";
 
 const ContainerDiv = styled.div`
   width: 100vw;
@@ -7,7 +8,7 @@ const ContainerDiv = styled.div`
 const ThumbnailDiv = styled.div`
   width: 300px;
   background-color: transparent;
-  margin: 20px 0;
+  margin: 20px 20px;
 
   div {
     &:hover img {
@@ -40,6 +41,25 @@ const StyledDiv = styled.div`
   margin: 20px 0 10px;
 `;
 
+const DetailDiv = styled.div`
+  @media ${device.tablet} {
+    width: 45%;
+    padding: 0 0 0 30px;
+  }
+`;
+
+const ContactFormDiv = styled(DetailDiv)`
+  @media ${device.tablet} {
+    order: 2;
+  }
+`;
+
+const ContactDetailsDiv = styled(DetailDiv)`
+  @media ${device.tablet} {
+    order: 1;
+  }
+`;
+
 export {
   ContainerDiv,
   ThumbnailDiv,
@@ -47,4 +67,7 @@ export {
   CategoriesContainer,
   PaddedDiv,
   StyledDiv,
+  DetailDiv,
+  ContactFormDiv,
+  ContactDetailsDiv,
 };

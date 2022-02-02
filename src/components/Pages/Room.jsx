@@ -10,13 +10,21 @@ import {
 import Back from "../SmallerComponents/Back";
 import Thumbnail from "../SmallerComponents/Thumbnail";
 import DropdownBar from "../SmallerComponents/DropdownBar";
-import { CenterDiv40, FlexDiv } from "../styleComponents/FlexDivs";
+import {
+  CenterDiv,
+  CenterDiv20,
+  CenterDiv40,
+  FlexDiv,
+  FlexSpaced20,
+} from "../styleComponents/FlexDivs";
 import { RoomCrumb } from "../SmallerComponents/Breadcrumb";
 import Paginate from "../SmallerComponents/Paginate";
 import { RoomList } from "../SmallerComponents/RoomList";
+import { BreakDiv, BreakDiv20 } from "../styleComponents/BreakDivs";
 
 function Room() {
   let { room } = useParams();
+  const [roomChanged, setRoomChange] = useState(false);
 
   const [list, setList] = useState(
     room ? products.filter((product) => product.category === room) : products
@@ -26,7 +34,12 @@ function Room() {
     setList(
       room ? products.filter((product) => product.category === room) : products
     );
+    setRoomChange(true);
   }, [room]);
+
+  function resetRoomChange(t) {
+    setRoomChange(t);
+  }
 
   window.scrollTo({
     top: 0,
@@ -35,42 +48,47 @@ function Room() {
   return (
     <ContainerDiv>
       <InnerDiv>
+        <PaddedDiv>
+          <Back></Back>
+        </PaddedDiv>
+
+        {room ? (
+          <FlexSpaced20>
+            <PaddedDiv>
+              <RoomCrumb></RoomCrumb>
+            </PaddedDiv>
+          </FlexSpaced20>
+        ) : (
+          <CenterDiv>
+            <RoomList></RoomList>{" "}
+          </CenterDiv>
+        )}
+
         <FlexDiv>
-          <PaddedDiv>
-            <Back></Back>
-            {room ? <RoomCrumb></RoomCrumb> : <RoomList></RoomList>}
-          </PaddedDiv>
-          <DropdownBar list={list} setList={setList} room={room}></DropdownBar>
+          <DropdownBar
+            roomChanged={roomChanged}
+            resetRoomChange={resetRoomChange}
+            list={list}
+            setList={setList}
+            room={room}
+          ></DropdownBar>
         </FlexDiv>
 
-        <CategoriesContainer>
+        <CenterDiv20>
           {list.length > 0 ? (
-            <Paginate data={list} dataLimit={6}></Paginate>
+            <Paginate
+              roomChanged={roomChanged}
+              data={list}
+              dataLimit={6}
+              resetRoomChange={resetRoomChange}
+            ></Paginate>
           ) : (
             <CenterDiv40>No products to show.</CenterDiv40>
           )}
-        </CategoriesContainer>
+        </CenterDiv20>
       </InnerDiv>
     </ContainerDiv>
   );
-}
-
-{
-  /* (
-            list.map((product) => {
-              return (
-                <Thumbnail
-                  key={product.name}
-                  id={product.id}
-                  image={product.image}
-                  name={product.name}
-                  price={product.price}
-                  sale={product.sale}
-                  description={product.details}
-                ></Thumbnail>
-              );
-            })
-          )  */
 }
 
 export default Room;

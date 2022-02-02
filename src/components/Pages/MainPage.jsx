@@ -38,12 +38,12 @@ function MainPage() {
 
         <CategoriesContainer>
           <Link to="/livingroom">
-            <Category image={livingroom} position="0 60%">
+            <Category image={livingroom} position="0 58%">
               <p>Livingroom</p>
             </Category>
           </Link>
           <Link to="/diningroom">
-            <Category image={diningroom} position="0 55%">
+            <Category image={diningroom} position="0 60%">
               <p>Diningroom</p>
             </Category>
           </Link>
@@ -58,7 +58,7 @@ function MainPage() {
             </Category>
           </Link>
           <Link to="/bathroom">
-            <Category image={bathroom} position="0 65%">
+            <Category image={bathroom} position="0 57%">
               <p>Bathroom</p>
             </Category>
           </Link>
