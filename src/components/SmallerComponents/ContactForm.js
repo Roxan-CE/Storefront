@@ -39,7 +39,6 @@ function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          autoFocus
         />
         <textarea
           placeholder="Message"

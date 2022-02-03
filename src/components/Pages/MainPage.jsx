@@ -7,9 +7,9 @@ import {
 } from "../styleComponents/divStyles";
 import { Category, MainImage } from "../styleComponents/Imagestyles";
 import { Link } from "react-router-dom";
-import { CenterDiv20, CenterDiv } from "../styleComponents/FlexDivs";
+import { CenterDiv20, CenterDiv, RightFlex } from "../styleComponents/FlexDivs";
 import { WideButton } from "../styleComponents/ButtonStyles";
-import { BreakDiv1020 } from "../styleComponents/BreakDivs";
+import { BreakDiv1020, BreakDiv20 } from "../styleComponents/BreakDivs";
 import mainpic from "../../assets/Categories/mainpic.jpg";
 import livingroom from "../../assets/Categories/LivingRoom.jpg";
 import diningroom from "../../assets/Categories/DiningRoom.jpg";
@@ -17,6 +17,7 @@ import kitchen from "../../assets/Categories/Kitchen.jpg";
 import bedroom from "../../assets/Categories/bedroom.jpg";
 import bathroom from "../../assets/Categories/Bathroom.jpg";
 import decor from "../../assets/Categories/Decor.jpg";
+import CarouselDiv from "../SmallerComponents/CarouselDiv";
 
 function MainPage() {
   window.scrollTo({
@@ -68,6 +69,18 @@ function MainPage() {
             </Category>
           </Link>
         </CategoriesContainer>
+
+        <div
+          className="carouselMain"
+          style={{
+            height: "380px",
+            width: "100vw",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <CarouselDiv></CarouselDiv>
+        </div>
       </InnerDiv>
     </ContainerDiv>
   );

@@ -96,6 +96,7 @@ const Category = styled.div`
 
 const ProductImage = styled.img`
   width: 340px;
+  height: 400px;
 
   @media ${device.tablet} {
   }
@@ -126,6 +127,16 @@ const ThumbnailImage = styled.img`
   cursor: pointer;
 `;
 
+const CarThumbImg = styled.div`
+  width: 270px;
+  height: 270px;
+  background-image: url(${(props) => props.src});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 55%;
+  cursor: pointer;
+`;
+
 export {
   Category,
   MainImage,
@@ -135,4 +146,5 @@ export {
   ButtonImg,
   ThumbnailImage,
   AboutImage,
+  CarThumbImg,
 };

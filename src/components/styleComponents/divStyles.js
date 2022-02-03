@@ -42,6 +42,10 @@ const StyledDiv = styled.div`
 `;
 
 const DetailDiv = styled.div`
+  @media ${device.mobileL} {
+    width: 50%;
+    padding: 0 0 0 30px;
+  }
   @media ${device.tablet} {
     width: 45%;
     padding: 0 0 0 30px;
@@ -50,6 +54,7 @@ const DetailDiv = styled.div`
 
 const ContactFormDiv = styled(DetailDiv)`
   @media ${device.tablet} {
+    padding: 0 10px 0 20px;
     order: 2;
   }
 `;
@@ -57,6 +62,7 @@ const ContactFormDiv = styled(DetailDiv)`
 const ContactDetailsDiv = styled(DetailDiv)`
   @media ${device.tablet} {
     order: 1;
+    padding: 0 10px 0 30px;
   }
 `;
 
