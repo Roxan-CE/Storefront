@@ -5,9 +5,9 @@ const MainImage = styled.div`
   width: 90vw;
   height: 350px;
   background-image: url(${(props) => props.image});
-  background-size: 650px auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 60% 20%;
+  background-position: 60% 50%;
 `;
 
 const AboutImage = styled.div`

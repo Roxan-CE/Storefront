@@ -4,7 +4,7 @@ import { device } from "./components/styleComponents/device.js";
 export const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    color: rgba(0, 0, 0, 0.6);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     font-size: 16px;

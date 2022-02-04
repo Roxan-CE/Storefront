@@ -66,6 +66,25 @@ const ContactDetailsDiv = styled(DetailDiv)`
   }
 `;
 
+const CarouselMain = styled.div`
+  height: 380px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  @media ${device.tablet} {
+  }
+`;
+
+const InnerCarouselDiv = styled.div`
+  width: 85%;
+  margin: 0 20px 0;
+  display: flex;
+
+  @media ${device.tablet} {
+  }
+`;
+
 export {
   ContainerDiv,
   ThumbnailDiv,
@@ -76,4 +95,6 @@ export {
   DetailDiv,
   ContactFormDiv,
   ContactDetailsDiv,
+  CarouselMain,
+  InnerCarouselDiv,
 };

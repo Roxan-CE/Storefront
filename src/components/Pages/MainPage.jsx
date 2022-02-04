@@ -1,23 +1,30 @@
 import React from "react";
 import {
-  CategoriesContainer,
+  CarouselMain,
   ContainerDiv,
   InnerDiv,
-  PaddedDiv,
 } from "../styleComponents/divStyles";
 import { Category, MainImage } from "../styleComponents/Imagestyles";
 import { Link } from "react-router-dom";
 import { CenterDiv20, CenterDiv, RightFlex } from "../styleComponents/FlexDivs";
 import { WideButton } from "../styleComponents/ButtonStyles";
-import { BreakDiv1020, BreakDiv20 } from "../styleComponents/BreakDivs";
+import {
+  BreakDiv,
+  BreakDiv1020,
+  BreakDiv20,
+} from "../styleComponents/BreakDivs";
 import mainpic from "../../assets/Categories/mainpic.jpg";
-import livingroom from "../../assets/Categories/LivingRoom.jpg";
-import diningroom from "../../assets/Categories/DiningRoom.jpg";
-import kitchen from "../../assets/Categories/Kitchen.jpg";
-import bedroom from "../../assets/Categories/bedroom.jpg";
-import bathroom from "../../assets/Categories/Bathroom.jpg";
-import decor from "../../assets/Categories/Decor.jpg";
 import CarouselDiv from "../SmallerComponents/CarouselDiv";
+import furniture from "../../assets/Icons/furniture.svg";
+import priceTag from "../../assets/Icons/priceTag.svg";
+import deliveryTruck from "../../assets/Icons/deliveryTruck.svg";
+
+import bedroom from "../../assets/Categories/bedroom.jpg";
+import Decor from "../../assets/Categories/Decor.jpg";
+import DiningRoom from "../../assets/Categories/DiningRoom.jpg";
+import Kitchen from "../../assets/Categories/Kitchen.jpg";
+import sales from "../../assets/Categories/sales.jpg";
+import Bathroom from "../../assets/Categories/Bathroom.jpg";
 
 function MainPage() {
   window.scrollTo({
@@ -27,60 +34,93 @@ function MainPage() {
   return (
     <ContainerDiv>
       <InnerDiv>
-        <CenterDiv20>
+        <CenterDiv20 style={{ position: "relative" }}>
           <Link to="/all-products">
-            <MainImage image={mainpic} />
+            <MainImage image={Decor} />
           </Link>
-        </CenterDiv20>
-        <CenterDiv>
-          <h2>TimeLess and Modern Aesthetics</h2>
-        </CenterDiv>
-        <BreakDiv1020></BreakDiv1020>
 
-        <CategoriesContainer>
-          <Link to="/livingroom">
-            <Category image={livingroom} position="0 58%">
-              <p>Livingroom</p>
-            </Category>
-          </Link>
-          <Link to="/diningroom">
-            <Category image={diningroom} position="0 60%">
-              <p>Diningroom</p>
-            </Category>
-          </Link>
-          <Link to="/kitchen">
-            <Category image={kitchen} position="0 60%">
-              <p>Kitchen</p>
-            </Category>
-          </Link>
-          <Link to="/bedroom">
-            <Category image={bedroom} position="0 55%">
-              <p>Bedroom</p>
-            </Category>
-          </Link>
-          <Link to="/bathroom">
-            <Category image={bathroom} position="0 57%">
-              <p>Bathroom</p>
-            </Category>
-          </Link>
-          <Link to="/decor">
-            <Category image={decor} position="0 60%">
-              <p>Decor</p>
-            </Category>
-          </Link>
-        </CategoriesContainer>
+          <div
+            style={{
+              position: "relative",
+            }}
+          >
+            <div style={{ paddingBottom: "10px" }}>
+              <h1
+                style={{
+                  fontWeight: "600",
+                  fontSize: "1rem",
+                  padding: "10px 0 0",
+                  marginBottom: 0,
+                  color: "rgba(0, 0, 0, 0.6)",
+                }}
+              >
+                TimeLess and Modern Aesthetics
+              </h1>
+              <BreakDiv></BreakDiv>
+            </div>
+            <button
+              style={{
+                backgroundColor: "transparent",
+                border: "solid 1px",
+                padding: "10px 20px",
+                color: "rgba(0, 0, 0, 0.6)",
+                boxShadow: "0 .125rem .25rem rgba(0,0,0,.075)",
+                fontSize: "0.7rem",
+                margin: "0 0 0 100px",
+              }}
+            >
+              <p style={{ letterSpacing: "1px", textTransform: "uppercase" }}>
+                Shop now
+              </p>
+            </button>
+          </div>
+        </CenterDiv20>
 
         <div
-          className="carouselMain"
+          className="tags"
           style={{
-            height: "380px",
-            width: "100vw",
+            margin: "20px 20px 40px",
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "center",
+            width: "375px",
           }}
         >
-          <CarouselDiv></CarouselDiv>
+          <div style={{ display: "flex", width: "100%", margin: "10px 0" }}>
+            <img src={furniture} style={{ width: "50px", padding: "0 30px" }} />
+            <p style={{ padding: "0 20px" }}>Elegant quality pieces.</p>
+          </div>
+          <div style={{ display: "flex", width: "100%", margin: "10px 0" }}>
+            <img src={priceTag} style={{ width: "50px", padding: "0 30px" }} />
+            <p style={{ padding: "0 20px" }}>Affordable Prices.</p>
+          </div>
+          <div style={{ display: "flex", width: "100%", margin: "10px 0" }}>
+            <img
+              src={deliveryTruck}
+              style={{ width: "50px", padding: "0 30px" }}
+            />
+            <p style={{ padding: "0 20px" }}>Fast reliable shipping.</p>
+          </div>
         </div>
+        <div style={{ margin: "0 50px 0", width: "100%" }}>
+          <h2 style={{ letterSpacing: "2px" }}>Pieces you will love.</h2>
+        </div>
+        <CarouselMain>
+          <CarouselDiv type="bestSeller"></CarouselDiv>
+        </CarouselMain>
+
+        <div
+          style={{
+            margin: "0 50px",
+            padding: 0,
+            width: "260px",
+          }}
+        >
+          <h4 style={{ letterSpacing: "2px" }}>Get them while they last.</h4>
+        </div>
+        <CarouselMain>
+          <CarouselDiv type="sale"></CarouselDiv>
+        </CarouselMain>
       </InnerDiv>
     </ContainerDiv>
   );
