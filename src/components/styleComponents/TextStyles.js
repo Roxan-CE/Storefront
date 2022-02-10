@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Logo } from "./HeaderStyles";
 
 const Fineprint = styled.p`
   font-size: 0.75rem;
@@ -41,6 +43,14 @@ const RegularText = styled.p`
 
 const LiStyled = styled.li``;
 
+const FooterLink = styled(Link)`
+  padding: 5px 0 0;
+`;
+
+const FooterLogo = styled(Logo)`
+  padding: 10px 0 0;
+`;
+
 export {
   Fineprint,
   H3Link,
@@ -50,4 +60,6 @@ export {
   RedText,
   Title1,
   RegularText,
+  FooterLink,
+  FooterLogo,
 };

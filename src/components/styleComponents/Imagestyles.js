@@ -8,6 +8,10 @@ const MainImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60% 50%;
+
+  @media ${device.tablet} {
+    height: 600px;
+  }
 `;
 
 const AboutImage = styled.div`
@@ -102,6 +106,14 @@ const ProductImage = styled.img`
   }
 `;
 
+const TagsImage = styled.img`
+  width: 50px;
+  padding: 0 30px;
+
+  @media ${device.tablet} {
+  }
+`;
+
 const CartImage = styled.img`
   width: 22px;
   padding: 0px 7px;
@@ -147,4 +159,5 @@ export {
   ThumbnailImage,
   AboutImage,
   CarThumbImg,
+  TagsImage,
 };

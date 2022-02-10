@@ -12,7 +12,6 @@ function Paginate(props) {
   const count = Math.ceil(data.length / dataLimit);
 
   const dataList = usePagination(data, dataLimit);
-  console.log(dataList.currentData());
 
   useEffect(() => {
     if (props.roomChanged) {
@@ -26,7 +25,6 @@ function Paginate(props) {
   const handleChange = (e, p) => {
     setPage(p);
     dataList.jump(p);
-    console.log(e);
   };
 
   return (

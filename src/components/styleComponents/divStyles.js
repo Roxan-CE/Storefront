@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "./device.js";
 
@@ -85,6 +86,14 @@ const InnerCarouselDiv = styled.div`
   }
 `;
 
+const LogoDiv = styled.div`
+  width: 58%;
+  padding-left: 4px;
+
+  @media ${device.tablet} {
+  }
+`;
+
 export {
   ContainerDiv,
   ThumbnailDiv,
@@ -97,4 +106,5 @@ export {
   ContactDetailsDiv,
   CarouselMain,
   InnerCarouselDiv,
+  LogoDiv,
 };

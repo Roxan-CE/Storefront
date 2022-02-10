@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { InnerCarouselDiv, InnerDiv } from "../styleComponents/divStyles";
-import { CenterDiv20 } from "../styleComponents/FlexDivs";
 import { Carousel } from "@trendyol-js/react-carousel";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import products from "../../products";
-import Thumbnail from "./Thumbnail";
 import CarThumb from "./CarThumb";
 import carouselArrowStyles from "../styleComponents/carouselArrowStyles";
 
@@ -16,10 +14,36 @@ function CarouselDiv(props) {
   let saleList = [...products].filter((product) => product.sale);
 
   let setList = props.type === "bestSeller" ? bestSellerList : saleList;
+
+  function useWindowWidth() {
+    const [width, setWidth] = useState([0]);
+    useLayoutEffect(() => {
+      function updateWidth() {
+        setWidth([window.innerWidth]);
+      }
+      window.addEventListener("resize", updateWidth);
+      updateWidth();
+      return () => window.removeEventListener("resize", updateWidth);
+    }, []);
+    return width;
+  }
+
+  function GetSize() {
+    const width = useWindowWidth();
+
+    if (width === 1200) {
+      return 3.2;
+    } else {
+      return 1;
+    }
+  }
+
+  console.log(useWindowWidth());
+
   return (
     <InnerCarouselDiv>
       <Carousel
-        show={1}
+        show={GetSize()}
         slide={1}
         transition={0.5}
         swiping="true"

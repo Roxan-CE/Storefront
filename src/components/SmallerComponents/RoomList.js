@@ -1,9 +1,6 @@
 import * as React from "react";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
-
 import { Link } from "react-router-dom";
-import Stack from "@mui/material/Stack";
-import { CenterDiv20, FlexDiv, LeftFlex20 } from "../styleComponents/FlexDivs";
+import { CenterDiv20 } from "../styleComponents/FlexDivs";
 import { RegularText } from "../styleComponents/TextStyles";
 
 export function RoomList() {
@@ -18,9 +15,9 @@ export function RoomList() {
 
   return (
     <CenterDiv20 id="roomlist">
-      {rooms.map((room) => {
+      {rooms.map((room, index) => {
         return (
-          <Link to={"/" + room.url}>
+          <Link key={room + index} to={"/" + room.url}>
             <RegularText>{room.name}</RegularText>
           </Link>
         );
