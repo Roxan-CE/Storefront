@@ -15,12 +15,16 @@ const MainImage = styled.div`
 `;
 
 const AboutImage = styled.div`
-  width: 100%;
+  width: 90vw;
   height: 350px;
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 60% 55%;
+
+  @media ${device.tablet} {
+    height: 500px;
+  }
 `;
 
 const Category = styled.div`

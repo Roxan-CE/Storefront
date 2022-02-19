@@ -1,14 +1,13 @@
 import React from "react";
 import {
   ContainerDiv,
-  DetailDiv,
   InnerDiv,
   PaddedDiv,
 } from "../styleComponents/divStyles";
 import { Title1 } from "../styleComponents/TextStyles";
 import { BreakDiv } from "../styleComponents/BreakDivs";
 import aboutimg from "../../assets/aboutimg.jpg";
-import { CenterDiv20, FlexDiv, LeftFlex } from "../styleComponents/FlexDivs";
+import { CenterDiv } from "../styleComponents/FlexDivs";
 import { AboutImage } from "../styleComponents/Imagestyles";
 
 function About() {
@@ -16,9 +15,9 @@ function About() {
     <ContainerDiv>
       <InnerDiv>
         <PaddedDiv>
-          <LeftFlex>
+          <CenterDiv>
             <AboutImage image={aboutimg} />
-          </LeftFlex>
+          </CenterDiv>
 
           <div>
             <br />

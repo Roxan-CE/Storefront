@@ -1,13 +1,7 @@
 import React from "react";
-import { InnerDiv, LogoDiv, PaddedDiv } from "../styleComponents/divStyles";
-import {
-  CenterDiv20,
-  FlexColumnL,
-  FlexColumnR,
-  LeftFlex20,
-  LogoSpaced20,
-} from "../styleComponents/FlexDivs";
-import { FooterLink, FooterLogo, Title1 } from "../styleComponents/TextStyles";
+import { InnerDiv, PaddedDiv } from "../styleComponents/divStyles";
+import { CenterDiv20, LeftFlex20 } from "../styleComponents/FlexDivs";
+import { Title1 } from "../styleComponents/TextStyles";
 import instagram from "../../assets/Icons/instagram.svg";
 import pinterest from "../../assets/Icons/pinterest.svg";
 import facebook from "../../assets/Icons/facebook.svg";
@@ -15,6 +9,14 @@ import twitter from "../../assets/Icons/twitter.svg";
 import youtube from "../../assets/Icons/youtube.svg";
 import { Link } from "react-router-dom";
 import { BreakDiv40 } from "../styleComponents/BreakDivs";
+import {
+  FlexColumnL,
+  FlexColumnR,
+  FooterLink,
+  FooterLogo,
+  LogoDiv,
+  LogoSpaced20,
+} from "../styleComponents/FooterStyles";
 
 function Footer() {
   const d = new Date();

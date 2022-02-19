@@ -17,7 +17,7 @@ const TagLineDiv = styled.div`
 const MainHeading = styled.div`
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
 
