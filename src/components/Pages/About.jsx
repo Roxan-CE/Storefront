@@ -14,11 +14,10 @@ function About() {
   return (
     <ContainerDiv>
       <InnerDiv>
+        <CenterDiv>
+          <AboutImage image={aboutimg} />
+        </CenterDiv>
         <PaddedDiv>
-          <CenterDiv>
-            <AboutImage image={aboutimg} />
-          </CenterDiv>
-
           <div>
             <br />
             <h2>About us</h2>

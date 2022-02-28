@@ -16,7 +16,21 @@ function ContactForm() {
 
   return (
     <FormDiv>
-      <form>
+      <form
+        onSubmit={(e) => {
+          let x = document.getElementById("sendButton");
+
+          console.log(formData);
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+          send(true);
+
+          e.preventDefault();
+        }}
+      >
         <input
           type="text"
           name="name"
@@ -56,17 +70,6 @@ function ContactForm() {
           value={sent ? "Message sent" : "Send"}
           onChange={handleChange}
           disabled={sent ? true : false}
-          onClick={(e) => {
-            let x = document.getElementById("sendButton");
-            e.preventDefault();
-            console.log(formData);
-            setFormData({
-              name: "",
-              email: "",
-              message: "",
-            });
-            send(true);
-          }}
         />
       </form>
     </FormDiv>

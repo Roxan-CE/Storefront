@@ -9,9 +9,14 @@ import {
 } from "../styleComponents/divStyles";
 import { Fineprint, H3Link, Title1 } from "../styleComponents/TextStyles";
 import { WideButton } from "../styleComponents/ButtonStyles";
-import { CenterDiv20, FlexSpaced20 } from "../styleComponents/FlexDivs";
-import { BreakDiv1020 } from "../styleComponents/BreakDivs";
+import {
+  CenterDiv20,
+  FlexSpaced20,
+  LeftFlex,
+} from "../styleComponents/FlexDivs";
+import { BreakDiv1020, BreakDiv20 } from "../styleComponents/BreakDivs";
 import EmptyCart from "../SmallerComponents/EmptyCart";
+import { CartLeft, CartRight } from "../styleComponents/CartStyles";
 
 function Cart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();
@@ -47,50 +52,49 @@ function Cart() {
 
             <BreakDiv1020></BreakDiv1020>
 
-            <CenterDiv20>
-              {items.map((item) => {
-                return (
-                  <CartItem
-                    key={item.id}
-                    id={item.id}
-                    image={item.image}
-                    name={item.name}
-                    price={item.price}
-                    description={item.details}
-                    quantity={item.quantity}
-                  ></CartItem>
-                );
-              })}
-            </CenterDiv20>
+            <LeftFlex>
+              <CartLeft>
+                {items.map((item) => {
+                  return (
+                    <CartItem
+                      key={item.id}
+                      id={item.id}
+                      image={item.image}
+                      name={item.name}
+                      price={item.price}
+                      description={item.details}
+                      quantity={item.quantity}
+                    ></CartItem>
+                  );
+                })}
+              </CartLeft>
 
-            <FlexSpaced20>
-              <Title1>Total* </Title1>
-              <Title1>{formatter.format(cartTotal)}</Title1>
-            </FlexSpaced20>
+              <CartRight>
+                <FlexSpaced20>
+                  <Title1>Total* </Title1>
+                  <Title1>{formatter.format(cartTotal)}</Title1>
 
-            <BreakDiv1020></BreakDiv1020>
+                  <BreakDiv20></BreakDiv20>
 
-            <FlexSpaced20>
-              <Fineprint>
-                *Final taxes and shipping are calculated at checkout.
-                <br />
-                Discounts can not be applied to sale items. Sale items are final
-                sale.
-              </Fineprint>
-            </FlexSpaced20>
+                  <Fineprint>
+                    *Final taxes and shipping are calculated at checkout.
+                    <br />
+                    Discounts can not be applied to sale items. Sale items are
+                    final sale.
+                  </Fineprint>
 
-            <FlexSpaced20>
-              <WideButton
-                onClick={() => {
-                  navigate("/preview");
-                }}
-              >
-                <h3>Checkout</h3>
-              </WideButton>
-              <WideButton onClick={handleClick}>
-                <h3>Continue Shopping</h3>
-              </WideButton>
-            </FlexSpaced20>
+                  <br />
+                  <br />
+                  <br />
+                  <WideButton onClick={() => {}}>
+                    <h3>Checkout</h3>
+                  </WideButton>
+                  <WideButton onClick={handleClick}>
+                    <h3>Continue Shopping</h3>
+                  </WideButton>
+                </FlexSpaced20>
+              </CartRight>
+            </LeftFlex>
           </CategoriesContainer>
         )}
       </InnerDiv>

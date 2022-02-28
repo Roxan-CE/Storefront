@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "react-use-cart";
-import { CartDiv, CartImg, CartDetails } from "../styleComponents/CartStyles";
+import {
+  CartDiv,
+  CartImg,
+  CartDetails,
+  QuantityInput,
+} from "../styleComponents/CartStyles";
 import { ArrowImg, ButtonImg } from "../styleComponents/Imagestyles";
 import { useNavigate } from "react-router-dom";
 import formatter from "../SmallerComponents/formatter";
-import { FlexDiv } from "../styleComponents/FlexDivs";
+import { CenterDiv, FlexDiv, LeftFlex } from "../styleComponents/FlexDivs";
 import { BreakDiv } from "../styleComponents/BreakDivs";
 import close from "../../assets/Icons/close.svg";
 import left from "../../assets/Icons/left.svg";
@@ -12,12 +17,23 @@ import right from "../../assets/Icons/right.svg";
 
 function CartItem(props) {
   const { updateItemQuantity, removeItem } = useCart();
+  let [show, setShow] = useState(false);
+  let [value, setValue] = useState(props.quantity);
 
   const navigate = useNavigate();
 
   function handleClick() {
     navigate(props.name);
   }
+
+  function handleChange(e) {
+    const newQuantity = Number(e.target.value);
+    setShow(true);
+    setValue(newQuantity);
+  }
+  console.log("the new value is " + value);
+
+  console.log("the new quantity is " + props.quantity);
 
   return (
     <CartDiv>
@@ -32,16 +48,39 @@ function CartItem(props) {
 
           <li>Unit Price: {formatter.format(props.price)}</li>
           <li>
-            Quantity:
-            <ArrowImg
-              src={left}
-              onClick={() => updateItemQuantity(props.id, props.quantity - 1)}
-            />
-            <span>{props.quantity}</span>
-            <ArrowImg
-              src={right}
-              onClick={() => updateItemQuantity(props.id, props.quantity + 1)}
-            />
+            <LeftFlex>
+              <p style={{ alignSelf: "center" }}>Quantity:</p>
+              <ArrowImg
+                src={left}
+                onClick={() => {
+                  setValue(value - 1);
+                  setShow(true);
+                }}
+              />
+              <QuantityInput
+                placeholder={props.quantity}
+                onChange={handleChange}
+                value={value}
+              ></QuantityInput>
+              <ArrowImg
+                src={right}
+                onClick={() => {
+                  setValue(value + 1);
+                  setShow(true);
+                }}
+              />
+              {show ? (
+                <a
+                  style={{ alignSelf: "center", paddingLeft: "20px" }}
+                  onClick={() => {
+                    updateItemQuantity(props.id, value);
+                    setShow(false);
+                  }}
+                >
+                  Update Quantity
+                </a>
+              ) : null}
+            </LeftFlex>
           </li>
           <li>Total price: {formatter.format(props.quantity * props.price)}</li>
         </ul>

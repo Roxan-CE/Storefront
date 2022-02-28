@@ -1,33 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import products from "../../products";
-import {
-  ContainerDiv,
-  DetailDiv,
-  InnerDiv,
-  PaddedDiv,
-  StyledDiv,
-} from "../styleComponents/divStyles";
+import { DetailDiv, InnerDiv, PaddedDiv } from "../styleComponents/divStyles";
 import { useParams } from "react-router-dom";
-import { ProductImage } from "../styleComponents/Imagestyles";
+import { ArrowImg, ProductImage } from "../styleComponents/Imagestyles";
 import { WideButton } from "../styleComponents/ButtonStyles";
 import { useCart } from "react-use-cart";
 import { ProductCrumb } from "../SmallerComponents/Breadcrumb";
 import Price from "../SmallerComponents/Price";
 import {
   CenterDiv20,
-  FlexDiv,
   FlexSpacedT20,
+  LeftFlex,
   LeftFlex20,
-  RegularFlex,
 } from "../styleComponents/FlexDivs";
 import Back from "../SmallerComponents/Back";
-import { BreakDiv, BreakDiv20 } from "../styleComponents/BreakDivs";
+import { BreakDiv } from "../styleComponents/BreakDivs";
+import left from "../../assets/Icons/left.svg";
+import right from "../../assets/Icons/right.svg";
+import { QuantityInput } from "../styleComponents/CartStyles";
 
 function Product() {
   const { product } = useParams();
   const { addItem } = useCart();
+  const [quantity, setQuantity] = useState(1);
 
   const item = products.find((x) => x.name === product);
+
+  function handleChange(e) {
+    setQuantity(Number(e.target.value));
+    console.log(typeof quantity);
+  }
+
+  console.log(typeof quantity);
 
   return (
     <InnerDiv>
@@ -53,8 +57,30 @@ function Product() {
             <FlexSpacedT20>
               <p>{item.details}</p>
 
+              <LeftFlex>
+                <p style={{ paddingTop: "20px" }}>
+                  Quantity:
+                  <ArrowImg
+                    src={left}
+                    onClick={() =>
+                      quantity > 1 ? setQuantity(quantity - 1) : 1
+                    }
+                  />
+                  <QuantityInput
+                    type="number"
+                    value={quantity}
+                    onChange={handleChange}
+                  ></QuantityInput>
+                  <ArrowImg
+                    src={right}
+                    onClick={() =>
+                      quantity < 100 ? setQuantity(quantity + 1) : 100
+                    }
+                  />
+                </p>
+              </LeftFlex>
               <CenterDiv20>
-                <WideButton onClick={() => addItem(item)}>
+                <WideButton onClick={() => addItem(item, quantity)}>
                   <h3>Add to Cart</h3>
                 </WideButton>
               </CenterDiv20>

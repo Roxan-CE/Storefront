@@ -8,15 +8,15 @@ const FlexDiv = styled.div`
 `;
 
 const FlexSpacedT20 = styled(FlexDiv)`
-  margin-top: 20px;
+  margin-top: 2vw 4vw;
 `;
 
 const FlexSpaced20 = styled(FlexDiv)`
-  margin: 20px;
+  margin: 2vw 4vw;
 `;
 
 const FlexSpacedS20 = styled(FlexDiv)`
-  margin: 0 20px;
+  margin: 0 4vw;
 `;
 
 const RightFlex = styled(FlexDiv)`
@@ -28,7 +28,11 @@ const LeftFlex = styled(FlexDiv)`
 `;
 
 const LeftFlex20 = styled(LeftFlex)`
-  margin: 20px 0;
+  margin: 2vw 0;
+`;
+
+const LeftFlexfull20 = styled(LeftFlex)`
+  margin: 2vw 0;
 `;
 
 const CenterDiv = styled(FlexDiv)`
@@ -37,12 +41,13 @@ const CenterDiv = styled(FlexDiv)`
 `;
 
 const CenterDiv20 = styled(CenterDiv)`
-  margin: 20px 0;
+  margin: 2vw 0;
+
   position: relative;
 `;
 
 const CenterDiv40 = styled(CenterDiv)`
-  margin: 40px 0;
+  margin: 4vw 0;
 `;
 
 const RegularFlex = styled.div`
@@ -61,4 +66,5 @@ export {
   FlexSpaced20,
   RegularFlex,
   FlexSpacedS20,
+  LeftFlexfull20,
 };

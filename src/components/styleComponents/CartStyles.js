@@ -10,7 +10,17 @@ const CartImg = styled.img`
 
   @media ${device.tablet} {
     width: 230px;
-    height: 200px;
+    height: 210px;
+  }
+`;
+
+const QuantityInput = styled.input`
+  width: 20px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7rem;
+
+  @media ${device.tablet} {
   }
 `;
 
@@ -18,16 +28,35 @@ const CartDetails = styled.div`
   width: 80%;
   padding: 15px 0;
 
-  @media ${device.mobileL} {
-  }
-
   @media ${device.tablet} {
     padding: 0;
   }
 `;
 
+const CartLeft = styled.div`
+  margin: 2vw 0;
+  position: relative;
+  width: 95%;
+
+  @media ${device.laptop} {
+    width: 50%;
+  }
+`;
+
+const CartRight = styled(CartLeft)`
+  width: 90%;
+
+  @media ${device.tablet} {
+    width: 94%;
+  }
+
+  @media ${device.laptop} {
+    width: 44%;
+  }
+`;
+
 const CartDiv = styled.div`
-  width: 100vw;
+  width: 94%;
   height: 150px;
   display: flex;
   flex-direction: row;
@@ -36,10 +65,12 @@ const CartDiv = styled.div`
 
   @media ${device.mobileL} {
     height: 175px;
+    width: 96%;
   }
 
   @media ${device.tablet} {
     height: 200px;
+    width: 100%;
   }
 
   h1 {
@@ -72,4 +103,4 @@ const CartDiv = styled.div`
   }
 `;
 
-export { CartDiv, CartImg, CartDetails };
+export { CartDiv, CartImg, CartDetails, CartLeft, CartRight, QuantityInput };

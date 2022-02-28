@@ -8,17 +8,17 @@ const BreakDiv = styled.div`
 `;
 
 const BreakDiv10 = styled(BreakDiv)`
-  margin: 10px 0;
+  margin: 1vw 0;
 `;
 const BreakDiv20 = styled(BreakDiv)`
-  margin: 20px 0;
+  margin: 2vw 0;
 `;
 const BreakDiv1020 = styled(BreakDiv)`
-  margin: 10px 20px;
+  margin: 1vw 2vw;
 `;
 
 const BreakDiv40 = styled(BreakDiv)`
-  margin: 40px 0 20px;
+  margin: 4vw 0 2vw;
 `;
 
 export { BreakDiv, BreakDiv10, BreakDiv20, BreakDiv1020, BreakDiv40 };

@@ -15,7 +15,7 @@ const MainImage = styled.div`
 `;
 
 const AboutImage = styled.div`
-  width: 90vw;
+  width: 93vw;
   height: 350px;
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
@@ -106,7 +106,9 @@ const ProductImage = styled.img`
   width: 340px;
   height: 400px;
 
-  @media ${device.tablet} {
+  @media ${device.laptop} {
+    width: 460px;
+    height: 500px;
   }
 `;
 
@@ -128,7 +130,7 @@ const CartImage = styled.img`
 
 const ArrowImg = styled.img`
   position: relative;
-  top: 2.4px;
+
   cursor: pointer;
 `;
 

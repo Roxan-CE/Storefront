@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "../../products";
 import {
-  CategoriesContainer,
   ContainerDiv,
   InnerDiv,
   PaddedDiv,
 } from "../styleComponents/divStyles";
 import Back from "../SmallerComponents/Back";
-import Thumbnail from "../SmallerComponents/Thumbnail";
+
 import DropdownBar from "../SmallerComponents/DropdownBar";
 import {
   CenterDiv,
@@ -20,11 +19,12 @@ import {
 import { RoomCrumb } from "../SmallerComponents/Breadcrumb";
 import Paginate from "../SmallerComponents/Paginate";
 import { RoomList } from "../SmallerComponents/RoomList";
-import { BreakDiv, BreakDiv20 } from "../styleComponents/BreakDivs";
+import CountDropdown from "../SmallerComponents/CountDropdown";
 
 function Room() {
   let { room } = useParams();
   const [roomChanged, setRoomChange] = useState(false);
+  const [count, setCount] = useState(8);
 
   const [list, setList] = useState(
     room ? products.filter((product) => product.category === room) : products
@@ -44,6 +44,10 @@ function Room() {
   window.scrollTo({
     top: 0,
   });
+
+  function resetCount(newCount) {
+    setCount(newCount);
+  }
 
   return (
     <ContainerDiv>
@@ -72,6 +76,8 @@ function Room() {
             setList={setList}
             room={room}
           ></DropdownBar>
+
+          <CountDropdown resetCount={resetCount}></CountDropdown>
         </FlexDiv>
 
         <CenterDiv20>
@@ -79,7 +85,7 @@ function Room() {
             <Paginate
               roomChanged={roomChanged}
               data={list}
-              dataLimit={6}
+              dataLimit={count}
               resetRoomChange={resetRoomChange}
             ></Paginate>
           ) : (

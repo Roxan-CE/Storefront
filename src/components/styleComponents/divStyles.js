@@ -9,7 +9,7 @@ const ContainerDiv = styled.div`
 const ThumbnailDiv = styled.div`
   width: 300px;
   background-color: transparent;
-  margin: 20px 20px;
+  margin: 1vw 1vw;
 
   div {
     &:hover img {
@@ -34,13 +34,13 @@ const CategoriesContainer = styled.div`
 `;
 
 const PaddedDiv = styled.div`
-  margin: 0 20px;
+  margin: 0 4vw;
   width: 100%;
 `;
 
 const StyledDiv = styled.div`
   justify-content: center;
-  margin: 20px 0 10px;
+  margin: 1vw 0 10px;
 `;
 
 const DetailDiv = styled.div`
@@ -56,7 +56,7 @@ const DetailDiv = styled.div`
 
 const ContactFormDiv = styled(DetailDiv)`
   @media ${device.tablet} {
-    padding: 0 10px 0 20px;
+    padding: 0 10px 0 4vw;
     order: 2;
   }
 `;
@@ -80,7 +80,7 @@ const CarouselMain = styled.div`
 
 const InnerCarouselDiv = styled.div`
   width: 85%;
-  margin: 0 20px 0;
+  margin: 0 2vw 0;
   display: flex;
 
   @media ${device.tablet} {
