@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { CenterDiv20 } from "../styleComponents/FlexDivs";
+import { CenterDiv20, MenuLinks } from "../styleComponents/FlexDivs";
 import { RegularText } from "../styleComponents/TextStyles";
 
 export function RoomList() {
@@ -14,7 +14,7 @@ export function RoomList() {
   ];
 
   return (
-    <CenterDiv20 id="roomlist">
+    <MenuLinks>
       {rooms.map((room, index) => {
         return (
           <Link key={room + index} to={"/" + room.url}>
@@ -22,6 +22,6 @@ export function RoomList() {
           </Link>
         );
       })}
-    </CenterDiv20>
+    </MenuLinks>
   );
 }

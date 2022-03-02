@@ -5,15 +5,35 @@ const Dropdown = styled.nav`
   width: 300px;
   background: transparent;
   margin: 10px auto 10px;
+  position: relative;
   border-bottom: solid 1px;
+  height: 50px;
 
-  @media ${device.tablet} {
-    width: 300px;
-    margin: 10px 50px 10px;
+  :hover {
+    border-bottom: 0;
+
+    .slide {
+      border-bottom: solid 1px;
+      transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    h4 {
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
   }
 
   li {
     cursor: pointer;
+    :hover {
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      font-style: italic;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+      background-color: #efefef;
+      border-radius: 4px;
+    }
   }
 
   h4 {
@@ -21,6 +41,7 @@ const Dropdown = styled.nav`
     background: transparent;
     cursor: pointer;
     display: block;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   h4::after {
@@ -35,10 +56,15 @@ const Dropdown = styled.nav`
     height: 0px;
     overflow: hidden;
     text-align: center;
-    transition: height 0.4s ease;
+    transition: height 1s cubic-bezier(0.19, 1, 0.22, 1);
     background-color: white;
     position: absolute;
     z-index: 2;
+    left: -1px;
+    top: 51px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    z-index: 10;
   }
 
   .slide li {
@@ -52,7 +78,12 @@ const Dropdown = styled.nav`
   }
 
   #touch:checked + .slide {
-    height: 371px;
+    height: 300px;
+  }
+
+  @media ${device.tablet} {
+    width: 300px;
+    margin: 26px 50px 26px;
   }
 `;
 
@@ -60,15 +91,35 @@ const CountDropdownStyled = styled.nav`
   width: 300px;
   background: transparent;
   margin: 10px auto 10px;
+  position: relative;
   border-bottom: solid 1px;
+  height: 50px;
 
-  @media ${device.tablet} {
-    width: 300px;
-    margin: 10px 50px 10px;
+  :hover {
+    border-bottom: 0;
+    .slide2 {
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+      border-bottom: solid 1px;
+    }
+
+    h4 {
+      font-weight: 500;
+
+      letter-spacing: 1.5px;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
   }
 
   li {
     cursor: pointer;
+    :hover {
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      font-style: italic;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+      background-color: #efefef;
+      border-radius: 4px;
+    }
   }
 
   h4 {
@@ -76,6 +127,7 @@ const CountDropdownStyled = styled.nav`
     background: transparent;
     cursor: pointer;
     display: block;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   h4::after {
@@ -90,10 +142,14 @@ const CountDropdownStyled = styled.nav`
     height: 0px;
     overflow: hidden;
     text-align: center;
-    transition: height 0.4s ease;
+    transition: height 1s cubic-bezier(0.19, 1, 0.22, 1);
     background-color: white;
     position: absolute;
     z-index: 2;
+    left: -1px;
+    top: 51px;
+    border-left: solid 1px;
+    border-right: solid 1px;
   }
 
   .slide2 li {
@@ -108,6 +164,10 @@ const CountDropdownStyled = styled.nav`
 
   #touch2:checked + .slide2 {
     height: 171px;
+  }
+
+  @media ${device.tablet} {
+    margin: 20px 50px 20px;
   }
 `;
 export { Dropdown, CountDropdownStyled };

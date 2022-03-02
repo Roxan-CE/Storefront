@@ -10,7 +10,16 @@ const MainImage = styled.div`
   background-position: 60% 50%;
 
   @media ${device.tablet} {
-    height: 600px;
+    height: 500px;
+  }
+  @media ${device.laptop} {
+    height: 575px;
+  }
+  @media ${device.laptopL} {
+    height: 750px;
+  }
+  @media ${device.desktop} {
+    height: 1024px;
   }
 `;
 
@@ -24,6 +33,15 @@ const AboutImage = styled.div`
 
   @media ${device.tablet} {
     height: 500px;
+  }
+  @media ${device.laptop} {
+    height: 575px;
+  }
+  @media ${device.laptopL} {
+    height: 670px;
+  }
+  @media ${device.desktop} {
+    height: 1024px;
   }
 `;
 
@@ -106,6 +124,10 @@ const ProductImage = styled.img`
   width: 340px;
   height: 400px;
 
+  @media ${device.mobileL} {
+    margin: 0 auto;
+  }
+
   @media ${device.laptop} {
     width: 460px;
     height: 500px;
@@ -124,25 +146,41 @@ const CartImage = styled.img`
   width: 22px;
   padding: 0px 7px;
 
+  :hover {
+    cursor: pointer;
+    filter: saturate(30%);
+  }
+
   @media ${device.tablet} {
   }
 `;
 
 const ArrowImg = styled.img`
   position: relative;
-
+  align-self: center;
   cursor: pointer;
 `;
 
 const ButtonImg = styled.img`
   cursor: pointer;
   padding-right: 5px;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 4px;
+
+  :hover {
+    background-color: #efefef;
+  }
 `;
 
 const ThumbnailImage = styled.img`
   width: 100%;
   height: 300px;
   cursor: pointer;
+
+  :hover {
+    filter: saturate(30%);
+  }
 `;
 
 const CarThumbImg = styled.div`
@@ -153,6 +191,10 @@ const CarThumbImg = styled.div`
   background-size: cover;
   background-position: 60% 55%;
   cursor: pointer;
+
+  :hover {
+    filter: saturate(30%);
+  }
 `;
 
 export {

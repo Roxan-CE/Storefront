@@ -8,7 +8,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     font-size: 16px;
-    ${"" /* transition: background 0.2s ease-in, color 0.2s ease-in; */}
     margin: 0;
     padding: 0; 
     width: 100vw;
@@ -39,18 +38,26 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
-   
-   :hover {
-    letter-spacing: 3px;
-   }
+    cursor: pointer;
+
+    :hover {
+      font-weight: 700;
+
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+  }
+
+  link {
+    
   }
 
   em {
     font-family: 'Tangerine', cursive;  
     letter-spacing: 2px;
     font-size: 1.5rem;
-    font-weight: 400;
-
+    font-weight: 700;
+    
   }
 
   h1 {
@@ -87,6 +94,7 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     margin: 0;
+    align-self: center;
 
   }
 

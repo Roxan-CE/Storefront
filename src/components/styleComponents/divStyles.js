@@ -9,7 +9,7 @@ const ContainerDiv = styled.div`
 const ThumbnailDiv = styled.div`
   width: 300px;
   background-color: transparent;
-  margin: 1vw 1vw;
+  margin: 3vw 1vw;
 
   div {
     &:hover img {
@@ -44,6 +44,25 @@ const StyledDiv = styled.div`
 `;
 
 const DetailDiv = styled.div`
+  @media ${device.tablet} {
+    width: 45%;
+    padding: 0 0 0 30px;
+  }
+  @media ${device.laptopL} {
+    width: 63%;
+    padding: 0 0 0 30px;
+  }
+`;
+
+const ContactFormDiv = styled.div`
+  justify-content: center;
+  margin: 1vw 0 10px;
+
+  @media ${device.tablet} {
+    padding: 0 10px 0 4vw;
+    order: 2;
+  }
+
   @media ${device.mobileL} {
     width: 50%;
     padding: 0 0 0 30px;
@@ -54,17 +73,22 @@ const DetailDiv = styled.div`
   }
 `;
 
-const ContactFormDiv = styled(DetailDiv)`
-  @media ${device.tablet} {
-    padding: 0 10px 0 4vw;
-    order: 2;
-  }
-`;
+const ContactDetailsDiv = styled.div`
+  justify-content: center;
+  margin: 1vw 0 10px;
 
-const ContactDetailsDiv = styled(DetailDiv)`
   @media ${device.tablet} {
     order: 1;
     padding: 0 10px 0 30px;
+  }
+
+  @media ${device.mobileL} {
+    width: 50%;
+    padding: 0 0 0 30px;
+  }
+  @media ${device.tablet} {
+    width: 45%;
+    padding: 0 0 0 30px;
   }
 `;
 

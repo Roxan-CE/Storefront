@@ -8,7 +8,7 @@ const BreakDiv = styled.div`
 `;
 
 const BreakDiv10 = styled(BreakDiv)`
-  margin: 1vw 0;
+  margin: 0.5vw 0;
 `;
 const BreakDiv20 = styled(BreakDiv)`
   margin: 2vw 0;

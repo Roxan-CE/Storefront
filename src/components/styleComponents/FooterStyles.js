@@ -27,6 +27,10 @@ const LogoDiv = styled.div`
   width: 58%;
   padding-left: 4px;
 
+  a:hover {
+    font-weight: inherit;
+  }
+
   @media ${device.tablet} {
     padding-left: 20px;
     width: 48%;
@@ -42,6 +46,13 @@ const FlexColumnL = styled(LeftFlex20)`
   flex-direction: column;
   a {
     padding-left: 10px;
+
+    :hover {
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-style: italic;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
   }
 
   @media ${device.tablet} {
@@ -57,6 +68,15 @@ const FlexColumnL = styled(LeftFlex20)`
 const FlexColumnR = styled(LeftFlex20)`
   width: 40%;
   flex-direction: column;
+
+  a {
+    :hover {
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      font-style: italic;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
   @media ${device.laptop} {
     width: 20%;
   }

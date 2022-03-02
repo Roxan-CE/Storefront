@@ -15,12 +15,12 @@ function Price(props) {
   return (
     <RegularFlex>
       {props.sale ? (
-        <div>
+        <div style={{ display: "flex" }}>
           <Striked>{formatter.format(props.price)}</Striked>
           <RedText>{formatter.format(props.price * sale)}</RedText>
         </div>
       ) : (
-        <Title1 style={{ alignSelf: "center" }}>
+        <Title1 style={{ alignSelf: "center", paddingTop: "0" }}>
           {formatter.format(props.price)}
         </Title1>
       )}

@@ -4,13 +4,17 @@ import { device } from "./device";
 const CartImg = styled.img`
   width: 136px;
 
+  :hover {
+    cursor: pointer;
+    filter: saturate(30%);
+  }
+
   @media ${device.mobileL} {
     width: 160px;
   }
 
   @media ${device.tablet} {
     width: 230px;
-    height: 210px;
   }
 `;
 
@@ -19,6 +23,8 @@ const QuantityInput = styled.input`
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 0.7rem;
+  border: solid 1px;
+  color: inherit;
 
   @media ${device.tablet} {
   }
@@ -30,6 +36,16 @@ const CartDetails = styled.div`
 
   @media ${device.tablet} {
     padding: 0;
+  }
+`;
+
+const TopDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
+  width: 100%;
+
+  @media ${device.tablet} {
   }
 `;
 
@@ -69,7 +85,7 @@ const CartDiv = styled.div`
   }
 
   @media ${device.tablet} {
-    height: 200px;
+    height: 240px;
     width: 100%;
   }
 
@@ -103,4 +119,12 @@ const CartDiv = styled.div`
   }
 `;
 
-export { CartDiv, CartImg, CartDetails, CartLeft, CartRight, QuantityInput };
+export {
+  CartDiv,
+  CartImg,
+  CartDetails,
+  CartLeft,
+  CartRight,
+  QuantityInput,
+  TopDiv,
+};

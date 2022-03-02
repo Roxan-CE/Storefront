@@ -55,30 +55,36 @@ function Product() {
             <BreakDiv></BreakDiv>
 
             <FlexSpacedT20>
-              <p>{item.details}</p>
+              <p style={{ marginTop: "20px" }}>{item.details}</p>
 
-              <LeftFlex>
-                <p style={{ paddingTop: "20px" }}>
-                  Quantity:
-                  <ArrowImg
-                    src={left}
-                    onClick={() =>
-                      quantity > 1 ? setQuantity(quantity - 1) : 1
-                    }
-                  />
-                  <QuantityInput
-                    type="number"
-                    value={quantity}
-                    onChange={handleChange}
-                  ></QuantityInput>
-                  <ArrowImg
-                    src={right}
-                    onClick={() =>
-                      quantity < 100 ? setQuantity(quantity + 1) : 100
-                    }
-                  />
-                </p>
+              <p style={{ marginTop: "20px" }}>
+                Dimensions:{" "}
+                <span
+                  style={{ fontFamily: "Lato, sansserif", fontSize: "0.8rem " }}
+                >
+                  {item.dimensions.width}W x {item.dimensions.height}H x{" "}
+                  {item.dimensions.depth}D{" "}
+                </span>
+              </p>
+              <LeftFlex style={{ marginTop: "20px" }}>
+                <p style={{ alignSelf: "center" }}>Quantity:</p>
+                <ArrowImg
+                  src={left}
+                  onClick={() => (quantity > 1 ? setQuantity(quantity - 1) : 1)}
+                />
+                <QuantityInput
+                  type="number"
+                  value={quantity}
+                  onChange={handleChange}
+                ></QuantityInput>
+                <ArrowImg
+                  src={right}
+                  onClick={() =>
+                    quantity < 100 ? setQuantity(quantity + 1) : 100
+                  }
+                />
               </LeftFlex>
+
               <CenterDiv20>
                 <WideButton onClick={() => addItem(item, quantity)}>
                   <h3>Add to Cart</h3>

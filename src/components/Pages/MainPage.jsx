@@ -44,18 +44,16 @@ function MainPage() {
               <HeadingH1>TimeLess and Modern Aesthetics</HeadingH1>
               <HeadingUnderline></HeadingUnderline>
             </div>
-            <HeadingButton>
-              <HeadingButtonText
-                onClick={() => {
-                  navigate("/all-products");
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth", // for smoothly scrolling
-                  });
-                }}
-              >
-                Shop now
-              </HeadingButtonText>
+            <HeadingButton
+              onClick={() => {
+                navigate("/all-products");
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // for smoothly scrolling
+                });
+              }}
+            >
+              <HeadingButtonText>Shop now</HeadingButtonText>
             </HeadingButton>
           </MainHeading>
         </CenterDiv20>
@@ -76,7 +74,6 @@ function MainPage() {
             </TagDiv>
           </TagLineDiv>
         </CenterDiv>
-
         <CarouselBox>
           <CarouselTitle>Pieces you will love.</CarouselTitle>
         </CarouselBox>

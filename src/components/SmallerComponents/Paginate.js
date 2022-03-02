@@ -3,7 +3,7 @@ import { ContainerDiv } from "../styleComponents/divStyles";
 import Thumbnail from "./Thumbnail";
 import { Pagination, PaginationItem } from "@mui/material";
 import usePagination from "./usePagination";
-import { CenterDiv20 } from "../styleComponents/FlexDivs";
+import { CenterDiv, CenterDiv20 } from "../styleComponents/FlexDivs";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 
 function Paginate(props) {
@@ -29,7 +29,7 @@ function Paginate(props) {
 
   return (
     <ContainerDiv>
-      <CenterDiv20>
+      <CenterDiv>
         {dataList.currentData().map((product) => {
           return (
             <Thumbnail
@@ -43,7 +43,7 @@ function Paginate(props) {
             ></Thumbnail>
           );
         })}
-      </CenterDiv20>
+      </CenterDiv>
       <CenterDiv20>
         <Pagination
           count={count}

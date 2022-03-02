@@ -42,9 +42,6 @@ function CountDropdown(props) {
               </li>
             );
           })}
-          <li>
-            <BreakDiv></BreakDiv>
-          </li>
         </ul>
       </StyledDiv>
     </CountDropdownStyled>

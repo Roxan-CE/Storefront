@@ -17,6 +17,7 @@ import {
   LogoDiv,
   LogoSpaced20,
 } from "../styleComponents/FooterStyles";
+import { GpsFixed } from "@mui/icons-material";
 
 function Footer() {
   const d = new Date();
@@ -69,6 +70,10 @@ function Footer() {
             <FooterLink to="#">Help Centre</FooterLink>
           </FlexColumnR>
           <CenterDiv20>
+            <br></br>
+            <br></br>
+            <br></br>
+
             <Title1>Roxan © {year}</Title1>
           </CenterDiv20>
         </LeftFlex20>

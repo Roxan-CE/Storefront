@@ -15,7 +15,11 @@ function CartIcon() {
   };
   return (
     <RightFlex>
-      <CartImage src={shoppingbag} onClick={() => handleClick("cart")} />
+      <CartImage
+        style={{ cursor: "pointer" }}
+        src={shoppingbag}
+        onClick={() => handleClick("cart")}
+      />
       {totalItems ? (
         <CartCount onClick={() => handleClick("cart")}>{totalItems}</CartCount>
       ) : null}

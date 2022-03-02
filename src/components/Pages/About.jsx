@@ -11,6 +11,11 @@ import { CenterDiv } from "../styleComponents/FlexDivs";
 import { AboutImage } from "../styleComponents/Imagestyles";
 
 function About() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // for smoothly scrolling
+  });
+
   return (
     <ContainerDiv>
       <InnerDiv>

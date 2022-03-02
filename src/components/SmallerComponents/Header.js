@@ -29,9 +29,7 @@ function Header() {
             <Menu>
               <UlStyled>
                 <LiStyled className="shop-li">
-                  <em className="shopButton">
-                    <Link to="/all-products">Shop</Link>
-                  </em>
+                  <em className="shopButton">Shop</em>
                   <div className="room-menu">
                     <UlStyled>
                       {rooms.map((room) => {
@@ -44,6 +42,7 @@ function Header() {
                     </UlStyled>
                   </div>
                 </LiStyled>
+
                 <LiStyled>
                   <Link to="/about">About</Link>
                 </LiStyled>

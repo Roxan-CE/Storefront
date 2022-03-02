@@ -17,6 +17,10 @@ import {
 import { Title1 } from "../styleComponents/TextStyles";
 
 function Contact() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // for smoothly scrolling
+  });
   return (
     <InnerDiv>
       <FlexSpaced20>
@@ -28,7 +32,7 @@ function Contact() {
           <br />
         </ContactFormDiv>
 
-        <ContactDetailsDiv>
+        <ContactDetailsDiv className="this one">
           <Title1>Email</Title1>
           <LeftFlex20>
             <p>

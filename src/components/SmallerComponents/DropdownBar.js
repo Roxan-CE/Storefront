@@ -71,9 +71,6 @@ function DropdownBar(props) {
               </li>
             );
           })}
-          <li>
-            <BreakDiv></BreakDiv>
-          </li>
         </ul>
       </StyledDiv>
     </Dropdown>

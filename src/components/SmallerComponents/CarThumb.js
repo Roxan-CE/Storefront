@@ -28,7 +28,6 @@ export default function CarThumb(props) {
       </Link>
 
       <div
-        className="detailDiv"
         style={{
           display: "flex",
           justifyContent: "space-between",

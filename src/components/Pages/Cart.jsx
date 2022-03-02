@@ -6,17 +6,19 @@ import {
   CategoriesContainer,
   ContainerDiv,
   InnerDiv,
+  PaddedDiv,
 } from "../styleComponents/divStyles";
 import { Fineprint, H3Link, Title1 } from "../styleComponents/TextStyles";
 import { WideButton } from "../styleComponents/ButtonStyles";
 import {
   CenterDiv20,
+  FlexDiv,
   FlexSpaced20,
   LeftFlex,
 } from "../styleComponents/FlexDivs";
 import { BreakDiv1020, BreakDiv20 } from "../styleComponents/BreakDivs";
 import EmptyCart from "../SmallerComponents/EmptyCart";
-import { CartLeft, CartRight } from "../styleComponents/CartStyles";
+import { CartLeft, CartRight, TopDiv } from "../styleComponents/CartStyles";
 
 function Cart() {
   const { isEmpty, items, cartTotal, emptyCart, totalItems } = useCart();
@@ -44,16 +46,14 @@ function Cart() {
           <EmptyCart></EmptyCart>
         ) : (
           <CategoriesContainer>
-            <FlexSpaced20>
-              <h3>Total Items: {totalItems} </h3>
-
-              <H3Link onClick={emptyCart}>Empty Cart</H3Link>
-            </FlexSpaced20>
-
-            <BreakDiv1020></BreakDiv1020>
-
             <LeftFlex>
               <CartLeft>
+                <TopDiv>
+                  <h3>Total Items: {totalItems} </h3>
+
+                  <H3Link onClick={emptyCart}>Empty Cart</H3Link>
+                </TopDiv>
+
                 {items.map((item) => {
                   return (
                     <CartItem

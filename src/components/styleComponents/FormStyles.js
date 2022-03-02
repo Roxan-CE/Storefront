@@ -36,11 +36,17 @@ const FormDiv = styled.div`
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 1px;
     font-size: 13px;
     font-family: "Lato", sans-serif;
-    text-transform: uppercase;
+
     font-weight: 300;
     margin: 5px 0;
+
+    :hover {
+      background: #efefef;
+      font-weight: 700;
+    }
   }
 
   input[type="button"]:hover,

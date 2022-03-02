@@ -14,6 +14,7 @@ import { BreakDiv } from "../styleComponents/BreakDivs";
 import close from "../../assets/Icons/close.svg";
 import left from "../../assets/Icons/left.svg";
 import right from "../../assets/Icons/right.svg";
+import { H3Link, H1Link } from "../styleComponents/TextStyles";
 
 function CartItem(props) {
   const { updateItemQuantity, removeItem } = useCart();
@@ -37,7 +38,7 @@ function CartItem(props) {
 
   return (
     <CartDiv>
-      <CartImg src={props.image} />
+      <CartImg onClick={handleClick} src={props.image} />
       <CartDetails>
         <ul>
           <FlexDiv>
@@ -70,15 +71,15 @@ function CartItem(props) {
                 }}
               />
               {show ? (
-                <a
-                  style={{ alignSelf: "center", paddingLeft: "20px" }}
+                <H3Link
+                  style={{ alignSelf: "center", marginLeft: "20px" }}
                   onClick={() => {
                     updateItemQuantity(props.id, value);
                     setShow(false);
                   }}
                 >
                   Update Quantity
-                </a>
+                </H3Link>
               ) : null}
             </LeftFlex>
           </li>

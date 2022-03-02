@@ -43,6 +43,7 @@ function Room() {
 
   window.scrollTo({
     top: 0,
+    behavior: "smooth", // for smoothly scrolling
   });
 
   function resetCount(newCount) {
@@ -57,11 +58,9 @@ function Room() {
         </PaddedDiv>
 
         {room ? (
-          <FlexSpaced20>
-            <PaddedDiv>
-              <RoomCrumb></RoomCrumb>
-            </PaddedDiv>
-          </FlexSpaced20>
+          <CenterDiv>
+            <RoomCrumb></RoomCrumb>
+          </CenterDiv>
         ) : (
           <CenterDiv>
             <RoomList></RoomList>{" "}
@@ -80,7 +79,7 @@ function Room() {
           <CountDropdown resetCount={resetCount}></CountDropdown>
         </FlexDiv>
 
-        <CenterDiv20>
+        <CenterDiv>
           {list.length > 0 ? (
             <Paginate
               roomChanged={roomChanged}
@@ -91,7 +90,7 @@ function Room() {
           ) : (
             <CenterDiv40>No products to show.</CenterDiv40>
           )}
-        </CenterDiv20>
+        </CenterDiv>
       </InnerDiv>
     </ContainerDiv>
   );
