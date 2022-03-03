@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { InnerCarouselDiv, InnerDiv } from "../styleComponents/divStyles";
 import { Carousel } from "@trendyol-js/react-carousel";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";

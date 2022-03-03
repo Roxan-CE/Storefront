@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { BreakDiv } from "../styleComponents/BreakDivs";
+import React from "react";
 import { StyledDiv } from "../styleComponents/divStyles";
 import { Dropdown } from "../styleComponents/DropdownStyles";
-import { Title1 } from "../styleComponents/TextStyles";
 
 function DropdownBar(props) {
   const listReset = props.room

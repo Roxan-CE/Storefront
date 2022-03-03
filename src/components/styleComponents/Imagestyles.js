@@ -167,6 +167,7 @@ const ButtonImg = styled.img`
   color: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 4px;
+  z-index: 2;
 
   :hover {
     background-color: #efefef;

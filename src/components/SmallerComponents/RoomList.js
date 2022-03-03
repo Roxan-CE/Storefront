@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { CenterDiv20, MenuLinks } from "../styleComponents/FlexDivs";
+import { MenuLinks } from "../styleComponents/FlexDivs";
 import { RegularText } from "../styleComponents/TextStyles";
 
 export function RoomList() {

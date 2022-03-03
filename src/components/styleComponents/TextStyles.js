@@ -2,8 +2,18 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Logo } from "./HeaderStyles";
 
+const MainLogo = styled.a`
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+  :hover {
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+`;
 const Fineprint = styled.p`
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 `;
 const H1Link = styled.h1`
   :hover {
@@ -75,7 +85,7 @@ const RegularText = styled.p`
   font-family: "Cormorant Garamond", serif;
   text-align: center;
   font-size: 16px;
-  margin: 10px 8px;
+  margin: 10px 20px;
   letter-spacing: 1px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
@@ -89,6 +99,7 @@ const LinedLink = styled(RegularText)`
   position: relative;
   color: inherit;
   text-decoration: none;
+  padding: 0;
 
   &:before {
     left: 0;
@@ -150,4 +161,5 @@ export {
   BackText,
   LinedLink,
   H1Link,
+  MainLogo,
 };

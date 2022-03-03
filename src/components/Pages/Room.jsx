@@ -9,13 +9,7 @@ import {
 import Back from "../SmallerComponents/Back";
 
 import DropdownBar from "../SmallerComponents/DropdownBar";
-import {
-  CenterDiv,
-  CenterDiv20,
-  CenterDiv40,
-  FlexDiv,
-  FlexSpaced20,
-} from "../styleComponents/FlexDivs";
+import { CenterDiv, CenterDiv40, FlexDiv } from "../styleComponents/FlexDivs";
 import { RoomCrumb } from "../SmallerComponents/Breadcrumb";
 import Paginate from "../SmallerComponents/Paginate";
 import { RoomList } from "../SmallerComponents/RoomList";

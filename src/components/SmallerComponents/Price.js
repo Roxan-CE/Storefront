@@ -2,14 +2,7 @@ import React from "react";
 import { RedText, Striked, Title1 } from "../styleComponents/TextStyles";
 import formatter from "../SmallerComponents/formatter";
 import sale from "./Sale";
-import {
-  CenterDiv40,
-  FlexDiv,
-  LeftFlex,
-  RegularFlex,
-  RightFlex,
-} from "../styleComponents/FlexDivs";
-import { PaddedDiv } from "../styleComponents/divStyles";
+import { RegularFlex } from "../styleComponents/FlexDivs";
 
 function Price(props) {
   return (

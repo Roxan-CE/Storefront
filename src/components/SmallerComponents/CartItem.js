@@ -9,12 +9,12 @@ import {
 import { ArrowImg, ButtonImg } from "../styleComponents/Imagestyles";
 import { useNavigate } from "react-router-dom";
 import formatter from "../SmallerComponents/formatter";
-import { CenterDiv, FlexDiv, LeftFlex } from "../styleComponents/FlexDivs";
+import { FlexDiv, LeftFlex } from "../styleComponents/FlexDivs";
 import { BreakDiv } from "../styleComponents/BreakDivs";
 import close from "../../assets/Icons/close.svg";
 import left from "../../assets/Icons/left.svg";
 import right from "../../assets/Icons/right.svg";
-import { H3Link, H1Link } from "../styleComponents/TextStyles";
+import { H3Link } from "../styleComponents/TextStyles";
 
 function CartItem(props) {
   const { updateItemQuantity, removeItem } = useCart();
@@ -32,9 +32,6 @@ function CartItem(props) {
     setShow(true);
     setValue(newQuantity);
   }
-  console.log("the new value is " + value);
-
-  console.log("the new quantity is " + props.quantity);
 
   return (
     <CartDiv>

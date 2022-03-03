@@ -108,7 +108,7 @@ const Menu = styled.nav`
 
         &:before {
           left: 0;
-          bottom: -4px;
+          bottom: -4spx;
           width: 100%;
           height: 1px;
           background: #000;

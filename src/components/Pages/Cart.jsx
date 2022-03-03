@@ -6,16 +6,10 @@ import {
   CategoriesContainer,
   ContainerDiv,
   InnerDiv,
-  PaddedDiv,
 } from "../styleComponents/divStyles";
 import { Fineprint, H3Link, Title1 } from "../styleComponents/TextStyles";
 import { WideButton } from "../styleComponents/ButtonStyles";
-import {
-  CenterDiv20,
-  FlexDiv,
-  FlexSpaced20,
-  LeftFlex,
-} from "../styleComponents/FlexDivs";
+import { FlexSpaced20, LeftFlex } from "../styleComponents/FlexDivs";
 import { BreakDiv1020, BreakDiv20 } from "../styleComponents/BreakDivs";
 import EmptyCart from "../SmallerComponents/EmptyCart";
 import { CartLeft, CartRight, TopDiv } from "../styleComponents/CartStyles";

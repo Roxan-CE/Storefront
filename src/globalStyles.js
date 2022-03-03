@@ -2,6 +2,11 @@ import { createGlobalStyle } from "styled-components";
 import { device } from "./components/styleComponents/device.js";
 
 export const GlobalStyles = createGlobalStyle`
+
+:root {
+  font-size: 16px;
+}
+
   body {
     background: ${({ theme }) => theme.body};
     color: rgba(0, 0, 0, 0.6);
@@ -12,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0; 
     width: 100vw;
     letter-spacing: 1px;
+    
 
     @media ${device.mobileL} {
 
@@ -33,7 +39,7 @@ export const GlobalStyles = createGlobalStyle`
 
   }
 
-  }
+
 
   a {
     text-decoration: none;
@@ -42,7 +48,6 @@ export const GlobalStyles = createGlobalStyle`
 
     :hover {
       font-weight: 700;
-
       transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
@@ -55,7 +60,7 @@ export const GlobalStyles = createGlobalStyle`
   em {
     font-family: 'Tangerine', cursive;  
     letter-spacing: 2px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     
   }
@@ -68,14 +73,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
   }
 
   h3 {
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
@@ -84,7 +89,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h4 {
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
@@ -93,7 +98,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    margin: 0;
     align-self: center;
 
   }
@@ -105,6 +109,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
 
+}
 
   
   `;

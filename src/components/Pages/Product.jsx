@@ -18,6 +18,8 @@ import { BreakDiv } from "../styleComponents/BreakDivs";
 import left from "../../assets/Icons/left.svg";
 import right from "../../assets/Icons/right.svg";
 import { QuantityInput } from "../styleComponents/CartStyles";
+import toast, { Toaster } from "react-hot-toast";
+import ToastOptions from "../SmallerComponents/ToastOptions";
 
 function Product() {
   const { product } = useParams();
@@ -86,7 +88,20 @@ function Product() {
               </LeftFlex>
 
               <CenterDiv20>
-                <WideButton onClick={() => addItem(item, quantity)}>
+                <WideButton
+                  onClick={() => {
+                    addItem(item, quantity);
+                    quantity > 1
+                      ? toast(
+                          quantity + " items added to your cart.",
+                          ToastOptions
+                        )
+                      : toast(
+                          item.name + " has been added to your cart.",
+                          ToastOptions
+                        );
+                  }}
+                >
                   <h3>Add to Cart</h3>
                 </WideButton>
               </CenterDiv20>

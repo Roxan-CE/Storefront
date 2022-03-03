@@ -4,16 +4,9 @@ import ContactForm from "../SmallerComponents/ContactForm";
 import {
   ContactDetailsDiv,
   ContactFormDiv,
-  ContainerDiv,
-  DetailDiv,
   InnerDiv,
-  PaddedDiv,
 } from "../styleComponents/divStyles";
-import {
-  CenterDiv20,
-  FlexSpaced20,
-  LeftFlex20,
-} from "../styleComponents/FlexDivs";
+import { FlexSpaced20, LeftFlex20 } from "../styleComponents/FlexDivs";
 import { Title1 } from "../styleComponents/TextStyles";
 
 function Contact() {

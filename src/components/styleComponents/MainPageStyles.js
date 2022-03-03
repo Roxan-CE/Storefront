@@ -44,7 +44,7 @@ const HeadingH1 = styled.h1`
 
   @media ${device.tablet} {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     text-shadow: 1px -2px rgba(0, 0, 0, 0.8);
   }
@@ -72,7 +72,7 @@ const HeadingUnderline = styled(BreakDiv)`
 const HeadingButton = styled.button`
   margin: 10px auto 0;
   background-color: transparent;
-  padding: 10px;
+  padding: 0px;
   font-size: 0.6rem;
   border: solid 1px;
   cursor: pointer;

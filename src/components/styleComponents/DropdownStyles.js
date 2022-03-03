@@ -69,6 +69,10 @@ const Dropdown = styled.nav`
 
   .slide li {
     padding: 20px 0 10px;
+
+    p {
+      margin: 0;
+    }
   }
 
   #touch {
@@ -154,6 +158,9 @@ const CountDropdownStyled = styled.nav`
 
   .slide2 li {
     padding: 20px 0 10px;
+    p {
+      margin: 0;
+    }
   }
 
   #touch2 {
@@ -163,7 +170,7 @@ const CountDropdownStyled = styled.nav`
   }
 
   #touch2:checked + .slide2 {
-    height: 171px;
+    height: 151px;
   }
 
   @media ${device.tablet} {

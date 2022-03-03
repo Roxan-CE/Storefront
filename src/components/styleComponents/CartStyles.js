@@ -20,6 +20,8 @@ const CartImg = styled.img`
 
 const QuantityInput = styled.input`
   width: 20px;
+  height: 20px;
+  align-self: center;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 0.7rem;
@@ -32,10 +34,18 @@ const QuantityInput = styled.input`
 
 const CartDetails = styled.div`
   width: 80%;
-  padding: 15px 0;
+  padding: 0 0 0 5px;
+  ul {
+    li {
+      padding-top: 10px;
+      padding-bottom: 0;
+      margin: 0;
+    }
+  }
 
   @media ${device.tablet} {
-    padding: 0;
+    padding-top: 0px;
+    padding-left: 10px;
   }
 `;
 

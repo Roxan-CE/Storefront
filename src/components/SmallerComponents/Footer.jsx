@@ -1,13 +1,13 @@
 import React from "react";
 import { InnerDiv, PaddedDiv } from "../styleComponents/divStyles";
 import { CenterDiv20, LeftFlex20 } from "../styleComponents/FlexDivs";
-import { Title1 } from "../styleComponents/TextStyles";
+import { MainLogo, Title1 } from "../styleComponents/TextStyles";
 import instagram from "../../assets/Icons/instagram.svg";
 import pinterest from "../../assets/Icons/pinterest.svg";
 import facebook from "../../assets/Icons/facebook.svg";
 import twitter from "../../assets/Icons/twitter.svg";
 import youtube from "../../assets/Icons/youtube.svg";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { BreakDiv40 } from "../styleComponents/BreakDivs";
 import {
   FlexColumnL,
@@ -17,11 +17,15 @@ import {
   LogoDiv,
   LogoSpaced20,
 } from "../styleComponents/FooterStyles";
-import { GpsFixed } from "@mui/icons-material";
 
 function Footer() {
   const d = new Date();
   let year = d.getFullYear();
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/");
+  }
 
   return (
     <InnerDiv>
@@ -30,7 +34,7 @@ function Footer() {
         <LeftFlex20>
           <LogoDiv>
             <FooterLogo>
-              <Link to="/">Cozy Living</Link>
+              <MainLogo onClick={handleClick}>Cozy Living</MainLogo>
             </FooterLogo>
             <LogoSpaced20>
               <FooterLink to="#">

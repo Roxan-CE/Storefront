@@ -17,7 +17,7 @@ function Back() {
         });
       }}
     >
-      <ButtonImg src={back} />
+      <ButtonImg style={{ zIndex: "1" }} src={back} />
       <a>
         <BackText>Back</BackText>
       </a>

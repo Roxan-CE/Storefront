@@ -91,8 +91,9 @@ const MenuLinks = styled(CenterDiv)`
 
     &:before {
       left: 0;
-      bottom: 8px;
+      bottom: 5px;
       width: 100%;
+
       height: 1px;
       background: rgba(0, 0, 0, 0.6);
       transform: scaleX(0);

@@ -1,22 +1,11 @@
-import { ThumbnailDiv } from "../styleComponents/divStyles";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
-import {
-  ButtonImg,
-  CarThumbImg,
-  ThumbnailImage,
-} from "../styleComponents/Imagestyles";
+import { ButtonImg, CarThumbImg } from "../styleComponents/Imagestyles";
 import Price from "./Price";
-import { BreakDiv10 } from "../styleComponents/BreakDivs";
-import {
-  FlexSpacedT20,
-  FlexDiv,
-  LeftFlex,
-  FlexSpaced20,
-  RightFlex,
-} from "../styleComponents/FlexDivs";
 import { Title1 } from "../styleComponents/TextStyles";
 import add from "../../assets/Icons/add.svg";
+import toast from "react-hot-toast";
+import ToastOptions from "./ToastOptions";
 
 export default function CarThumb(props) {
   const { addItem } = useCart();
@@ -43,7 +32,13 @@ export default function CarThumb(props) {
           </div>
         </div>
         <div style={{ width: "10%" }}>
-          <ButtonImg onClick={() => addItem(props)} src={add} />
+          <ButtonImg
+            onClick={() => {
+              addItem(props);
+              toast(props.name + " has been added to your cart.", ToastOptions);
+            }}
+            src={add}
+          />
         </div>
       </div>
     </div>
